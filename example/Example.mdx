@@ -1,0 +1,86 @@
+import { Story, Meta, Preview } from '@storybook/addon-docs/blocks';
+import { Button } from '@storybook/react/demo';
+
+import { BestFor, NotFor } from '@doc-blocks/intended-usage';
+import { Row } from '@doc-blocks/row';
+import { Version } from '@doc-blocks/version';
+import { ResponsiveStory } from '@doc-blocks/responsive-story';
+import { RelatedComponents } from '@doc-blocks/related-components';
+import { HeaderLinks, HeaderLink } from '@doc-blocks/header-link';
+import { Do, Dont } from '@doc-blocks/guideline';
+
+import { version } from './package.json';
+
+<Meta title="Example|Button" />
+
+<HeaderLinks>
+  <Version current={version} />
+  <HeaderLink to="google.com">Changelog</HeaderLink>
+  <HeaderLink to="google.com">Design Spec</HeaderLink>
+</HeaderLinks>
+
+# Button
+
+Buttons allow users to take actions, and make choices, with a single tap.
+
+<RelatedComponents components={['Components/Header Link']} />
+
+<BestFor>
+
+- Taking action within a page
+
+</BestFor>
+
+<NotFor>
+
+- Navigation between pages
+
+</NotFor>
+
+## Types
+
+<Row>
+  <div>
+
+  ### Side by side (column size flexible)
+
+  Description of type and breakdown of usage.
+
+  - one
+  - two
+  - three
+
+
+  </div>
+
+  <Preview>
+    <Story id="button--basic" />
+  </Preview>
+</Row>
+
+### Usage Guidelines
+
+Description of variants and breakdown of usage. This text block expands to the full width of the page.
+
+<Row>
+  <Do label="Keep button text to 1-2 words">
+    <Button>Click me</Button>
+  </Do>
+  <Dont label="Have buttons with more than 2 words">
+    <Button>Click me to do the thing that is a</Button>
+  </Dont>
+</Row>
+
+## Scenarios
+
+<Row>
+  <div>
+
+  ### Scenario 1 (example with a mobile shell)
+
+  Typical application of one of the component variants
+
+  </div>
+
+  <ResponsiveStory id="button--basic" label="Basic Button" top={150} align="end" />
+</Row>

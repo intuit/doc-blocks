@@ -1,0 +1,17 @@
+import { Story, Meta, Preview } from '@storybook/addon-docs/blocks';
+
+import { Version } from '.';
+import { version } from '../package.json';
+import notes from '../README.md';
+
+<Meta title="Components|Version" parameters={{ notes }} />
+
+# @doc-blocks/version
+
+A component that makes displays the current version of the component.
+
+<Preview>
+  <Story name="Basic Usage">
+    <Version current={version} />
+  </Story>
+</Preview>

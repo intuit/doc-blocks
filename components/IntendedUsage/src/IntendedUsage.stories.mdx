@@ -1,0 +1,75 @@
+import { Story, Meta, Preview } from '@storybook/addon-docs/blocks';
+import { Button } from '@storybook/react/demo';
+import { Row } from '@doc-blocks/row';
+
+import { BestFor, NotFor } from '.';
+import notes from '../README.md';
+
+<Meta title="Components|Intended Usage" parameters={{ notes }} />
+
+# @doc-blocks/intended-usage
+
+A component to describe how a component should be used.
+
+<BestFor>
+
+- Describing common situations to use your components in.
+
+</BestFor>
+
+<NotFor>
+
+- Ordering bagels
+  
+</NotFor>
+
+## Usage
+
+Describe how to use a component.
+
+<Preview>
+  <Story name="Best For">
+    <BestFor>
+      <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+      </ul>
+    </BestFor>
+  </Story>
+</Preview>
+
+Or how not a component should be used.
+
+<Preview>
+  <Story name="Not For">
+    <NotFor>
+      <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>With a really really really really really really really really really really really really really really really really really really really really really really really really long line</li>
+      </ul>
+    </NotFor>
+  </Story>
+</Preview>
+
+They are best if used together.
+
+<Preview>
+  <Story name="Together">
+    <BestFor>
+      <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+      </ul>
+    </BestFor>
+    <NotFor>
+      <ul>
+        <li>four</li>
+        <li>five</li>
+        <li>six</li>
+      </ul>
+    </NotFor>
+  </Story>
+</Preview>

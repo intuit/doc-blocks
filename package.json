@@ -1,0 +1,64 @@
+{
+  "name": "@doc-blocks/monorepo",
+  "private": true,
+  "repository": "https://github.com/intuit/doc-blocks",
+  "author": "Andrew Lisowski lisowski54@gmail.com",
+  "contributors": [
+    "Andrew Lisowski lisowski54@gmail.com"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "create": "ds create component",
+    "create:package": "ds create package",
+    "clean": "ds clean",
+    "dev": "ds dev",
+    "start": "lerna run start --parallel",
+    "storybook": "ds storybook start",
+    "lint": "ds lint",
+    "test": "ds test",
+    "build": "lerna run build --stream",
+    "build:storybook": "ds storybook build",
+    "size": "ds size"
+  },
+  "workspaces": [
+    "components/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@design-systems/cli": "1.7.2-canary.215.5073.0",
+    "@storybook/addon-docs": "6.0.0-beta.5",
+    "@testing-library/react": "8.0.4",
+    "@types/react-dom": "16.8.4",
+    "auto": "9.30.1",
+    "html-webpack-insert-text-plugin": "1.0.3",
+    "html-webpack-plugin": "4.3.0",
+    "husky": "2.7.0",
+    "lerna": "^3.20.2",
+    "lint-staged": "^9.0.0",
+    "prettier": "1.18.2",
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "lint-staged": {
+    "*.{js,json,css,md,ts,tsx,jsx}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "jest-junit": {
+    "outputDirectory": "./coverage/target/surefire-reports"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "auto": {
+    "plugins": [
+      "npm"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+import { Story, Meta, Preview } from '@storybook/addon-docs/blocks';
+import { ThemeProvider, themes, ensure } from '@storybook/theming';
+
+import { RelatedComponents } from '.';
+import notes from '../README.md';
+
+<Meta title="Components|Related-Components" parameters={{ notes }} />
+
+# @doc-blocks/related-components
+
+A component that makes it easy to list a bunch of related components.
+
+<Preview>
+  <Story name="Basic Usage">
+    <ThemeProvider theme={ensure(themes.light)}>
+      <RelatedComponents
+        components={[
+          'Components/Header Link',
+          'Components/Header ResponsiveStory',
+          'Components/Row'
+        ]}
+      />
+    </ThemeProvider>
+  </Story>
+</Preview>

@@ -9,6 +9,10 @@
   "contributors": [
     "Andrew Lisowski lisowski54@gmail.com"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "description": "All of the storybook doc blocks in 1 package",
   "license": "MIT",
   "scripts": {

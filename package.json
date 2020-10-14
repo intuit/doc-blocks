@@ -60,6 +60,10 @@
       "pre-commit": "lint-staged"
     }
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "auto": {
     "plugins": [
       "npm",

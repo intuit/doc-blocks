@@ -18,18 +18,22 @@
     "test": "ds test",
     "build": "lerna run build --stream",
     "build:storybook": "ds storybook build",
-    "size": "ds size"
+    "size": "ds size",
+    "release": "auto shipit"
   },
   "workspaces": [
     "components/*",
     "packages/*"
   ],
   "devDependencies": {
+    "@auto-it/gh-pages": "9.58.0",
+    "@auto-it/released": "9.58.0",
+    "@auto-it/all-contributors": "9.58.0",
     "@design-systems/cli": "1.7.2-canary.215.5073.0",
     "@storybook/addon-docs": "6.0.0-beta.5",
     "@testing-library/react": "8.0.4",
     "@types/react-dom": "16.8.4",
-    "auto": "9.30.1",
+    "auto": "9.58.0",
     "html-webpack-insert-text-plugin": "1.0.3",
     "html-webpack-plugin": "4.3.0",
     "husky": "2.7.0",
@@ -58,7 +62,15 @@
   },
   "auto": {
     "plugins": [
-      "npm"
+      "npm",
+      "released",
+      "all-contributors",
+      [
+        "gh-pages",
+        {
+          "dir": "./out"
+        }
+      ]
     ]
   }
 }

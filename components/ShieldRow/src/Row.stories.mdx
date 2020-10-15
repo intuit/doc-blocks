@@ -4,7 +4,7 @@ import { Accessibility } from '@doc-blocks/accessibility';
 import { DesignSpec } from '@doc-blocks/design-spec';
 import { Version } from '@doc-blocks/version';
 
-import ShieldRow from '.';
+import { ShieldRow } from '.';
 import notes from '../README.md';
 
 <Meta title="Components|ShieldRow" parameters={{ notes }} />
@@ -16,7 +16,7 @@ import notes from '../README.md';
     <ShieldRow>
       <Version current="1.0.0" />
       <DesignSpec type="abstract" url="http://abstract.com/" />
-      <Accessibility tag={'reduced-motion'} />
+      <Accessibility tag="reduced-motion" />
     </ShieldRow>
   </Story>
 </Preview>

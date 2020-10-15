@@ -10,5 +10,3 @@ interface BundleSizeProps {
 export const BundleSize = ({ size }: BundleSizeProps) => (
   <Shield label="size" message={size} color="#0077C5" />
 );
-
-export default BundleSize;

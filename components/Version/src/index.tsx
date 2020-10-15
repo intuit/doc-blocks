@@ -18,5 +18,3 @@ export const Version = ({ current, url }: VersionProps) => (
     title="Open component's changelog"
   />
 );
-
-export default Version;

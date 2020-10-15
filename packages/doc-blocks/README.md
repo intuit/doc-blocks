@@ -5,13 +5,15 @@ All of the storybook @doc-blocks in 1 package.
 This package contains all of the following:
 
 - [`@doc-blocks/accessibility`](../../components/Accessibility/README.md)
+- [`@doc-blocks/bundle-size`](../../components/BundleSize/README.md)
+- [`@doc-blocks/design-spec`](../../components/DesignSpec/README.md)
 - [`@doc-blocks/guideline`](../../components/Guideline/README.md)
-- [`@doc-blocks/header-link`](../../components/HeaderLink/README.md)
 - [`@doc-blocks/intended-usage`](../../components/IntendedUsage/README.md)
 - [`@doc-blocks/related-components`](../../components/RelatedComponents/README.md)
 - [`@doc-blocks/responsive-story`](../../components/ResponsiveStory/README.md)
 - [`@doc-blocks/row`](../../components/Row/README.md)
 - [`@doc-blocks/shield`](../../components/Shield/README.md)
+- [`@doc-blocks/shield-row`](../../components/ShieldRow/README.md)
 - [`@doc-blocks/version`](../../components/Version/README.md)
 
 ## Installation

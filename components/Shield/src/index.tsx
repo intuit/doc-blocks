@@ -72,5 +72,3 @@ export const Shield = ({
     </Wrapper>
   );
 };
-
-export default Shield;

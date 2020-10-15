@@ -15,5 +15,3 @@ export const ShieldRow = (props: Element<'div'>) => (
     `}
   />
 );
-
-export default ShieldRow;

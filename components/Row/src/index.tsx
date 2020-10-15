@@ -37,5 +37,3 @@ export const Row = ({ gap = 40, type, className, ...props }: RowProps) => (
     )}
   />
 );
-
-export default Row;

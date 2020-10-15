@@ -19,8 +19,7 @@ import { RelatedComponents } from '@doc-blocks/related-components';
 
 <RelatedComponents
   components={[
-    'Components/Header Link',
-    'Components/Header ResponsiveStory',
+    'Components/Responsive Story',
     'Components/Row'
   ]}
 />

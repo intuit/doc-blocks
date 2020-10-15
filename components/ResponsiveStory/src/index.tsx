@@ -1,6 +1,8 @@
+/* eslint-disable react/no-unused-prop-types */
+
 import React from 'react';
 import makeClass from 'clsx';
-// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { Source } from '@storybook/addon-docs/blocks';
 import { css } from '@emotion/core';
@@ -319,5 +321,3 @@ export const ResponsiveStory = ({
     </ResponsiveStoryWrapper>
   );
 };
-
-export default ResponsiveStory;

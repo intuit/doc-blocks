@@ -24,5 +24,3 @@ export const DesignSpec = ({ type, url }: DesignSpecProps) => (
     url={url}
   />
 );
-
-export default DesignSpec;

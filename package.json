@@ -19,21 +19,21 @@
     "build": "lerna run build --stream",
     "build:storybook": "ds storybook build",
     "size": "ds size",
-    "release": "auto shipit"
+    "release": "auto shipit -v"
   },
   "workspaces": [
     "components/*",
     "packages/*"
   ],
   "devDependencies": {
-    "@auto-it/gh-pages": "9.58.0",
-    "@auto-it/released": "9.58.0",
-    "@auto-it/all-contributors": "9.58.0",
-    "@design-systems/cli": "1.7.2-canary.215.5073.0",
+    "@auto-it/all-contributors": "9.59.1",
+    "@auto-it/gh-pages": "9.59.1",
+    "@auto-it/released": "9.59.1",
+    "@design-systems/cli": "2.6.1",
     "@storybook/addon-docs": "6.0.0-beta.5",
     "@testing-library/react": "8.0.4",
     "@types/react-dom": "16.8.4",
-    "auto": "9.58.0",
+    "auto": "9.59.1",
     "html-webpack-insert-text-plugin": "1.0.3",
     "html-webpack-plugin": "4.3.0",
     "husky": "2.7.0",
@@ -41,7 +41,8 @@
     "lint-staged": "^9.0.0",
     "prettier": "1.18.2",
     "react": "16.8.6",
-    "react-dom": "16.8.6"
+    "react-dom": "16.8.6",
+    "source-map-loader": "1.1.0"
   },
   "prettier": {
     "singleQuote": true

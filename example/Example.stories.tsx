@@ -4,13 +4,13 @@ import { Button } from '@storybook/react/demo';
 import mdx from './Example.mdx';
 
 export default {
-  title: 'Button',
+  title: 'Examples/Button',
   component: Button,
   parameters: {
     docs: {
-      page: mdx
-    }
-  }
+      page: mdx,
+    },
+  },
 };
 
 export const Basic = () => <Button>Hello Button</Button>;

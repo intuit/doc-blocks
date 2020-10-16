@@ -1,16 +1,16 @@
-import { Story, Meta, Preview } from '@storybook/addon-docs/blocks';
+import { Story, Meta, Canvas } from '@storybook/addon-docs/blocks';
 
 import { BundleSize } from '.';
 import notes from '../README.md';
 
-<Meta title="Components|Bundle Size" parameters={{ notes }} />
+<Meta title="Components/Bundle Size" parameters={{ notes }} />
 
 # @doc-blocks/bundle-size
 
 A component that makes displays an bundle-size tag.
 
-<Preview>
+<Canvas>
   <Story name="Basic Usage">
     <BundleSize size="1.2 kB" />
   </Story>
-</Preview>
+</Canvas>

@@ -1,34 +1,34 @@
-import { Story, Meta, Preview } from '@storybook/addon-docs/blocks';
+import { Story, Meta, Canvas } from '@storybook/addon-docs/blocks';
 
 import { Shield } from '.';
 
 import notes from '../README.md';
 
-<Meta title="Components|Shield" parameters={{ notes }} />
+<Meta title="Components/Shield" parameters={{ notes }} />
 
 # @doc-blocks/shield
 
 A component that makes displays a information badge.
 
-<Preview>
+<Canvas>
   <Story name="Version">
     <Shield label="version" message="1.0.0" />
   </Story>
-</Preview>
+</Canvas>
 
 You can customize the color
 
-<Preview>
+<Canvas>
   <Story name="Accessibility">
     <Shield label="a11y" message="reduced-motion" color="#c9007a"/>
   </Story>
-</Preview>
+</Canvas>
 
 And even use it as a link
 
-<Preview>
+<Canvas>
   <Story name="Url">
     <Shield label="search" message="google" url="https://google.com" />
   </Story>
-</Preview>
+</Canvas>
 

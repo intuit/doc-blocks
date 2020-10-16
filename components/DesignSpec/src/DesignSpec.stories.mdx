@@ -1,15 +1,15 @@
-import { Story, Meta, Preview } from '@storybook/addon-docs/blocks';
+import { Story, Meta, Canvas } from '@storybook/addon-docs/blocks';
 
 import { DesignSpec } from '.';
 import notes from '../README.md';
 
-<Meta title="Components|DesignSpec" parameters={{ notes }} />
+<Meta title="Components/DesignSpec" parameters={{ notes }} />
 
 # @doc-blocks/design-spec
 
 A component that makes displays a link to a design spec.
 
-<Preview>
+<Canvas>
   <Story name="Basic Usage">
     <DesignSpec type="abstract" url="http://abstract.com/" />
     <div style={{ height: 20 }} />
@@ -19,4 +19,4 @@ A component that makes displays a link to a design spec.
     <div style={{ height: 20 }} />
     <DesignSpec type="something else" url="http://figma.com/" />
   </Story>
-</Preview>
+</Canvas>

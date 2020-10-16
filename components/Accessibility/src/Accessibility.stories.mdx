@@ -1,16 +1,16 @@
-import { Story, Meta, Preview } from '@storybook/addon-docs/blocks';
+import { Story, Meta, Canvas } from '@storybook/addon-docs/blocks';
 
 import { Accessibility } from '.';
 import notes from '../README.md';
 
-<Meta title="Components|Accessibility" parameters={{ notes }} />
+<Meta title="Components/Accessibility" parameters={{ notes }} />
 
 # @doc-blocks/accessibility
 
 A component that makes displays an accessibility tag.
 
-<Preview>
+<Canvas>
   <Story name="Basic Usage">
     <Accessibility tag="reduced-motion" />
   </Story>
-</Preview>
+</Canvas>

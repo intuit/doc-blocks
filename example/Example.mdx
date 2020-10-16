@@ -1,4 +1,4 @@
-import { Story, Meta, Preview } from '@storybook/addon-docs/blocks';
+import { Story, Meta, Canvas } from '@storybook/addon-docs/blocks';
 import { Button } from '@storybook/react/demo';
 
 import { Accessibility } from '@doc-blocks/accessibility';
@@ -13,8 +13,6 @@ import { ShieldRow } from '@doc-blocks/shield-row';
 import { Version } from '@doc-blocks/version';
 
 import { version } from './package.json';
-
-<Meta title="Example|Button" />
 
 # Button
 
@@ -61,9 +59,9 @@ Buttons allow users to take actions, and make choices, with a single tap.
 
   </div>
 
-  <Preview>
+  <Canvas>
     <Story id="button--basic" />
-  </Preview>
+  </Canvas>
 </Row>
 
 ### Usage Guidelines

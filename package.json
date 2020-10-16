@@ -30,7 +30,7 @@
     "@auto-it/gh-pages": "9.59.1",
     "@auto-it/released": "9.59.1",
     "@design-systems/cli": "2.6.1",
-    "@storybook/addon-docs": "6.0.0-beta.5",
+    "@storybook/addon-docs": "6.0.26",
     "@testing-library/react": "8.0.4",
     "@types/react-dom": "16.8.4",
     "auto": "9.59.1",

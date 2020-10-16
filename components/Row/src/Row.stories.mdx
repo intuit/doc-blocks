@@ -1,15 +1,15 @@
-import { Story, Meta, Preview } from '@storybook/addon-docs/blocks';
+import { Story, Meta, Canvas } from '@storybook/addon-docs/blocks';
 
 import { Row } from '.';
 import notes from '../README.md';
 
-<Meta title="Components|Row" parameters={{ notes }} />
+<Meta title="Components/Row" parameters={{ notes }} />
 
 # @doc-blocks/row
 
 The `Row` component makes it simple to lay out any piece of content next to each other.
 
-<Preview>
+<Canvas>
   <Story name="Basic Usage">
     <Row>
       <div style={{ height: 60, width: '100%', background: 'black' }} />
@@ -17,22 +17,22 @@ The `Row` component makes it simple to lay out any piece of content next to each
       <div style={{ height: 60, width: '100%', background: 'black' }} />
     </Row>
   </Story>
-</Preview>
+</Canvas>
 
 If you have a story you want to add a bit of context to, you can use the `type="large-text"` prop to add a large text area
 
-<Preview>
+<Canvas>
   <Story name="Large Text">
     <Row type="large-text">
       <div style={{ height: 60, width: '100%', background: 'black' }} />
       <div style={{ height: 60, width: '100%', background: 'black' }} />
     </Row>
   </Story>
-</Preview>
+</Canvas>
 
 Here is what it looks like with some mock content
 
-<Preview>
+<Canvas>
   <Row type="large-text">
     <div>
       <h1>Title</h1>
@@ -49,8 +49,8 @@ Here is what it looks like with some mock content
         placerat mi enim vel leo.
       </p>
     </div>
-    <Preview>
+    <Canvas>
       <Story id="components-header-link--single" />
-    </Preview>
+    </Canvas>
   </Row>
-</Preview>
+</Canvas>

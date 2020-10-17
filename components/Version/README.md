@@ -15,8 +15,8 @@ yarn add @doc-blocks/version
 **Example:**
 
 ```jsx
-import { Version } from '@doc-blocks/version';
-import { version } from '../package.json';
+import { Version } from "@doc-blocks/version";
+import { version } from "../package.json";
 
 <Version current={version} url="link to changelog" />;
 ```

@@ -1,2 +1,2 @@
-export * from './Gallery';
-export * from './DesignSpecPlugin';
+export * from "./Gallery";
+export * from "./DesignSpecPlugin";

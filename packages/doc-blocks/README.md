@@ -27,5 +27,5 @@ yarn add doc-blocks
 Then import the component you want to use
 
 ```js
-import { Row } from 'doc-blocks';
+import { Row } from "doc-blocks";
 ```

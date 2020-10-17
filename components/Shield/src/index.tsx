@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-import React from 'react';
-import { css } from 'emotion';
+import React from "react";
+import { css } from "emotion";
 
 interface ShieldProps {
   /** The current label */
@@ -16,17 +16,17 @@ interface ShieldProps {
 }
 
 type AnchorProps = JSX.LibraryManagedAttributes<
-  'a',
-  React.ComponentPropsWithoutRef<'a'>
+  "a",
+  React.ComponentPropsWithoutRef<"a">
 >;
 
 /** A simple component. */
 export const Shield = ({
   label,
   message,
-  color = 'orange',
+  color = "orange",
   title,
-  url
+  url,
 }: ShieldProps) => {
   const Wrapper = url
     ? (p: AnchorProps) => (
@@ -38,7 +38,7 @@ export const Shield = ({
           rel="noopener noreferrer"
         />
       )
-    : 'span';
+    : "span";
 
   return (
     <Wrapper

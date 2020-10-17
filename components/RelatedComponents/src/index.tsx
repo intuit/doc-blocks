@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from '@storybook/components';
-import { navigate } from '@storybook/addon-links/dist/preview';
-import { css } from 'emotion';
+import React from "react";
+import { Link } from "@storybook/components";
+import { navigate } from "@storybook/addon-links/dist/preview";
+import { css } from "emotion";
 
 interface KindLinkProps {
   /** Text of the link */
@@ -43,8 +43,8 @@ export const RelatedComponents = (props: RelatedComponentsProps) => (
     <span>
       {props.components.map((component, i) => (
         <React.Fragment key={component}>
-          <KindLink kind={component}>{component.split('/')[1]}</KindLink>
-          {i !== props.components.length - 1 && ', '}
+          <KindLink kind={component}>{component.split("/")[1]}</KindLink>
+          {i !== props.components.length - 1 && ", "}
         </React.Fragment>
       ))}
     </span>

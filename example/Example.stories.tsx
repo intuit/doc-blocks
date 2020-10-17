@@ -1,10 +1,10 @@
-import React from 'react';
-import { Button } from '@storybook/react/demo';
+import React from "react";
+import { Button } from "@storybook/react/demo";
 
-import mdx from './Example.mdx';
+import mdx from "./Example.mdx";
 
 export default {
-  title: 'Examples/Button',
+  title: "Examples/Button",
   component: Button,
   parameters: {
     docs: {

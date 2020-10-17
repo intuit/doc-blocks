@@ -1,8 +1,8 @@
-import { Story, Meta, Canvas } from '@storybook/addon-docs/blocks';
-import { ThemeProvider, themes, ensure } from '@storybook/theming';
+import { Story, Meta, Canvas } from "@storybook/addon-docs/blocks";
+import { ThemeProvider, themes, ensure } from "@storybook/theming";
 
-import { RelatedComponents } from '.';
-import notes from '../README.md';
+import { RelatedComponents } from ".";
+import notes from "../README.md";
 
 <Meta title="Components/Related-Components" parameters={{ notes }} />
 
@@ -14,10 +14,7 @@ A component that makes it easy to list a bunch of related components.
   <Story name="Basic Usage">
     <ThemeProvider theme={ensure(themes.light)}>
       <RelatedComponents
-        components={[
-          'Components/Responsive Story',
-          'Components/Row'
-        ]}
+        components={["Components/Responsive Story", "Components/Row"]}
       />
     </ThemeProvider>
   </Story>

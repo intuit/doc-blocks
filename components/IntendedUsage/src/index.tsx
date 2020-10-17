@@ -1,7 +1,7 @@
-import React from 'react';
-import { Element } from '@design-systems/utils';
+import React from "react";
+import { Element } from "@design-systems/utils";
 
-import { css } from 'emotion';
+import { css } from "emotion";
 
 interface IntendedUsageProps {
   /** The title of the section */
@@ -16,7 +16,7 @@ export const IntendedUsage = ({
   sectionTitle,
   icon,
   ...props
-}: Element<'div'> & IntendedUsageProps) => (
+}: Element<"div"> & IntendedUsageProps) => (
   <div
     {...props}
     className={css`
@@ -35,7 +35,7 @@ export const IntendedUsage = ({
       }
 
       li:before {
-        content: '${icon}';
+        content: "${icon}";
         position: absolute;
         left: 0;
         top: 6px;
@@ -56,11 +56,11 @@ export const IntendedUsage = ({
 );
 
 /** A component that lists what the component being documented is intended to be used like. */
-export const BestFor = (props: Element<'div'>) => (
+export const BestFor = (props: Element<"div">) => (
   <IntendedUsage sectionTitle="Best For" icon="✅" {...props} />
 );
 
 /** A component that lists what the component being documented is not intended to be used like. */
-export const NotFor = (props: Element<'div'>) => (
+export const NotFor = (props: Element<"div">) => (
   <IntendedUsage sectionTitle="Not For" icon="❌" {...props} />
 );

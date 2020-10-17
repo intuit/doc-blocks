@@ -1,19 +1,19 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
-import React from 'react';
-import { DesignSpec } from '@doc-blocks/design-spec';
-import { Row } from '@doc-blocks/row';
-import { Shield } from '@doc-blocks/shield';
-import { ShieldRow } from '@doc-blocks/shield-row';
-import { Story, Canvas } from '@storybook/addon-docs/blocks';
-import styled from '@emotion/styled';
-import LinkTo from '@storybook/addon-links/dist/react';
-import Markdown from 'markdown-to-jsx';
-import { css } from 'emotion';
-import useLayoutEffect from 'use-isomorphic-layout-effect';
+import React from "react";
+import { DesignSpec } from "@doc-blocks/design-spec";
+import { Row } from "@doc-blocks/row";
+import { Shield } from "@doc-blocks/shield";
+import { ShieldRow } from "@doc-blocks/shield-row";
+import { Story, Canvas } from "@storybook/addon-docs/blocks";
+import styled from "@emotion/styled";
+import LinkTo from "@storybook/addon-links/dist/react";
+import Markdown from "markdown-to-jsx";
+import { css } from "emotion";
+import useLayoutEffect from "use-isomorphic-layout-effect";
 
-import { StorybookReference } from './story-reference';
-import { ComponentSpec } from './types';
+import { StorybookReference } from "./story-reference";
+import { ComponentSpec } from "./types";
 
 export const StoryWrapper = styled.div`
   display: flex;
@@ -79,9 +79,9 @@ interface GalleryItemProps extends StoryInclusionProps {
 /** A component showcase */
 export const GalleryItem = ({
   name,
-  includedStoryNames = ['Basic'],
+  includedStoryNames = ["Basic"],
   excludedStoryNames = [],
-  matchPath = '',
+  matchPath = "",
   titleStory,
 }: GalleryItemProps) => {
   const allStories = getStories();
@@ -99,20 +99,20 @@ export const GalleryItem = ({
     features.stories[0];
 
   const firstStoryId = `${features.kind
-    .replace(/\//g, '-')
-    .replace(/\s+-\s+/g, '-')
-    .replace(/\s/g, '-')
-    .toLowerCase()}--${firstStory.name.replace(/[\s\\/]/g, '-').toLowerCase()}`;
+    .replace(/\//g, "-")
+    .replace(/\s+-\s+/g, "-")
+    .replace(/\s/g, "-")
+    .toLowerCase()}--${firstStory.name.replace(/[\s\\/]/g, "-").toLowerCase()}`;
 
   const designSpec = ((process.env
     .DESIGN_SPECS as any) as ComponentSpec[]).find(
     (spec) => spec.name === name
   );
-  const category = features.kind.split('/')[0];
+  const category = features.kind.split("/")[0];
   const renderShieldRow =
     (designSpec?.type && designSpec.url) ||
-    category === 'Utilities' ||
-    category === 'Experimental';
+    category === "Utilities" ||
+    category === "Experimental";
 
   return (
     <Row
@@ -130,7 +130,7 @@ export const GalleryItem = ({
           <StorybookReference
             kind={`${category} - ${name}`}
             story={titleStory || firstStory.name}
-            style={{ color: '#393a3d' }}
+            style={{ color: "#393a3d" }}
           >
             {name}
           </StorybookReference>
@@ -141,10 +141,10 @@ export const GalleryItem = ({
             {designSpec?.type && designSpec.url && (
               <DesignSpec type={designSpec.type} url={designSpec.url} />
             )}
-            {category === 'Utilities' && (
+            {category === "Utilities" && (
               <Shield color="#0077c5" label="Type" message="Utility" />
             )}
-            {category === 'Experimental' && (
+            {category === "Experimental" && (
               <Shield color="#ff6a00" label="Type" message="Experimental" />
             )}
           </ShieldRow>
@@ -201,7 +201,7 @@ export const Character = styled.div`
 
   ${(props: CharacterProps) =>
     props.disabled
-      ? 'cursor: no-drop;'
+      ? "cursor: no-drop;"
       : `
         &:hover,
         &:focus {
@@ -222,7 +222,7 @@ const AlphabetNavigation = (props: AlphabetNavigationProps) => {
   const chars = React.useMemo(() => {
     const usedCharacters = new Set(
       props.stories.map((story) => {
-        return story.kind.split('/')[1][0];
+        return story.kind.split("/")[1][0];
       })
     );
     const items: React.ReactNode[] = [];
@@ -237,7 +237,7 @@ const AlphabetNavigation = (props: AlphabetNavigationProps) => {
           onClick={() =>
             document
               .querySelector(`.${char}`)
-              ?.scrollIntoView({ behavior: 'smooth' })
+              ?.scrollIntoView({ behavior: "smooth" })
           }
         >
           {char}
@@ -261,15 +261,15 @@ export const Gallery = ({
   excludedComponents = [],
   excludedStoryNames,
   includedStoryNames,
-  matchPath = '',
-  titleStory
+  matchPath = "",
+  titleStory,
 }: GalleryProps) => {
   const [allStories, setAllStories] = React.useState<Kind[]>([]);
   const items = React.useMemo(() => {
     return allStories
-      .sort((a, b) => a.kind.split('/')[1].localeCompare(b.kind.split('/')[1]))
+      .sort((a, b) => a.kind.split("/")[1].localeCompare(b.kind.split("/")[1]))
       .map((component) => {
-        const name = component.kind.split('/')[1];
+        const name = component.kind.split("/")[1];
         return (
           <GalleryItem
             key={name}
@@ -281,7 +281,13 @@ export const Gallery = ({
           />
         );
       });
-  }, [allStories, includedStoryNames, excludedStoryNames, matchPath, titleStory]);
+  }, [
+    allStories,
+    includedStoryNames,
+    excludedStoryNames,
+    matchPath,
+    titleStory,
+  ]);
 
   useLayoutEffect(() => {
     setAllStories(

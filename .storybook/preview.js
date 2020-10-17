@@ -1,5 +1,5 @@
-import React from 'react';
-import * as dsPreview from '@design-systems/storybook/preview';
+import React from "react";
+import * as dsPreview from "@design-systems/storybook/preview";
 
 const compare = (order) => (a, b) => {
   let first = order.findIndex((str) => str === a.toLowerCase());
@@ -11,7 +11,7 @@ const compare = (order) => (a, b) => {
   return first < second ? -1 : second < first ? 1 : 0;
 };
 
-const sectionOrder = ['gallery', 'examples', 'components'];
+const sectionOrder = ["gallery", "examples", "components"];
 
 const sectionCompare = compare(sectionOrder);
 
@@ -21,8 +21,8 @@ export const parameters = {
   ...dsPreview.parameters,
   options: {
     storySort: ([, a], [, b]) => {
-      const [aSection, aComponent] = a.kind.split('/');
-      const [bSection, bComponent] = b.kind.split('/');
+      const [aSection, aComponent] = a.kind.split("/");
+      const [bSection, bComponent] = b.kind.split("/");
 
       if (aSection === bSection) {
         // Sort components alphabetically

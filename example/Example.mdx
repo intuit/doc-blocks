@@ -1,18 +1,18 @@
-import { Story, Meta, Canvas } from '@storybook/addon-docs/blocks';
-import { Button } from '@storybook/react/demo';
+import { Story, Meta, Canvas } from "@storybook/addon-docs/blocks";
+import { Button } from "@storybook/react/demo";
 
-import { Accessibility } from '@doc-blocks/accessibility';
-import { BundleSize } from '@doc-blocks/bundle-size';
-import { DesignSpec } from '@doc-blocks/design-spec';
-import { Do, Dont } from '@doc-blocks/guideline';
-import { BestFor, NotFor } from '@doc-blocks/intended-usage';
-import { RelatedComponents } from '@doc-blocks/related-components';
-import { ResponsiveStory } from '@doc-blocks/responsive-story';
-import { Row } from '@doc-blocks/row';
-import { ShieldRow } from '@doc-blocks/shield-row';
-import { Version } from '@doc-blocks/version';
+import { Accessibility } from "@doc-blocks/accessibility";
+import { BundleSize } from "@doc-blocks/bundle-size";
+import { DesignSpec } from "@doc-blocks/design-spec";
+import { Do, Dont } from "@doc-blocks/guideline";
+import { BestFor, NotFor } from "@doc-blocks/intended-usage";
+import { RelatedComponents } from "@doc-blocks/related-components";
+import { ResponsiveStory } from "@doc-blocks/responsive-story";
+import { Row } from "@doc-blocks/row";
+import { ShieldRow } from "@doc-blocks/shield-row";
+import { Version } from "@doc-blocks/version";
 
-import { version } from './package.json';
+import { version } from "./package.json";
 
 # Button
 
@@ -25,44 +25,52 @@ import { version } from './package.json';
 
 Buttons allow users to take actions, and make choices, with a single tap.
 
-<RelatedComponents components={['Components/Shield']} />
+<RelatedComponents components={["Components/Shield"]} />
 
 <Row>
 
+
 <BestFor>
+
 
 - Taking action within a page
 
 </BestFor>
 
+
 <NotFor>
+
 
 - Navigation between pages
 
 </NotFor>
 
+
 </Row>
+
 
 ## Types
 
 <Row>
   <div>
 
-  ### Side by side (column size flexible)
 
-  Description of type and breakdown of usage.
+### Side by side (column size flexible)
 
-  - one
-  - two
-  - three
+Description of type and breakdown of usage.
 
+- one
+- two
+- three
 
   </div>
+
 
   <Canvas>
     <Story id="button--basic" />
   </Canvas>
 </Row>
+
 
 ### Usage Guidelines
 
@@ -82,11 +90,14 @@ Description of variants and breakdown of usage. This text block expands to the f
 <Row>
   <div>
 
-  ### Scenario 1 (example with a mobile shell)
 
-  Typical application of one of the component variants
+### Scenario 1 (example with a mobile shell)
+
+Typical application of one of the component variants
 
   </div>
 
+
   <ResponsiveStory id="button--basic" label="Basic Button" top={150} align="center" />
 </Row>
+

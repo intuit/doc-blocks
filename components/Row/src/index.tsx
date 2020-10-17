@@ -1,12 +1,12 @@
-import React from 'react';
-import { Element } from '@design-systems/utils';
-import { css, cx } from 'emotion';
+import React from "react";
+import { Element } from "@design-systems/utils";
+import { css, cx } from "emotion";
 
-export interface RowProps extends Element<'div'> {
+export interface RowProps extends Element<"div"> {
   /** The space between items in the row */
   gap?: number;
   /** A specific type of row */
-  type?: 'large-text';
+  type?: "large-text";
 }
 
 /** Render a story in an iframe so it's responsive */
@@ -29,9 +29,9 @@ export const Row = ({ gap = 40, type, className, ...props }: RowProps) => (
 
         @media (min-width: 992px) {
           grid-auto-flow: column;
-          grid-template-columns: ${type === 'large-text'
-            ? '2fr 1fr'
-            : 'repeat(auto-fit, minmax(200px, 1fr))'};
+          grid-template-columns: ${type === "large-text"
+            ? "2fr 1fr"
+            : "repeat(auto-fit, minmax(200px, 1fr))"};
         }
       `
     )}

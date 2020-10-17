@@ -12,5 +12,5 @@
 //   webpackFinal: async config => modifyWebpack(await webpackFinal(config))
 // };
 module.exports = {
-  presets: ['@storybook/addon-docs/preset', '@design-systems/storybook/preset']
+  presets: ["@storybook/addon-docs/preset", "@design-systems/storybook/preset"],
 };

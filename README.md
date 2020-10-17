@@ -23,7 +23,7 @@ yarn add @doc-blocks/row
 Then to use the component in your code just import it!
 
 ```js
-import { Row } from '@doc-blocks/row';
+import { Row } from "@doc-blocks/row";
 ```
 
 If you don't want to install all of the different components you can install [`doc-blocks`](./packages/doc-blocks/README.md).

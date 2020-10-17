@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable import/no-extraneous-dependencies */
 
-import React from 'react';
-import { hrefTo, navigate } from '@storybook/addon-links/dist/preview';
-import { Link } from '@storybook/components';
-import { Element } from '@design-systems/utils';
+import React from "react";
+import { hrefTo, navigate } from "@storybook/addon-links/dist/preview";
+import { Link } from "@storybook/components";
+import { Element } from "@design-systems/utils";
 
-interface StorybookLinkProps extends Element<'a'> {
+interface StorybookLinkProps extends Element<"a"> {
   /** Story kind to link to */
   kind: string;
   /** Story title to link to */
@@ -26,17 +26,17 @@ export const StorybookReference = ({
     <a
       {...html}
       // @ts-ignore
-      style={{ ...style, textDecoration: 'none' }}
+      style={{ ...style, textDecoration: "none" }}
       href="_blank"
       onClick={(e) => {
         if (e.metaKey) {
           hrefTo(kind, story).then((resolvedHref) => {
             window.open(
               resolvedHref
-                .replace('?id=', '?path=/story/')
-                .replace('iframe', 'index')
-                .replace('--', '-')
-                .replace('&viewMode=story', '--page')
+                .replace("?id=", "?path=/story/")
+                .replace("iframe", "index")
+                .replace("--", "-")
+                .replace("&viewMode=story", "--page")
             );
           });
 

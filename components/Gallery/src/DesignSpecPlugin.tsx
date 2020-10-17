@@ -1,21 +1,20 @@
-import fs from 'fs';
-import path from 'path';
-import glob from 'fast-glob';
-import webpack from 'webpack';
+import fs from "fs";
+import path from "path";
+import glob from "fast-glob";
+import webpack from "webpack";
 
-import { ComponentSpec } from './types';
+import { ComponentSpec } from "./types";
 
 /** Gather all of the design specs */
 export const getOverviewSpecs = async (): Promise<ComponentSpec[]> => {
-
   // TODO
   const overviews = await glob(
-    path.resolve(path.join(__dirname, '../components/**/Overview.stories.mdx'))
+    path.resolve(path.join(__dirname, "../components/**/Overview.stories.mdx"))
   );
 
   return overviews
     .map((overview) => {
-      const contents = fs.readFileSync(overview, { encoding: 'utf-8' });
+      const contents = fs.readFileSync(overview, { encoding: "utf-8" });
       const [, componentName] =
         overview.match(/\/components\/([^\\/]+)\//) || [];
 
@@ -25,8 +24,8 @@ export const getOverviewSpecs = async (): Promise<ComponentSpec[]> => {
         contents.match(/<DesignSpec\s+type="(\S+)"\s+url="(\S+)"/) || [];
 
       const readMe = fs.readFileSync(
-        path.join(__dirname, '../components/', componentName, 'README.md'),
-        { encoding: 'utf-8' }
+        path.join(__dirname, "../components/", componentName, "README.md"),
+        { encoding: "utf-8" }
       );
       const [, description] = readMe.match(/# .*\n\n(.*)/m) || [];
 
@@ -57,7 +56,7 @@ export const createGallerySpecs = async ({
   const designSpecs = await getSpecs();
 
   return new webpack.DefinePlugin({
-    'process.env': {
+    "process.env": {
       DESIGN_SPECS: JSON.stringify(designSpecs),
     },
   });

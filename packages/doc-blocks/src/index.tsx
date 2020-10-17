@@ -2,6 +2,7 @@ export * from '@doc-blocks/accessibility';
 export * from '@doc-blocks/bundle-size';
 export * from '@doc-blocks/design-spec';
 export * from '@doc-blocks/guideline';
+export * from '@doc-blocks/gallery';
 export * from '@doc-blocks/intended-usage';
 export * from '@doc-blocks/related-components';
 export * from '@doc-blocks/responsive-story';

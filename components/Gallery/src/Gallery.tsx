@@ -61,6 +61,8 @@ const getStories = () => {
 };
 
 interface StoryInclusionProps {
+  /** Story to make the component title link to */
+  titleStory?: string;
   /** Story name to include as the story in the gallery */
   includedStoryNames?: string[];
   /** Story name to not include as the story in the gallery */
@@ -80,6 +82,7 @@ export const GalleryItem = ({
   includedStoryNames = ['Basic'],
   excludedStoryNames = [],
   matchPath = '',
+  titleStory,
 }: GalleryItemProps) => {
   const allStories = getStories();
   const features = allStories.filter((item) =>
@@ -126,7 +129,7 @@ export const GalleryItem = ({
         <h2 className={name[0]}>
           <StorybookReference
             kind={`${category} - ${name}`}
-            story="Overview"
+            story={titleStory || firstStory.name}
             style={{ color: '#393a3d' }}
           >
             {name}
@@ -259,6 +262,7 @@ export const Gallery = ({
   excludedStoryNames,
   includedStoryNames,
   matchPath = '',
+  titleStory
 }: GalleryProps) => {
   const [allStories, setAllStories] = React.useState<Kind[]>([]);
   const items = React.useMemo(() => {
@@ -270,13 +274,14 @@ export const Gallery = ({
           <GalleryItem
             key={name}
             name={name}
+            titleStory={titleStory}
             matchPath={matchPath}
             excludedStoryNames={excludedStoryNames}
             includedStoryNames={includedStoryNames}
           />
         );
       });
-  }, [allStories, includedStoryNames, excludedStoryNames, matchPath]);
+  }, [allStories, includedStoryNames, excludedStoryNames, matchPath, titleStory]);
 
   useLayoutEffect(() => {
     setAllStories(

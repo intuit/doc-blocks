@@ -7,6 +7,8 @@ import { ComponentSpec } from './types';
 
 /** Gather all of the design specs */
 export const getOverviewSpecs = async (): Promise<ComponentSpec[]> => {
+
+  // TODO
   const overviews = await glob(
     path.resolve(path.join(__dirname, '../components/**/Overview.stories.mdx'))
   );

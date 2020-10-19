@@ -29,6 +29,14 @@ A showcase of frequently-used components.
 <Gallery />
 ```
 
+## Props
+
+- `excludedComponents` - Component names to exclude from the gallery
+- `excludedStoryNames` - Story names to exclude from the gallery
+- `includedStoryNames` - Story names to include from the gallery
+- `matchPath` - Storybook folder path that matched stories should live in. (ex: `Features`)
+- `titleStory` - Story to make the component title link to
+
 ### Add to webpack
 
 If you want the components to have a description and link to the design spec add the following to your storybook's webpack configuration.
@@ -114,7 +122,7 @@ module.exports = async (config) => {
   config.plugins.push(
     createGallerySpecs({
       specs: await getOverviewSpecs({
-        componentDirectory: path.join(__dirname, "../components")
+        componentDirectory: path.join(__dirname, "../components"),
       }),
     })
   );

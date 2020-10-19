@@ -6,21 +6,11 @@
 
 #### 🐛 Bug Fix
 
+- make component dir configurable for getOverviewSpecs ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- split up webpack code and component code ([@hipstersmoothie](https://github.com/hipstersmoothie))
 - upgrade prettier ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- make component title link story configurable and fall back to first story ([@hipstersmoothie](https://github.com/hipstersmoothie))
 - Add Gallery component ([@hipstersmoothie](https://github.com/hipstersmoothie))
-
-#### Authors: 1
-
-- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
-
----
-
-# v0.6.5 (Wed Oct 14 2020)
-
-#### ⚠️ Pushed to `master`
-
-- add publishConfig ([@hipstersmoothie](https://github.com/hipstersmoothie))
-- init ([@hipstersmoothie](https://github.com/hipstersmoothie))
 
 #### Authors: 1
 

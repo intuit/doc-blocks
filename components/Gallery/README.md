@@ -31,9 +31,11 @@ A showcase of frequently-used components.
 
 ## Props
 
+All of the props are optional.
+
+- `includedStoryNames` - Story names to include from the gallery (default: [`Basic`])
 - `excludedComponents` - Component names to exclude from the gallery
 - `excludedStoryNames` - Story names to exclude from the gallery
-- `includedStoryNames` - Story names to include from the gallery
 - `matchPath` - Storybook folder path that matched stories should live in. (ex: `Features`)
 - `titleStory` - Story to make the component title link to
 

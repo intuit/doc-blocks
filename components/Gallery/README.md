@@ -50,7 +50,7 @@ function getSpecs() {
 }
 
 module.exports = async (config) => {
-  config.plugins.push(await createGallerySpecs({ getSpecs }));
+  config.plugins.push(await createGallerySpecs({ specs: getSpecs() }));
   return config;
 };
 ```
@@ -102,13 +102,22 @@ import BadgeDocs from './Badge.mdx';
 <BadgeDocs />
 ```
 
-Just modify the webpack confuration to use this function:
+Just modify the webpack configuration to use this function:
 
 ```js
-const { createGallerySpecs, getOverviewSpecs } = require("@doc-blocks/gallery/specs");
+const {
+  createGallerySpecs,
+  getOverviewSpecs,
+} = require("@doc-blocks/gallery/specs");
 
 module.exports = async (config) => {
-  config.plugins.push(await createGallerySpecs({ getSpecs: getOverviewSpecs }));
+  config.plugins.push(
+    createGallerySpecs({
+      specs: await getOverviewSpecs({
+        componentDirectory: path.join(__dirname, "../components")
+      }),
+    })
+  );
   return config;
 };
 ```

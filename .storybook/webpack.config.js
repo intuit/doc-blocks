@@ -12,7 +12,7 @@ function getSpecs() {
 }
 
 module.exports = async ({ config, env }) => {
-  config.plugins.push(await createGallerySpecs({ getSpecs }));
+  config.plugins.push(await createGallerySpecs({ specs: getSpecs() }));
 
   config.plugins.push(
     new HtmlWebpackInsertPlugin([

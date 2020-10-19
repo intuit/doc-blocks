@@ -13,7 +13,7 @@ yarn add @doc-blocks/shield-row
 Then to use the component in your code just import it!
 
 ```js
-import ShieldRow from '@doc-blocks/shield-row';
+import ShieldRow from "@doc-blocks/shield-row";
 // and with css-modules
-import '@doc-blocks/shield-row/dist/main.css';
+import "@doc-blocks/shield-row/dist/main.css";
 ```

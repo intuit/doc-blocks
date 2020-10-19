@@ -1,19 +1,19 @@
 /* eslint-disable react/no-unused-prop-types */
 
-import React from 'react';
-import makeClass from 'clsx';
+import React from "react";
+import makeClass from "clsx";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import { Source } from '@storybook/addon-docs/blocks';
-import { css } from '@emotion/core';
-import styled from '@emotion/styled';
+import { Source } from "@storybook/addon-docs/blocks";
+import { css } from "@emotion/core";
+import styled from "@emotion/styled";
 
-const devices = ['iPad', 'iPhone', 'mac'] as const;
+const devices = ["iPad", "iPhone", "mac"] as const;
 type Device = typeof devices[number];
 
 interface DeviceProp {
   /** The device to render the story in */
-  device?: 'iPad' | 'iPhone' | 'mac' | 'choose';
+  device?: "iPad" | "iPhone" | "mac" | "choose";
 }
 
 interface IsLandscape {
@@ -28,8 +28,8 @@ const DeviceSelect = styled.select`
   appearance: none;
   font-size: 12px;
   line-height: 16px;
-  font-family: 'Nunito Sans', -apple-system, '.SFNSText-Regular',
-    'San Francisco', BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica,
+  font-family: "Nunito Sans", -apple-system, ".SFNSText-Regular",
+    "San Francisco", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica,
     Arial, sans-serif;
   font-weight: 700;
   padding: 4px 10px;
@@ -68,8 +68,8 @@ const ShowCodeButton = styled.button`
   color: rgb(51, 51, 51);
   font-size: 12px;
   line-height: 16px;
-  font-family: 'Nunito Sans', -apple-system, '.SFNSText-Regular',
-    'San Francisco', BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica,
+  font-family: "Nunito Sans", -apple-system, ".SFNSText-Regular",
+    "San Francisco", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica,
     Arial, sans-serif;
   font-weight: 700;
   margin-left: -1px;
@@ -93,20 +93,20 @@ const Iframe = styled.iframe<IsLandscape & DeviceProp>`
   display: block;
 
   ${({ device, isLandscape }) => css`
-    ${device === 'iPhone' &&
-      isLandscape &&
-      css`
-        padding-left: 30px;
-        box-sizing: border-box;
-      `}
+    ${device === "iPhone" &&
+    isLandscape &&
+    css`
+      padding-left: 30px;
+      box-sizing: border-box;
+    `}
 
-    ${device === 'mac' &&
-      css`
-        width: 1200px;
-        height: 750px;
-        transform: scale(0.8);
-        transform-origin: 0 0;
-      `}
+    ${device === "mac" &&
+    css`
+      width: 1200px;
+      height: 750px;
+      transform: scale(0.8);
+      transform-origin: 0 0;
+    `}
   `}
 `;
 
@@ -124,15 +124,15 @@ const IPhone = ({
   children,
   isLandscape,
   headerColor,
-  headerText
+  headerText,
 }: DeviceProps) => {
   const time = new Date(Date.now());
 
   return (
     <div
       className={makeClass(
-        'marvel-device iphone-x',
-        isLandscape && 'landscape'
+        "marvel-device iphone-x",
+        isLandscape && "landscape"
       )}
     >
       <div className="notch">
@@ -166,8 +166,8 @@ const IPhone = ({
 const IPad = ({ children, isLandscape }: DeviceProps) => (
   <div
     className={makeClass(
-      'marvel-device ipad silver',
-      isLandscape && 'landscape'
+      "marvel-device ipad silver",
+      isLandscape && "landscape"
     )}
   >
     <div className="camera" />
@@ -178,7 +178,7 @@ const IPad = ({ children, isLandscape }: DeviceProps) => (
 
 /** A mock mac */
 const Mac = ({ children }: DeviceProps) => (
-  <div className="marvel-device macbook" style={{ transform: 'scale(0.88)' }}>
+  <div className="marvel-device macbook" style={{ transform: "scale(0.88)" }}>
     <div className="top-bar" />
     <div className="camera" />
     <div className="screen">{children}</div>
@@ -189,15 +189,15 @@ const Mac = ({ children }: DeviceProps) => (
 /** Show only a portion of the device */
 function useTopOrBottom(top: number | undefined, bottom: number | undefined) {
   if (top) {
-    return { height: top, overflowY: 'hidden' } as const;
+    return { height: top, overflowY: "hidden" } as const;
   }
 
   if (bottom) {
     return {
       height: bottom,
-      display: 'flex',
-      alignItems: 'flex-end',
-      overflowY: 'hidden'
+      display: "flex",
+      alignItems: "flex-end",
+      overflowY: "hidden",
     } as const;
   }
 
@@ -207,7 +207,7 @@ function useTopOrBottom(top: number | undefined, bottom: number | undefined) {
 const deviceMap: Record<Device, (props: DeviceProps) => JSX.Element> = {
   iPhone: IPhone,
   iPad: IPad,
-  mac: Mac
+  mac: Mac,
 };
 
 type ResponsiveStoryBaseProps = IsLandscape &
@@ -219,7 +219,7 @@ type ResponsiveStoryBaseProps = IsLandscape &
     /** Display the device in landscape mode */
     isLandscape?: boolean;
     /** How to align the story */
-    align?: 'start' | 'center' | 'end';
+    align?: "start" | "center" | "end";
     /** Color to make iOS header */
     headerColor?: string;
     /** Color to make iOS header text */
@@ -244,9 +244,9 @@ type ResponsiveStoryProps = ResponsiveStoryBaseProps | TopProps | BottomProps;
 export const ResponsiveStory = ({
   id,
   label,
-  device = 'iPhone',
+  device = "iPhone",
   isLandscape,
-  align = 'start',
+  align = "start",
   headerColor,
   headerText,
   screenStyles = {},
@@ -254,28 +254,28 @@ export const ResponsiveStory = ({
 }: ResponsiveStoryProps) => {
   const [open, setOpen] = React.useState(false);
   const [currentDevice, setCurrentDevice] = React.useState<Device>(
-    device === 'choose' ? 'mac' : device
+    device === "choose" ? "mac" : device
   );
 
   const Device = deviceMap[currentDevice];
-  const top = 'top' in rest ? rest.top : undefined;
-  const bottom = 'bottom' in rest ? rest.bottom : undefined;
+  const top = "top" in rest ? rest.top : undefined;
+  const bottom = "bottom" in rest ? rest.bottom : undefined;
 
   // TODO: should scale the device instead of scrolling?
   return (
     <ResponsiveStoryWrapper
       style={{
-        alignItems: align === 'center' ? align : `flex-${align}`
+        alignItems: align === "center" ? align : `flex-${align}`,
       }}
     >
       <div>
         <div
           style={{
             overflowX:
-              currentDevice === 'iPhone' && !isLandscape ? undefined : 'auto',
+              currentDevice === "iPhone" && !isLandscape ? undefined : "auto",
             padding: 10,
-            maxWidth: '100vw',
-            ...useTopOrBottom(top, bottom)
+            maxWidth: "100vw",
+            ...useTopOrBottom(top, bottom),
           }}
         >
           <Device
@@ -286,8 +286,8 @@ export const ResponsiveStory = ({
             <Iframe
               title="Responsive preview"
               src={`${window.location.origin}${window.location.pathname.replace(
-                'index.html',
-                'iframe.html'
+                "index.html",
+                "iframe.html"
               )}?id=${id}`}
               isLandscape={isLandscape}
               device={currentDevice}
@@ -298,14 +298,14 @@ export const ResponsiveStory = ({
 
         <IframeLabel>
           {label && <i>{label}</i>}
-          {device === 'choose' && (
+          {device === "choose" && (
             <DeviceSelect
               value={currentDevice}
-              onChange={e => {
+              onChange={(e) => {
                 setCurrentDevice(e.target.value as Device);
               }}
             >
-              {devices.map(d => (
+              {devices.map((d) => (
                 <option key={d} value={d}>
                   {d}
                 </option>
@@ -313,7 +313,7 @@ export const ResponsiveStory = ({
             </DeviceSelect>
           )}
           <ShowCodeButton type="button" onClick={() => setOpen(!open)}>
-            {open ? 'Hide' : 'Show'} Code
+            {open ? "Hide" : "Show"} Code
           </ShowCodeButton>
         </IframeLabel>
       </div>

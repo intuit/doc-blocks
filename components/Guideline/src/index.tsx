@@ -1,7 +1,7 @@
-import React from 'react';
-import { css } from 'emotion';
-import styled from '@emotion/styled';
-import { Element } from '@design-systems/utils'
+import React from "react";
+import { css } from "emotion";
+import styled from "@emotion/styled";
+import { Element } from "@design-systems/utils";
 
 interface LineProps {
   /** The color of the line */
@@ -12,7 +12,7 @@ const Line = styled.div<LineProps>`
   width: 100%;
   height: 10px;
   margin-bottom: 8px;
-  background-color: ${props => props.color};
+  background-color: ${(props) => props.color};
 `;
 
 interface CreateGuidelineProps {
@@ -22,7 +22,7 @@ interface CreateGuidelineProps {
   color: string;
 }
 
-interface GuidelineProps extends Element<'div'> {
+interface GuidelineProps extends Element<"div"> {
   /** The label for the guideline */
   label: React.ReactNode;
 }

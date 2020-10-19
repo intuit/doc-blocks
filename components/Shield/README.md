@@ -15,7 +15,7 @@ yarn add @doc-blocks/shield
 **Example:**
 
 ```jsx
-import { Shield } from '@doc-blocks/shield';
+import { Shield } from "@doc-blocks/shield";
 
-<Shield label={'version'} message={'v1.0.0'} />;
+<Shield label={"version"} message={"v1.0.0"} />;
 ```

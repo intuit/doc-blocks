@@ -1,9 +1,9 @@
-import { Story, Meta, Preview } from '@storybook/addon-docs/blocks';
+import { Story, Meta, Canvas } from "@storybook/addon-docs/blocks";
 
-import { BestFor, NotFor } from '.';
-import notes from '../README.md';
+import { BestFor, NotFor } from ".";
+import notes from "../README.md";
 
-<Meta title="Components|Intended Usage" parameters={{ notes }} />
+<Meta title="Components/Intended Usage" parameters={{ notes }} />
 
 # @doc-blocks/intended-usage
 
@@ -11,21 +11,25 @@ A component to describe how a component should be used.
 
 <BestFor>
 
+
 - Describing common situations to use your components in.
 
 </BestFor>
 
+
 <NotFor>
 
+
 - Ordering bagels
-  
+
 </NotFor>
+
 
 ## Usage
 
 Describe how to use a component.
 
-<Preview>
+<Canvas>
   <Story name="Best For">
     <BestFor>
       <ul>
@@ -35,25 +39,29 @@ Describe how to use a component.
       </ul>
     </BestFor>
   </Story>
-</Preview>
+</Canvas>
 
 Or how not a component should be used.
 
-<Preview>
+<Canvas>
   <Story name="Not For">
     <NotFor>
       <ul>
         <li>one</li>
         <li>two</li>
-        <li>With a really really really really really really really really really really really really really really really really really really really really really really really really long line</li>
+        <li>
+          With a really really really really really really really really really
+          really really really really really really really really really really
+          really really really really really long line
+        </li>
       </ul>
     </NotFor>
   </Story>
-</Preview>
+</Canvas>
 
 They are best if used together.
 
-<Preview>
+<Canvas>
   <Story name="Together">
     <BestFor>
       <ul>
@@ -70,4 +78,4 @@ They are best if used together.
       </ul>
     </NotFor>
   </Story>
-</Preview>
+</Canvas>

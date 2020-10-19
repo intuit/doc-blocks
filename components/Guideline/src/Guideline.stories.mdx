@@ -1,11 +1,11 @@
-import { Story, Meta, Preview } from '@storybook/addon-docs/blocks';
-import { Button } from '@storybook/react/demo';
-import { Row } from '@doc-blocks/row';
+import { Story, Meta, Canvas } from "@storybook/addon-docs/blocks";
+import { Button } from "@storybook/react/demo";
+import { Row } from "@doc-blocks/row";
 
-import { Do, Dont } from '.';
-import notes from '../README.md';
+import { Do, Dont } from ".";
+import notes from "../README.md";
 
-<Meta title="Components|Guideline" parameters={{ notes }} />
+<Meta title="Components/Guideline" parameters={{ notes }} />
 
 # @doc-blocks/guideline
 
@@ -13,27 +13,27 @@ A component to display the `Do`'s and `Don't`s of you component.
 
 The `Do` guideline should show the right way to use the component.,
 
-<Preview>
+<Canvas>
   <Story name="Do">
     <Do label="Keep button text to 1-2 words">
       <Button>Click me</Button>
     </Do>
   </Story>
-</Preview>
+</Canvas>
 
 The `Don't` guideline should show the wrong way to use the component.
 
-<Preview>
+<Canvas>
   <Story name="Dont">
     <Dont label="Have buttons with more than 2 words">
       <Button>Click me to do the thing that is a</Button>
     </Dont>
   </Story>
-</Preview>
+</Canvas>
 
 Used with `@cgds/row` you can display a pair of `Do/Don't` on one line.
 
-<Preview>
+<Canvas>
   <Story name="A Row of Do/Dont">
     <Row>
       <Do label="Keep button text to 1-2 words">
@@ -44,4 +44,4 @@ Used with `@cgds/row` you can display a pair of `Do/Don't` on one line.
       </Dont>
     </Row>
   </Story>
-</Preview>
+</Canvas>

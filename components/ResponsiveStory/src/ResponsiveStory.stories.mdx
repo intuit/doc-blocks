@@ -1,9 +1,9 @@
-import { Story, Meta, Preview } from '@storybook/addon-docs/blocks';
+import { Story, Meta, Canvas } from "@storybook/addon-docs/blocks";
 
-import { ResponsiveStory } from '.';
-import notes from '../README.md';
+import { ResponsiveStory } from ".";
+import notes from "../README.md";
 
-<Meta title="Components|Responsive Story" parameters={{ notes }} />
+<Meta title="Components/Responsive Story" parameters={{ notes }} />
 
 # @doc-blocks/responsive-story
 
@@ -11,26 +11,26 @@ The `ResponsiveStory` lets you render any story in an `iframe` with a fancy devi
 Since it is in an `iframe` all of the media queries work and your component will actually render at that screen size.
 It will also display the source for the story you are documenting.
 
-<Preview>
+<Canvas>
   <Story name="Basic Usage">
     <ResponsiveStory id="components-row--basic-usage" />
   </Story>
-</Preview>
+</Canvas>
 
 You can add a label to the story for extra context.
 
-<Preview>
+<Canvas>
   <Story name="With Label">
     <ResponsiveStory
       id="components-row--basic-usage"
       label="A label for the story"
     />
   </Story>
-</Preview>
+</Canvas>
 
 It can render as an `iPhone`, `iPad`, or `mac`.
 
-<Preview>
+<Canvas>
   <Story name="Devices">
     <div>
       <ResponsiveStory id="components-row--basic-usage" />
@@ -38,19 +38,19 @@ It can render as an `iPhone`, `iPad`, or `mac`.
       <ResponsiveStory id="components-row--basic-usage" device="mac" />
     </div>
   </Story>
-</Preview>
+</Canvas>
 
 You can also let the user of your docs choose what device to render on.
 
-<Preview>
+<Canvas>
   <Story name="Choose Device">
     <ResponsiveStory id="components-row--basic-usage" device="choose" />
   </Story>
-</Preview>
+</Canvas>
 
 Choose the alignment of the device for the prettiest docs.
 
-<Preview>
+<Canvas>
   <Story name="Align">
     <div>
       <ResponsiveStory id="components-row--basic-usage" />
@@ -58,22 +58,22 @@ Choose the alignment of the device for the prettiest docs.
       <ResponsiveStory id="components-row--basic-usage" align="end" />
     </div>
   </Story>
-</Preview>
+</Canvas>
 
 Show only the important portion of the device.
 
-<Preview>
+<Canvas>
   <Story name="Top or Bottom">
     <div>
       <ResponsiveStory id="components-row--basic-usage" top={200} />
       <ResponsiveStory id="components-row--basic-usage" bottom={200} />
     </div>
   </Story>
-</Preview>
+</Canvas>
 
 Rotate the device to landscape mode to visualize even more device states.
 
-<Preview>
+<Canvas>
   <Story name="Rotate Mobile">
     <div>
       <ResponsiveStory isLandscape id="components-row--basic-usage" />
@@ -84,11 +84,11 @@ Rotate the device to landscape mode to visualize even more device states.
       />
     </div>
   </Story>
-</Preview>
+</Canvas>
 
 Change the color of the header on the `iPhone` to match your product header's color.
 
-<Preview>
+<Canvas>
   <Story name="Mobile Header">
     <ResponsiveStory
       id="components-row--basic-usage"
@@ -96,11 +96,11 @@ Change the color of the header on the `iPhone` to match your product header's co
       headerText="white"
     />
   </Story>
-</Preview>
+</Canvas>
 
 Add styles to the device wrapper.
 
-<Preview>
+<Canvas>
   <Story name="Device Styles">
     <ResponsiveStory
       id="components-row--basic-usage"
@@ -109,17 +109,17 @@ Add styles to the device wrapper.
       screenStyles={{ paddingTop: 20 }}
     />
   </Story>
-</Preview>
+</Canvas>
 
 ---
 
 Or even declare stories right withing MDX when writing MDX only stories.
 
-<Preview style={{ display: 'none' }}>
+<Canvas style={{ display: "none" }}>
   <Story name="test">
     <button>foo</button>
   </Story>
-</Preview>
+</Canvas>
 
 <ResponsiveStory
   id="components-responsive-story--test"

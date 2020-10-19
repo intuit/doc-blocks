@@ -1,5 +1,5 @@
 {
-  "name": "@doc-blocks/related-components",
+  "name": "@doc-blocks/gallery",
   "version": "0.6.5",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -28,23 +28,23 @@
     "size": "ds size"
   },
   "dependencies": {
-    "@babel/runtime": "^7.11.2",
-    "@emotion/core": "^10.0.28",
-    "@emotion/styled": "^10.0.27",
-    "emotion": "^10.0.27"
+    "@babel/runtime": "7.11.2",
+    "@doc-blocks/design-spec": "link:../DesignSpec",
+    "@doc-blocks/row": "link:../Row",
+    "@doc-blocks/shield": "link:../Shield",
+    "@doc-blocks/shield-row": "link:../ShieldRow",
+    "fast-glob": "^3.1.1",
+    "use-isomorphic-layout-effect": "1.0.0"
   },
   "peerDependencies": {
-    "@storybook/addon-links": "6.0.26",
-    "@storybook/components": "6.0.26",
-    "react": ">= 16.8.6"
-  },
-  "devDependencies": {
-    "@storybook/addon-links": "6.0.26",
-    "@storybook/components": "6.0.26"
+    "react": ">= 16.8.6",
+    "webpack": ">= 4.x"
   },
   "files": [
     "dist",
     "src",
+    "specs.js",
+    "specs.d.ts",
     "!*.snippet.*",
     "!*theme.*",
     "!*.test.*",

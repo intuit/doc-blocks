@@ -1,17 +1,17 @@
-import { Story, Meta, Preview } from '@storybook/addon-docs/blocks';
+import { Story, Meta, Canvas } from "@storybook/addon-docs/blocks";
 
-import { Accessibility } from '@doc-blocks/accessibility';
-import { DesignSpec } from '@doc-blocks/design-spec';
-import { Version } from '@doc-blocks/version';
+import { Accessibility } from "@doc-blocks/accessibility";
+import { DesignSpec } from "@doc-blocks/design-spec";
+import { Version } from "@doc-blocks/version";
 
-import { ShieldRow } from '.';
-import notes from '../README.md';
+import { ShieldRow } from ".";
+import notes from "../README.md";
 
-<Meta title="Components|ShieldRow" parameters={{ notes }} />
+<Meta title="Components/ShieldRow" parameters={{ notes }} />
 
 # @doc-blocks/shield-row
 
-<Preview>
+<Canvas>
   <Story name="Basic Usage">
     <ShieldRow>
       <Version current="1.0.0" />
@@ -19,4 +19,4 @@ import notes from '../README.md';
       <Accessibility tag="reduced-motion" />
     </ShieldRow>
   </Story>
-</Preview>
+</Canvas>

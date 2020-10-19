@@ -1,10 +1,10 @@
-import React from 'react';
-import { Shield } from '@doc-blocks/shield';
+import React from "react";
+import { Shield } from "@doc-blocks/shield";
 
 const typeMap: Record<string, string> = {
-  figma: '#a259ff',
-  zeplin: '#f69833',
-  abstract: '#191a1b'
+  figma: "#a259ff",
+  zeplin: "#f69833",
+  abstract: "#191a1b",
 };
 
 interface DesignSpecProps {

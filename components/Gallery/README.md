@@ -42,7 +42,7 @@ This function should return an array of component specs that have the following 
 - `url`
 
 ```js
-import { createGallerySpecs } from "@doc-blocks/gallery";
+const { createGallerySpecs } = require("@doc-blocks/gallery/specs");
 
 function getSpecs() {
   // Return and array of component specs
@@ -105,7 +105,7 @@ import BadgeDocs from './Badge.mdx';
 Just modify the webpack confuration to use this function:
 
 ```js
-import { createGallerySpecs, getOverviewSpecs } from "@doc-blocks/gallery";
+const { createGallerySpecs, getOverviewSpecs } = require("@doc-blocks/gallery/specs");
 
 module.exports = async (config) => {
   config.plugins.push(await createGallerySpecs({ getSpecs: getOverviewSpecs }));

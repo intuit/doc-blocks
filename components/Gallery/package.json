@@ -43,6 +43,8 @@
   "files": [
     "dist",
     "src",
+    "specs.js",
+    "specs.d.ts",
     "!*.snippet.*",
     "!*theme.*",
     "!*.test.*",

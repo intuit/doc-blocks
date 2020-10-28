@@ -71,9 +71,11 @@ interface StoryInclusionProps {
   matchPath?: string;
 }
 
-interface GalleryItemProps extends StoryInclusionProps {
+interface GalleryItemProps extends Exclude<StoryInclusionProps, "matchPath"> {
   /** The name of the component to display a gallery for */
   name: string;
+  /** The kind to display a gallery item for */
+  kind: Kind;
 }
 
 /** A component showcase */
@@ -81,24 +83,15 @@ export const GalleryItem = ({
   name,
   includedStoryNames = ["Basic"],
   excludedStoryNames = [],
-  matchPath = "",
+  kind,
   titleStory,
 }: GalleryItemProps) => {
-  const allStories = getStories();
-  const features = allStories.filter((item) =>
-    item.kind.includes(`/${name}${matchPath}`)
-  )[0];
-
-  if (!features) {
-    return null;
-  }
-
   const firstStory =
-    features.stories.find((s) => includedStoryNames.includes(s.name)) ||
-    features.stories.find((s) => !excludedStoryNames.includes(s.name)) ||
-    features.stories[0];
+    kind.stories.find((s) => includedStoryNames.includes(s.name)) ||
+    kind.stories.find((s) => !excludedStoryNames.includes(s.name)) ||
+    kind.stories[0];
 
-  const firstStoryId = `${features.kind
+  const firstStoryId = `${kind.kind
     .replace(/\//g, "-")
     .replace(/\s+-\s+/g, "-")
     .replace(/\s/g, "-")
@@ -108,7 +101,7 @@ export const GalleryItem = ({
     .DESIGN_SPECS as any) as ComponentSpec[]).find(
     (spec) => spec.name === name
   );
-  const category = features.kind.split("/")[0];
+  const category = kind.kind.split("/")[0];
   const renderShieldRow =
     (designSpec?.type && designSpec.url) ||
     category === "Utilities" ||
@@ -156,10 +149,10 @@ export const GalleryItem = ({
           </p>
         )}
         <StoryWrapper>
-          {features.stories.map((story) => (
+          {kind.stories.map((story) => (
             <LinkTo
-              key={`${features.kind}-${story.name}`}
-              kind={features.kind}
+              key={`${kind.kind}-${story.name}`}
+              kind={kind.kind}
               story={story.name}
             >
               {story.name}
@@ -274,26 +267,21 @@ export const Gallery = ({
           <GalleryItem
             key={name}
             name={name}
+            kind={component}
             titleStory={titleStory}
-            matchPath={matchPath}
             excludedStoryNames={excludedStoryNames}
             includedStoryNames={includedStoryNames}
           />
         );
       });
-  }, [
-    allStories,
-    includedStoryNames,
-    excludedStoryNames,
-    matchPath,
-    titleStory,
-  ]);
+  }, [allStories, includedStoryNames, excludedStoryNames, titleStory]);
 
   useLayoutEffect(() => {
     setAllStories(
       getStories().filter(
         (item) =>
-          item.kind.endsWith(matchPath) &&
+          (item.kind.endsWith(matchPath) ||
+            item.kind.match(new RegExp(matchPath))) &&
           !excludedComponents.some((i) => item.kind.includes(i))
       )
     );

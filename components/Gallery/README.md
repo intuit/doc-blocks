@@ -36,7 +36,7 @@ All of the props are optional.
 - `includedStoryNames` - Story names to include from the gallery (default: [`Basic`])
 - `excludedComponents` - Component names to exclude from the gallery
 - `excludedStoryNames` - Story names to exclude from the gallery
-- `matchPath` - Storybook folder path that matched stories should live in. (ex: `Features`)
+- `matchPath` - Storybook folder path that matched stories should live in. Can also be a regex (ex: `Features`)
 - `titleStory` - Story to make the component title link to
 
 ### Add to webpack

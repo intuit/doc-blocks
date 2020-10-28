@@ -293,7 +293,7 @@ export const Gallery = ({
     setAllStories(
       getStories().filter(
         (item) =>
-          item.kind.endsWith(matchPath) &&
+          (item.kind.endsWith(matchPath) || item.kind.match(new RegExp(matchPath))) &&
           !excludedComponents.some((i) => item.kind.includes(i))
       )
     );

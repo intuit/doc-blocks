@@ -1,3 +1,22 @@
+# v0.8.0 (Wed Oct 28 2020)
+
+#### 🚀 Enhancement
+
+- `@doc-blocks/gallery`
+  - allow for regex in match path [#5](https://github.com/intuit/doc-blocks/pull/5) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### 📝 Documentation
+
+- `@doc-blocks/gallery`
+  - more docs for gallery props [#4](https://github.com/intuit/doc-blocks/pull/4) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+  - add gallery prop docs [#3](https://github.com/intuit/doc-blocks/pull/3) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # v0.7.0 (Mon Oct 19 2020)
 
 #### 🚀 Enhancement

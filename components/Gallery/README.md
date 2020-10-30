@@ -2,6 +2,8 @@
 
 The `Gallery` component lets you easily showcase an example from each on of your components.
 
+[Demo](https://intuit.github.io/doc-blocks/?path=/story/gallery--page)
+
 ## Installation
 
 ```sh

@@ -174,7 +174,7 @@ export const Alphabet = styled.div`
   max-height: calc(100vh - 50px);
   overflow-y: auto;
   margin-top: 40px;
-  margin-right: 8px;
+  padding-right: 8px;
 `;
 
 interface CharacterProps {

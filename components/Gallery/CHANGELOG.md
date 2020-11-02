@@ -1,3 +1,19 @@
+# v0.8.1 (Mon Nov 02 2020)
+
+#### 🐛 Bug Fix
+
+- Gallery updates [#6](https://github.com/intuit/doc-blocks/pull/6) ([@kharrop](https://github.com/kharrop))
+- replace margin with padding ([@kharrop](https://github.com/kharrop))
+- extra margin for scroll ([@kharrop](https://github.com/kharrop))
+- adding link to demo ([@kharrop](https://github.com/kharrop))
+- gallery updates ([@kharrop](https://github.com/kharrop))
+
+#### Authors: 1
+
+- Kelly Harrop ([@kharrop](https://github.com/kharrop))
+
+---
+
 # v0.8.0 (Wed Oct 28 2020)
 
 #### 🚀 Enhancement

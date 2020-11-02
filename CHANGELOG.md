@@ -1,3 +1,16 @@
+# v0.8.1 (Mon Nov 02 2020)
+
+#### 🐛 Bug Fix
+
+- `@doc-blocks/gallery`
+  - Gallery updates [#6](https://github.com/intuit/doc-blocks/pull/6) ([@kharrop](https://github.com/kharrop))
+
+#### Authors: 1
+
+- Kelly Harrop ([@kharrop](https://github.com/kharrop))
+
+---
+
 # v0.8.0 (Wed Oct 28 2020)
 
 #### 🚀 Enhancement

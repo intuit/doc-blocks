@@ -169,10 +169,12 @@ export const GalleryItem = ({
 };
 
 export const Alphabet = styled.div`
-  position: fixed;
-  right: 64px;
-  top: 50%;
-  transform: translateY(-50%);
+  position: sticky;
+  top: 24px;
+  max-height: calc(100vh - 50px);
+  overflow-y: auto;
+  margin-top: 40px;
+  padding-right: 8px;
 `;
 
 interface CharacterProps {
@@ -181,26 +183,31 @@ interface CharacterProps {
 }
 
 export const Character = styled.div`
-  color: #8d9096;
-  display: flex;
+  box-sizing: content-box;
+  color: #6b6c72;
+  display: grid;
+  grid-gap: 8px;
   align-items: center;
   justify-content: center;
-  width: 1rem;
-  padding: 4px 0;
-  height: 1rem;
+  text-align: center;
+  min-width: 1rem;
+  padding: 4px;
+  line-height: 1.4rem;
+  height: 1.4rem;
   font-size: 1rem;
-  transition: font-size 0.3s ease-in-out, height 0.2s linear;
   cursor: pointer;
+  transition: font-size 0.1s ease-in;
 
   ${(props: CharacterProps) =>
     props.disabled
-      ? "cursor: no-drop;"
+      ? `cursor: not-allowed;
+      opacity: .4;
+      `
       : `
         &:hover,
         &:focus {
-          color: #6b6c72;
-          font-size: 2rem;
-          height: 2rem;
+          color: #1e1e1e;
+          font-size: 1.3rem;
         }
       `}
 `;
@@ -241,7 +248,11 @@ const AlphabetNavigation = (props: AlphabetNavigationProps) => {
     return items;
   }, [props.stories]);
 
-  return <Alphabet>{chars}</Alphabet>;
+  return (
+    <div>
+      <Alphabet>{chars}</Alphabet>
+    </div>
+  );
 };
 
 interface GalleryProps extends StoryInclusionProps {
@@ -289,9 +300,15 @@ export const Gallery = ({
   }, []);
 
   return (
-    <div>
+    <div
+      className={css`
+        display: grid;
+        grid-gap: 60px;
+        grid-template-columns: 1fr auto;
+      `}
+    >
+      <div>{items}</div>
       <AlphabetNavigation stories={allStories} />
-      {items}
     </div>
   );
 };

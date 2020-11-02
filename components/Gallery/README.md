@@ -2,6 +2,8 @@
 
 The `Gallery` component lets you easily showcase an example from each on of your components.
 
+[Demo](https://intuit.github.io/doc-blocks/?path=/story/gallery--page)
+
 ## Installation
 
 ```sh
@@ -33,11 +35,18 @@ A showcase of frequently-used components.
 
 All of the props are optional.
 
-- `includedStoryNames` - Story names to include from the gallery (default: [`Basic`])
+### Component props
+
 - `excludedComponents` - Component names to exclude from the gallery
-- `excludedStoryNames` - Story names to exclude from the gallery
-- `matchPath` - Storybook folder path that matched stories should live in. Can also be a regex (ex: `Features`)
+- `matchPath` - Storybook folder path or regex that looks for stories to generate components (ex: `Features`)
 - `titleStory` - Story to make the component title link to
+
+### Story name props
+
+Props that determine which stories appear under each component, allowing users to quickly navigate pages without opening folders in the sidebar.
+
+- `includedStoryNames` - Story names to include from the gallery (default: [`Basic`])
+- `excludedStoryNames` - Story names to exclude from the gallery
 
 ### Add to webpack
 

@@ -190,7 +190,7 @@ export const Character = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-width: 1rem;
+  width: 1rem;
   padding: 4px;
   line-height: 1.4rem;
   height: 1.4rem;

@@ -113,8 +113,7 @@ export const GalleryItem = ({
         grid-template-columns: initial;
         align-items: flex-start;
 
-        @media (
-: 768px) {
+        @media (min-width: 768px) {
           grid-template-columns: 1fr 2fr;
         }
       `}

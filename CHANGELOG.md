@@ -1,3 +1,16 @@
+# v0.8.2 (Thu Nov 05 2020)
+
+#### 🐛 Bug Fix
+
+- `@doc-blocks/gallery`
+  - Fix for wider characters in alphabet nav [#7](https://github.com/intuit/doc-blocks/pull/7) ([@kharrop](https://github.com/kharrop))
+
+#### Authors: 1
+
+- Kelly Harrop ([@kharrop](https://github.com/kharrop))
+
+---
+
 # v0.8.1 (Mon Nov 02 2020)
 
 #### 🐛 Bug Fix

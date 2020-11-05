@@ -113,7 +113,8 @@ export const GalleryItem = ({
         grid-template-columns: initial;
         align-items: flex-start;
 
-        @media (min-width: 768px) {
+        @media (
+: 768px) {
           grid-template-columns: 1fr 2fr;
         }
       `}
@@ -190,7 +191,7 @@ export const Character = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-width: 1rem;
+  width: 1rem;
   padding: 4px;
   line-height: 1.4rem;
   height: 1.4rem;

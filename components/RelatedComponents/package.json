@@ -34,13 +34,13 @@
     "emotion": "^10.0.27"
   },
   "peerDependencies": {
-    "@storybook/addon-links": "6.0.26",
-    "@storybook/components": "6.0.26",
+    "@storybook/addon-links": "6.2.9",
+    "@storybook/components": "6.2.9",
     "react": ">= 16.8.6"
   },
   "devDependencies": {
-    "@storybook/addon-links": "6.0.26",
-    "@storybook/components": "6.0.26"
+    "@storybook/addon-links": "6.2.9",
+    "@storybook/components": "6.2.9"
   },
   "files": [
     "dist",

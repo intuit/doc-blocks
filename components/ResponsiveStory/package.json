@@ -36,11 +36,11 @@
     "emotion": "^10.0.27"
   },
   "peerDependencies": {
-    "@storybook/addon-docs": "6.0.26",
+    "@storybook/addon-docs": "6.2.9",
     "react": ">= 16.8.6"
   },
   "devDependencies": {
-    "@storybook/addon-docs": "6.0.26"
+    "@storybook/addon-docs": "6.2.9"
   },
   "files": [
     "dist",

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "@storybook/components";
-import { navigate } from "@storybook/addon-links/dist/preview";
+import { navigate } from "@storybook/addon-links/dist/esm/preview";
 import { css } from "emotion";
 
 interface KindLinkProps {

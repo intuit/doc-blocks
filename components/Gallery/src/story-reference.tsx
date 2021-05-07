@@ -2,7 +2,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
 import React from "react";
-import { hrefTo, navigate } from "@storybook/addon-links/dist/preview";
+import { hrefTo, navigate } from "@storybook/addon-links/dist/esm/preview";
 import { Link } from "@storybook/components";
 import { Element } from "@design-systems/utils";
 
@@ -30,7 +30,7 @@ export const StorybookReference = ({
       href="_blank"
       onClick={(e) => {
         if (e.metaKey) {
-          hrefTo(kind, story).then((resolvedHref) => {
+          hrefTo(kind, story).then((resolvedHref: any) => {
             window.open(
               resolvedHref
                 .replace("?id=", "?path=/story/")

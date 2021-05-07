@@ -7,7 +7,7 @@ import { Shield } from "@doc-blocks/shield";
 import { ShieldRow } from "@doc-blocks/shield-row";
 import { Story, Canvas } from "@storybook/addon-docs/blocks";
 import styled from "@emotion/styled";
-import LinkTo from "@storybook/addon-links/dist/react";
+import LinkTo from "@storybook/addon-links/dist/esm/react";
 import Markdown from "markdown-to-jsx";
 import { css } from "emotion";
 import useLayoutEffect from "use-isomorphic-layout-effect";

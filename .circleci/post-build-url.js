@@ -11,7 +11,7 @@ const artifacts = JSON.parse(
     { encoding: "utf8" }
   )
 );
-const urls = artifacts.filter((artifact) =>
+const urls = (Array.isArray(artifacts)? artifacts : [artifacts]).filter((artifact) =>
   artifact.url.includes("index.html")
 );
 const message = `### Build Info\n\nYour PR was successfully deployed by circleCI [#$CIRCLE_BUILD_NUM]($CIRCLE_BUILD_URL)\n\n[Storybook](${urls[0].url})`;

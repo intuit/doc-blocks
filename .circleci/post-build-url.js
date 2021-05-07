@@ -12,7 +12,7 @@ const artifacts = JSON.parse(
   )
 );
 
-if (artifacts) {
+if (artifacts && Array.isArray(artifacts)) {
   const urls = (artifacts).filter((artifact) =>
     artifact.url.includes("index.html")
   );

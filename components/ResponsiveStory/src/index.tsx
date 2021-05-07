@@ -257,7 +257,7 @@ export const ResponsiveStory = ({
     device === "choose" ? "mac" : device
   );
 
-  const Device = deviceMap[currentDevice];
+  const DeviceComponent = deviceMap[currentDevice];
   const top = "top" in rest ? rest.top : undefined;
   const bottom = "bottom" in rest ? rest.bottom : undefined;
 
@@ -278,7 +278,7 @@ export const ResponsiveStory = ({
             ...useTopOrBottom(top, bottom),
           }}
         >
-          <Device
+          <DeviceComponent
             isLandscape={isLandscape}
             headerColor={headerColor}
             headerText={headerText}
@@ -293,7 +293,7 @@ export const ResponsiveStory = ({
               device={currentDevice}
               style={screenStyles}
             />
-          </Device>
+          </DeviceComponent>
         </div>
 
         <IframeLabel>

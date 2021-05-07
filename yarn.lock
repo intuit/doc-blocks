@@ -2219,8 +2219,8 @@
 
 "@design-systems/build@2.17.3--canary.651.17331.0":
   version "2.17.3--canary.651.17331.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@design-systems/build/-/build-2.17.3--canary.651.17331.0.tgz#1e13e27b50e4285fd935ebd269ab2f22ddd52044"
-  integrity sha1-HhPie1DkKF/ZNevSaasvIt3VIEQ=
+  resolved "https://registry.yarnpkg.com/@design-systems/build/-/build-2.17.3--canary.651.17331.0.tgz#1e13e27b50e4285fd935ebd269ab2f22ddd52044"
+  integrity sha512-AXe4c7Kxe7N7J6X+lcDvzXGsb8lCCQgFbgFoG7EFGHIFBeQJOksb2l55LtjreL/BwByZOgYNOGo4OkuhC5f/+A==
   dependencies:
     "@babel/code-frame" "^7.12.13"
     "@babel/core" "^7.13.8"
@@ -2263,8 +2263,8 @@
 
 "@design-systems/bundle@2.17.3--canary.651.17331.0":
   version "2.17.3--canary.651.17331.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@design-systems/bundle/-/bundle-2.17.3--canary.651.17331.0.tgz#d7e03440e8f00cbb1516e93ec42e84975969c118"
-  integrity sha1-1+A0QOjwDLsVFuk+xC6El1lpwRg=
+  resolved "https://registry.yarnpkg.com/@design-systems/bundle/-/bundle-2.17.3--canary.651.17331.0.tgz#d7e03440e8f00cbb1516e93ec42e84975969c118"
+  integrity sha512-2jTR71hcvhzg6xcezNEChYFuJbCpREYtWruwHtryyr7mbA0v3Ta12RV/x9utly/wRKEkdBRqzSi/cnFyyYwRAg==
   dependencies:
     "@design-systems/build" "2.17.3--canary.651.17331.0"
     "@design-systems/cli-utils" "2.17.3--canary.651.17331.0"
@@ -2281,8 +2281,8 @@
 
 "@design-systems/clean@2.17.3--canary.651.17331.0":
   version "2.17.3--canary.651.17331.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@design-systems/clean/-/clean-2.17.3--canary.651.17331.0.tgz#169da28f8b851cabb923e67ce41ff1255d5750d8"
-  integrity sha1-Fp2ij4uFHKu5I+Z85B/xJV1XUNg=
+  resolved "https://registry.yarnpkg.com/@design-systems/clean/-/clean-2.17.3--canary.651.17331.0.tgz#169da28f8b851cabb923e67ce41ff1255d5750d8"
+  integrity sha512-ERkAYnM2R8d3MtlP0cTXbo2oCOnYeHLpMS/XIQu+Aw08ZkHzskBQ3OcLalXDcOKihknKCrdwhlIoWTuX59EVrw==
   dependencies:
     "@design-systems/cli-utils" "2.17.3--canary.651.17331.0"
     "@design-systems/plugin" "2.17.3--canary.651.17331.0"
@@ -2292,8 +2292,8 @@
 
 "@design-systems/cli-utils@2.17.3--canary.651.17331.0":
   version "2.17.3--canary.651.17331.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@design-systems/cli-utils/-/cli-utils-2.17.3--canary.651.17331.0.tgz#4186416256e67c9045079c056bf2d4095acaf503"
-  integrity sha1-QYZBYlbmfJBFB5wFa/LUCVrK9QM=
+  resolved "https://registry.yarnpkg.com/@design-systems/cli-utils/-/cli-utils-2.17.3--canary.651.17331.0.tgz#4186416256e67c9045079c056bf2d4095acaf503"
+  integrity sha512-5G/FLEbLcUMyAJ3y4ZtEsqY9XXZoatMt7+WAhpnquQChuNYcZaFdJiYiGDZQg2M0XCdRBbSC6U2ALHd2v7k2nw==
   dependencies:
     find-up "5.0.0"
     npm-which "3.0.1"
@@ -2304,8 +2304,8 @@
 
 "@design-systems/cli@2.17.3--canary.651.17331.0":
   version "2.17.3--canary.651.17331.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@design-systems/cli/-/cli-2.17.3--canary.651.17331.0.tgz#8771b90c325a1fb0b47bc4f19ec746835a9caf53"
-  integrity sha1-h3G5DDJaH7C0e8TxnsdGg1qcr1M=
+  resolved "https://registry.yarnpkg.com/@design-systems/cli/-/cli-2.17.3--canary.651.17331.0.tgz#8771b90c325a1fb0b47bc4f19ec746835a9caf53"
+  integrity sha512-bLpJepwpJS8a8ZFfnlKPCwheatwWWFZ8AqViEe4QPttA8sdqmQeiFF5DLYjtEaHR7S7Uqtyp7RjH28+2CiLMBw==
   dependencies:
     "@design-systems/cli-utils" "2.17.3--canary.651.17331.0"
     "@design-systems/core" "2.17.3--canary.651.17331.0"
@@ -2321,8 +2321,8 @@
 
 "@design-systems/core@2.17.3--canary.651.17331.0":
   version "2.17.3--canary.651.17331.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@design-systems/core/-/core-2.17.3--canary.651.17331.0.tgz#dd2b0860fb3952a531c041a26dcda11b6dadcb48"
-  integrity sha1-3SsIYPs5UqUxwEGibc2hG22ty0g=
+  resolved "https://registry.yarnpkg.com/@design-systems/core/-/core-2.17.3--canary.651.17331.0.tgz#dd2b0860fb3952a531c041a26dcda11b6dadcb48"
+  integrity sha512-i0XM5g/ttWIYuXu857h9jMeBuE5kGMrtdMQeK+kfPPIbvR2svz9dmrf3ayOdZ98uYxULyfqtQiD0dcIgfyEcMA==
   dependencies:
     "@design-systems/build" "2.17.3--canary.651.17331.0"
     "@design-systems/bundle" "2.17.3--canary.651.17331.0"
@@ -2343,8 +2343,8 @@
 
 "@design-systems/create-command@2.17.3--canary.651.17331.0":
   version "2.17.3--canary.651.17331.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@design-systems/create-command/-/create-command-2.17.3--canary.651.17331.0.tgz#19d8bf98b90a9d1e3342ba69a1cdb1885280ff12"
-  integrity sha1-Gdi/mLkKnR4zQrppoc2xiFKA/xI=
+  resolved "https://registry.yarnpkg.com/@design-systems/create-command/-/create-command-2.17.3--canary.651.17331.0.tgz#19d8bf98b90a9d1e3342ba69a1cdb1885280ff12"
+  integrity sha512-v/9hXzYP2lUCQvF/0/EDk/DcuIJrp1ZqKIKCCm5QSDFZTqL3gYuMtHQImjsDgi7DSPLN1ps2oEz4kexIxK9I9g==
   dependencies:
     "@design-systems/cli-utils" "2.17.3--canary.651.17331.0"
     "@design-systems/create" "2.17.3--canary.651.17331.0"
@@ -2364,13 +2364,13 @@
 
 "@design-systems/create@2.17.3--canary.651.17331.0":
   version "2.17.3--canary.651.17331.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@design-systems/create/-/create-2.17.3--canary.651.17331.0.tgz#45faf4ff400cc1f167f5c93545290169bcf968da"
-  integrity sha1-Rfr0/0AMwfFn9ck1RSkBabz5aNo=
+  resolved "https://registry.yarnpkg.com/@design-systems/create/-/create-2.17.3--canary.651.17331.0.tgz#45faf4ff400cc1f167f5c93545290169bcf968da"
+  integrity sha512-0Vxec3UsoD3bzoBKCtHNUKSM2u/+bgiAoRHTM1d7QD/hkYvukHWp2V5kLtjTRp1aCS7zTI0DdwGKnuHbOlvKZw==
 
 "@design-systems/dev@2.17.3--canary.651.17331.0":
   version "2.17.3--canary.651.17331.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@design-systems/dev/-/dev-2.17.3--canary.651.17331.0.tgz#c1d359de199a266825c6bbfc810706e79a652816"
-  integrity sha1-wdNZ3hmaJmglxrv8gQcG55plKBY=
+  resolved "https://registry.yarnpkg.com/@design-systems/dev/-/dev-2.17.3--canary.651.17331.0.tgz#c1d359de199a266825c6bbfc810706e79a652816"
+  integrity sha512-E+XPpQqnoL7f+60IxPfMsuE+F741nTo3VA4Cg7Da4kYPDZ7mkNd8VrP5s3HXMCWOMLaylC+w6u5HfX3wZQOlvQ==
   dependencies:
     "@design-systems/cli-utils" "2.17.3--canary.651.17331.0"
     "@design-systems/plugin" "2.17.3--canary.651.17331.0"
@@ -2382,8 +2382,8 @@
 
 "@design-systems/eslint-config@2.17.3--canary.651.17331.0":
   version "2.17.3--canary.651.17331.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@design-systems/eslint-config/-/eslint-config-2.17.3--canary.651.17331.0.tgz#3043ea64d88d7a315043ac51e88b3117425bf8e6"
-  integrity sha1-MEPqZNiNejFQQ6xR6IsxF0Jb+OY=
+  resolved "https://registry.yarnpkg.com/@design-systems/eslint-config/-/eslint-config-2.17.3--canary.651.17331.0.tgz#3043ea64d88d7a315043ac51e88b3117425bf8e6"
+  integrity sha512-/Fm3+/qO/8YT5MmuhuI00bAzigkLoS+Oe7uUTQlfwYZOK2rFIpXhDI7vb5PC4Vh7nLhq3Tq8735519HU06Lt9g==
   dependencies:
     "@design-systems/cli-utils" "2.17.3--canary.651.17331.0"
     "@kendallgassner/eslint-plugin-package-json" "0.2.1"
@@ -2409,8 +2409,8 @@
 
 "@design-systems/lint@2.17.3--canary.651.17331.0":
   version "2.17.3--canary.651.17331.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@design-systems/lint/-/lint-2.17.3--canary.651.17331.0.tgz#396c446cc68b85ca647c5fef63ce014cf4911a35"
-  integrity sha1-OWxEbMaLhcpkfF/vY84BTPSRGjU=
+  resolved "https://registry.yarnpkg.com/@design-systems/lint/-/lint-2.17.3--canary.651.17331.0.tgz#396c446cc68b85ca647c5fef63ce014cf4911a35"
+  integrity sha512-NWp8KMF7vgM7dRgQi1GR+6PQM+55SeYIGyurHIy3NWCy/7Nr4fQwv+K4/ivSmmry3o+tUEO98RQJwYsF147YFQ==
   dependencies:
     "@design-systems/cli-utils" "2.17.3--canary.651.17331.0"
     "@design-systems/eslint-config" "2.17.3--canary.651.17331.0"
@@ -2428,8 +2428,8 @@
 
 "@design-systems/load-config@2.17.3--canary.651.17331.0":
   version "2.17.3--canary.651.17331.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@design-systems/load-config/-/load-config-2.17.3--canary.651.17331.0.tgz#c575ca04742d71c254e2a9ea4acc5f599060d2ff"
-  integrity sha1-xXXKBHQtccJU4qnqSsxfWZBg0v8=
+  resolved "https://registry.yarnpkg.com/@design-systems/load-config/-/load-config-2.17.3--canary.651.17331.0.tgz#c575ca04742d71c254e2a9ea4acc5f599060d2ff"
+  integrity sha512-sdNslpaTyYyDfwEkor2AgssNbu4Pbp4TEpA0y3hqHjejeHEVF42wltJHcr14Vmeh5sMxUBKlMfKbEqAKZIPyPQ==
   dependencies:
     "@design-systems/core" "2.17.3--canary.651.17331.0"
     "@design-systems/plugin" "2.17.3--canary.651.17331.0"
@@ -2444,8 +2444,8 @@
 
 "@design-systems/playroom@2.17.3--canary.651.17331.0":
   version "2.17.3--canary.651.17331.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@design-systems/playroom/-/playroom-2.17.3--canary.651.17331.0.tgz#155047165e4eaf6d9501d88117651882a0402c4f"
-  integrity sha1-FVBHFl5Or22VAdiBF2UYgqBALE8=
+  resolved "https://registry.yarnpkg.com/@design-systems/playroom/-/playroom-2.17.3--canary.651.17331.0.tgz#155047165e4eaf6d9501d88117651882a0402c4f"
+  integrity sha512-TIk5yUTVSW3nDtZuZVwIwAMVSA8pCga21NFRC2yoDvt3cyzYCr5ZffccWyR7v9SpnP+MWuqzOB2BZWLSc25glg==
   dependencies:
     "@babel/core" "^7.13.8"
     "@babel/register" "^7.13.8"
@@ -2466,8 +2466,8 @@
 
 "@design-systems/plugin@2.17.3--canary.651.17331.0":
   version "2.17.3--canary.651.17331.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@design-systems/plugin/-/plugin-2.17.3--canary.651.17331.0.tgz#a15624c738e7867e6dbb4225f3a91d0705b47eda"
-  integrity sha1-oVYkxzjnhn5tu0Il86kdBwW0fto=
+  resolved "https://registry.yarnpkg.com/@design-systems/plugin/-/plugin-2.17.3--canary.651.17331.0.tgz#a15624c738e7867e6dbb4225f3a91d0705b47eda"
+  integrity sha512-cOF0nS+XBB71x0Zi0oKrYP5GVXQfmODq+Ewon4EvH6PSR1JyZV4q7t6ghq8URB31ZNhlJf1PlywGJPVyELefKw==
   dependencies:
     command-line-application "0.10.1"
     tslib "2.0.1"
@@ -2475,8 +2475,8 @@
 
 "@design-systems/proof@2.17.3--canary.651.17331.0":
   version "2.17.3--canary.651.17331.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@design-systems/proof/-/proof-2.17.3--canary.651.17331.0.tgz#f2f9a67611fb9727ea860e81d0d012dc12e77c7e"
-  integrity sha1-8vmmdhH7lyfqhg6B0NAS3BLnfH4=
+  resolved "https://registry.yarnpkg.com/@design-systems/proof/-/proof-2.17.3--canary.651.17331.0.tgz#f2f9a67611fb9727ea860e81d0d012dc12e77c7e"
+  integrity sha512-NTWT5UF3DWymKvXSnwy66gWF/pWq9/fMWSGBmFkVNh+dgbDpQQh1iAglN1jKrdMTCGChjKfr70DadlPj8L2mLg==
   dependencies:
     "@babel/core" "^7.13.8"
     "@babel/plugin-transform-runtime" "^7.13.9"
@@ -2495,8 +2495,8 @@
 
 "@design-systems/size@2.17.3--canary.651.17331.0":
   version "2.17.3--canary.651.17331.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@design-systems/size/-/size-2.17.3--canary.651.17331.0.tgz#482b61261744aad209076229397840eec0ee69d0"
-  integrity sha1-SCthJhdEqtIJB2IpOXhA7sDuadA=
+  resolved "https://registry.yarnpkg.com/@design-systems/size/-/size-2.17.3--canary.651.17331.0.tgz#482b61261744aad209076229397840eec0ee69d0"
+  integrity sha512-XN6CMaCIzq7g76Wh/mAWWFvlsqdOvGUPmzSgUJLMIrNDKBlwMKIgS9wNJG9NIcdBQ1rhfZRRPwNjCkLR6XgFwA==
   dependencies:
     "@design-systems/cli-utils" "2.17.3--canary.651.17331.0"
     "@design-systems/plugin" "2.17.3--canary.651.17331.0"
@@ -2528,8 +2528,8 @@
 
 "@design-systems/storybook@2.17.3--canary.651.17331.0":
   version "2.17.3--canary.651.17331.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@design-systems/storybook/-/storybook-2.17.3--canary.651.17331.0.tgz#0dccd3b30c07db00d954c6de5a18689e56380e60"
-  integrity sha1-DczTswwH2wDZVMbeWhhonlY4DmA=
+  resolved "https://registry.yarnpkg.com/@design-systems/storybook/-/storybook-2.17.3--canary.651.17331.0.tgz#0dccd3b30c07db00d954c6de5a18689e56380e60"
+  integrity sha512-9MXChQOhMZtav7NUx4SOU6B7UGkYdcQbNcLdVa1RwKJiRyb4aP7a4P3AwpNtnYqpesoi5Lsl50KV42KNhzEUhA==
   dependencies:
     "@alisowski/storybook-addon-notes" "^6.0.1"
     "@babel/core" "^7.13.8"
@@ -2564,8 +2564,8 @@
 
 "@design-systems/stylelint-config@2.17.3--canary.651.17331.0":
   version "2.17.3--canary.651.17331.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@design-systems/stylelint-config/-/stylelint-config-2.17.3--canary.651.17331.0.tgz#16d082c86df3130c8b22f80d083aa60c45927990"
-  integrity sha1-FtCCyG3zEwyLIvgNCDqmDEWSeZA=
+  resolved "https://registry.yarnpkg.com/@design-systems/stylelint-config/-/stylelint-config-2.17.3--canary.651.17331.0.tgz#16d082c86df3130c8b22f80d083aa60c45927990"
+  integrity sha512-MjFuy94Z9JKA/9Yk7r5X91FDjP5YR3lB9fz+SjXb2jqP5rSfP6zwOoBuAD7gEQiQkbvS5EjFWSweQInUMlodUg==
   dependencies:
     stylelint-a11y "1.2.3"
     stylelint-config-css-modules "2.2.0"
@@ -2580,8 +2580,8 @@
 
 "@design-systems/test@2.17.3--canary.651.17331.0":
   version "2.17.3--canary.651.17331.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@design-systems/test/-/test-2.17.3--canary.651.17331.0.tgz#4c30934af65e0bbb73feb67b5705c9b41b2df284"
-  integrity sha1-TDCTSvZeC7tz/rZ7VwXJtBst8oQ=
+  resolved "https://registry.yarnpkg.com/@design-systems/test/-/test-2.17.3--canary.651.17331.0.tgz#4c30934af65e0bbb73feb67b5705c9b41b2df284"
+  integrity sha512-63+UeCX2kJZawetH6PFer/19k8+ig5loqU3fHmVIjcT3YxKpE7TMplOKmscMdo0Rd/yrok5M8+ZK9FDKICrwPg==
   dependencies:
     "@babel/core" "^7.13.8"
     "@design-systems/build" "2.17.3--canary.651.17331.0"
@@ -2602,8 +2602,8 @@
 
 "@design-systems/update@2.17.3--canary.651.17331.0":
   version "2.17.3--canary.651.17331.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@design-systems/update/-/update-2.17.3--canary.651.17331.0.tgz#3186ff8afb61cec9391c46ca4c621b3cf8407ad5"
-  integrity sha1-MYb/ivthzsk5HEbKTGIbPPhAetU=
+  resolved "https://registry.yarnpkg.com/@design-systems/update/-/update-2.17.3--canary.651.17331.0.tgz#3186ff8afb61cec9391c46ca4c621b3cf8407ad5"
+  integrity sha512-Hll5CmSfXiNozlxk9JGKDGNHd/+btuGVx0FtqPzqw8CCiv/qDHMdPsRZBSqMNyVCFOuB5mB20XtGXCfl+FPQwg==
   dependencies:
     "@design-systems/cli-utils" "2.17.3--canary.651.17331.0"
     "@design-systems/plugin" "2.17.3--canary.651.17331.0"
@@ -2618,8 +2618,8 @@
 
 "@design-systems/utils@2.17.3--canary.651.17331.0":
   version "2.17.3--canary.651.17331.0"
-  resolved "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@design-systems/utils/-/utils-2.17.3--canary.651.17331.0.tgz#05f709e98020d13b7ef00e15b6d7c0e5823f552c"
-  integrity sha1-BfcJ6YAg0Tt+8A4VttfA5YI/VSw=
+  resolved "https://registry.yarnpkg.com/@design-systems/utils/-/utils-2.17.3--canary.651.17331.0.tgz#05f709e98020d13b7ef00e15b6d7c0e5823f552c"
+  integrity sha512-GF/UQJPjriDZpJHdozqve4ajlqD5PTZ1F77OLQQGIRzwkd4NoPdAxQwcw9tmsq0c+GMV1o3Ie3KegBRS2rmQFQ==
   dependencies:
     "@babel/runtime" "^7.13.9"
     clsx "^1.0.4"
@@ -4319,9 +4319,9 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@royriojas/get-exports-from-file@https://github.com/hipstersmoothie/get-exports-from-file#all":
+"@royriojas/get-exports-from-file@git+https://github.com/hipstersmoothie/get-exports-from-file.git#all":
   version "1.3.0"
-  resolved "https://github.com/hipstersmoothie/get-exports-from-file#2674835dac0cb1a9821956020d00db22ef9efae0"
+  resolved "git+https://github.com/hipstersmoothie/get-exports-from-file.git#2674835dac0cb1a9821956020d00db22ef9efae0"
   dependencies:
     "@babel/parser" "7.4.5"
     "@babel/traverse" "7.4.5"
@@ -9429,9 +9429,9 @@ define-property@^2.0.2:
     is-descriptor "^1.0.2"
     isobject "^3.0.1"
 
-"degit@https://github.com/hipstersmoothie/degit.git#private-release":
+"degit@git+https://github.com/hipstersmoothie/degit.git#private-release":
   version "2.1.4"
-  resolved "https://github.com/hipstersmoothie/degit.git#77bdec052337a560e3487b4c45e402d5de49fe55"
+  resolved "git+https://github.com/hipstersmoothie/degit.git#77bdec052337a560e3487b4c45e402d5de49fe55"
   dependencies:
     chalk "2.4.2"
     githuburl "0.1.6"
@@ -10288,9 +10288,9 @@ eslint-formatter-pretty@^3.0.0:
     string-width "^4.2.0"
     supports-hyperlinks "^2.0.0"
 
-"eslint-import-resolver-lerna@https://github.com/hipstersmoothie/eslint-import-resolver-lerna.git#catch":
+"eslint-import-resolver-lerna@git+https://github.com/hipstersmoothie/eslint-import-resolver-lerna.git#catch":
   version "1.1.0"
-  resolved "https://github.com/hipstersmoothie/eslint-import-resolver-lerna.git#5c67ee424b102be38755728b55102e12f1bbd52d"
+  resolved "git+https://github.com/hipstersmoothie/eslint-import-resolver-lerna.git#5c67ee424b102be38755728b55102e12f1bbd52d"
 
 eslint-import-resolver-node@^0.3.2, eslint-import-resolver-node@^0.3.3:
   version "0.3.4"

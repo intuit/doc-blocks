@@ -1,3 +1,16 @@
+# v0.8.3 (Mon May 24 2021)
+
+#### 🐛 Bug Fix
+
+- Bump Storybook to 6.2.9 [#9](https://github.com/intuit/doc-blocks/pull/9) ([@kendallgassner](https://github.com/kendallgassner))
+- lint ([@kendallgassner](https://github.com/kendallgassner))
+
+#### Authors: 1
+
+- Kendall Gassner ([@kendallgassner](https://github.com/kendallgassner))
+
+---
+
 # v0.8.2 (Thu Nov 05 2020)
 
 #### 🐛 Bug Fix

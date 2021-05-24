@@ -11,14 +11,17 @@ const artifacts = JSON.parse(
     { encoding: "utf8" }
   )
 );
-const urls = artifacts.filter((artifact) =>
-  artifact.url.includes("index.html")
-);
-const message = `### Build Info\n\nYour PR was successfully deployed by circleCI [#$CIRCLE_BUILD_NUM]($CIRCLE_BUILD_URL)\n\n[Storybook](${urls[0].url})`;
 
-execSync(
-  `yarn auto comment --context $CIRCLE_BUILD_URL --message "${message}" || true`,
-  {
-    stdio: "inherit",
-  }
-);
+if (artifacts && Array.isArray(artifacts)) {
+  const urls = (artifacts).filter((artifact) =>
+    artifact.url.includes("index.html")
+  );
+  const message = `### Build Info\n\nYour PR was successfully deployed by circleCI [#$CIRCLE_BUILD_NUM]($CIRCLE_BUILD_URL)\n\n[Storybook](${urls[0].url})`;
+
+  execSync(
+    `yarn auto comment --context $CIRCLE_BUILD_URL --message "${message}" || true`,
+    {
+      stdio: "inherit",
+    }
+  );
+}

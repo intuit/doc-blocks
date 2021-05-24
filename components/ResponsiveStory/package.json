@@ -29,18 +29,18 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.11.2",
-    "@design-systems/utils": "^2.6.1",
+    "@design-systems/utils": "2.17.5",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "clsx": "^1.1.1",
     "emotion": "^10.0.27"
   },
   "peerDependencies": {
-    "@storybook/addon-docs": "6.0.26",
+    "@storybook/addon-docs": "6.2.9",
     "react": ">= 16.8.6"
   },
   "devDependencies": {
-    "@storybook/addon-docs": "6.0.26"
+    "@storybook/addon-docs": "6.2.9"
   },
   "files": [
     "dist",

@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.11.2",
-    "@design-systems/utils": "2.17.3--canary.651.17331.0",
+    "@design-systems/utils": "2.17.5",
     "@emotion/styled": "^10.0.27",
     "emotion": "^10.0.27"
   },

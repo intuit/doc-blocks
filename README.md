@@ -4,6 +4,8 @@
 
 > A design system for doc-blocks UI components, built on [@design-systems/cli](https://github.com/intuit/design-systems-cli).
 
+![docblocks logo](./docblocks-logo.png)
+
 ## 👍 Philosophy
 
 This repo contains a collection of components that make writing rich component documentation with `@storybook/addon-docs` a breeze!

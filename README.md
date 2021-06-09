@@ -1,7 +1,5 @@
 <div align="center">
-
-![logo](./media/logo-mark.svg)
-
+  <img src="./media/logo-mark.svg" />
   <h1>doc-blocks</h1>
 </div>
 

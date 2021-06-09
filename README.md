@@ -1,4 +1,5 @@
 <div align="center">
+  <img src="./media/logo-mark.svg" alt="doc-blocks logo" />
   <h1>doc-blocks</h1>
 </div>
 

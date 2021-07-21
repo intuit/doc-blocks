@@ -7,21 +7,28 @@ export interface RowProps extends Element<"div"> {
   gap?: number;
   /** A specific type of row */
   type?: "large-text";
+  /** Vertical alignment */
+  align?: string;
 }
 
-/** Render a story in an iframe so it's responsive */
-export const Row = ({ gap = 40, type, className, ...props }: RowProps) => (
+/** Render a story in an iframe so it"s responsive */
+export const Row = ({
+  gap = 40,
+  align = "self-start",
+  type,
+  className,
+  ...props
+}: RowProps) => (
   <div
     {...props}
     className={cx(
       className,
       css`
+        align-items: ${align};
         display: grid;
         grid-auto-flow: row;
-        align-items: center;
-        margin: 45px 0;
         grid-gap: ${gap}px;
-        align-items: flex-start;
+        margin: 45px 0;
 
         > * {
           margin: 0 !important;

@@ -1,0 +1,21 @@
+.tab-container {
+  width: 100%;
+}
+
+.tab-titles {
+  display: flex;
+  flex-direction: row;
+}
+
+.tab {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.tab.selected {
+  border-bottom: 1px solid #000000;
+}
+
+.tab-panel {
+  padding: 16px 32px;
+}

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs It matches the snapshot 1`] = `
+<div>
+  <div
+    class="tab-container"
+  >
+    <div
+      class="tab-titles"
+    >
+      <div
+        class="tab selected"
+        role="button"
+        tabindex="0"
+      >
+        Title 1
+      </div>
+      <div
+        class="tab "
+        role="button"
+        tabindex="0"
+      >
+        Title 2
+      </div>
+    </div>
+    <div
+      class="tab-panel"
+    >
+      Content 1
+    </div>
+  </div>
+</div>
+`;

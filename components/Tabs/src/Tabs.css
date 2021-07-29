@@ -16,6 +16,10 @@
   border-bottom: 1px solid #000000;
 }
 
+.tab:not(.selected):hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 .tab-panel {
   padding: 16px 32px;
 }

@@ -6,11 +6,13 @@ interface TabsProps {
   children: React.ReactChild[];
 }
 
-interface TabProps {
+interface TabProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   /** ID of tab (ties tab content to tab title)  */
   id: string;
-  /** What to render in title */
-  children: React.ReactNode;
 }
 
 interface TabsContextProps {
@@ -23,8 +25,12 @@ interface TabsContextProps {
 interface Tab {
   /** Title to render in tab */
   title?: React.ReactNode;
+  /** Props to spread to tab title element */
+  titleProps?: React.DOMAttributes<HTMLDivElement> & React.AriaAttributes;
   /** Content to render in tab panel */
   content?: React.ReactNode;
+  /** Props to spread to tab content element */
+  contentProps?: React.DOMAttributes<HTMLDivElement> & React.AriaAttributes;
 }
 
 // Setting up context with dummy values to satisfy typechecking
@@ -63,18 +69,23 @@ export const Tabs = ({ children }: TabsProps) => {
               tabIndex={0}
               onClick={() => setSelectedId(id)}
               onKeyDown={(e) => e.key !== "Tab" && setSelectedId(id)}
+              {...tab.titleProps}
             >
               {tab.title}
             </div>
           ))}
         </div>
-        <div className={styles["tab-panel"]}>
-          {Object.entries(tabs)
-            .filter(([id]) => id === selectedId)
-            .map(([, tab]) => {
-              return tab.content;
-            })}
-        </div>
+        {Object.entries(tabs)
+          .filter(([id]) => id === selectedId)
+          .map(([id, tab]) => (
+            <div
+              key={`${id}-content`}
+              className={styles["tab-panel"]}
+              {...tab.contentProps}
+            >
+              {tab.content}
+            </div>
+          ))}
       </div>
     </>
   );
@@ -83,26 +94,27 @@ export const Tabs = ({ children }: TabsProps) => {
 /** Add a title to a tab */
 const Title = ({ id, children, ...rest }: TabProps) => {
   const { setTabs } = React.useContext(TabsContext);
+  const { current: otherProps } = React.useRef(rest);
 
   React.useEffect(() => {
     if (id) {
-      setTabs((prev: Record<string | number, Tab>) => {
+      setTabs((prev: Record<string, Tab>) => {
         // If this tab already exists, append to the existing object
         if (prev[id]) {
           return {
             ...prev,
-            [id]: { ...prev[id], title: children },
+            [id]: { ...prev[id], title: children, titleProps: otherProps },
           };
         }
 
         // Otherwise, create a new object with this ID
         return {
           ...prev,
-          [id]: { title: children },
+          [id]: { title: children, titleProps: otherProps },
         };
       });
     }
-  }, [id, children, setTabs]);
+  }, [id, children, setTabs, otherProps]);
 
   return null;
 };
@@ -110,26 +122,27 @@ const Title = ({ id, children, ...rest }: TabProps) => {
 /** Add some content to a tab */
 const Content = ({ id, children, ...rest }: TabProps) => {
   const { setTabs } = React.useContext(TabsContext);
+  const { current: otherProps } = React.useRef(rest);
 
   React.useEffect(() => {
     if (id) {
-      setTabs((prev: Record<string | number, Tab>) => {
+      setTabs((prev: Record<string, Tab>) => {
         // If this tab already exists, append to the existing object
         if (prev[id]) {
           return {
             ...prev,
-            [id]: { ...prev[id], content: children },
+            [id]: { ...prev[id], content: children, contentProps: otherProps },
           };
         }
 
         // Otherwise, create a new object with this ID
         return {
           ...prev,
-          [id]: { content: children },
+          [id]: { content: children, contentProps: otherProps },
         };
       });
     }
-  }, [id, children, setTabs]);
+  }, [id, children, setTabs, otherProps]);
 
   return null;
 };

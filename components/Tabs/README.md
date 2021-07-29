@@ -33,3 +33,5 @@ const TabbedInterface = () => (
   </Tabs>
 );
 ```
+
+Feel free to add whatever classes or styles you want to any of the `Tabs.x` components - they'll be passed down to the div element!

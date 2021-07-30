@@ -10,6 +10,7 @@ exports[`Tabs It matches the snapshot 1`] = `
     >
       <div
         class="src___StyledDiv3-sc-1xojtv1-2 bhJGbF undefined undefined"
+        id="one"
         role="button"
         tabindex="0"
       >
@@ -17,6 +18,7 @@ exports[`Tabs It matches the snapshot 1`] = `
       </div>
       <div
         class="src___StyledDiv3-sc-1xojtv1-2 lhVIJV undefined "
+        id="two"
         role="button"
         tabindex="0"
       >

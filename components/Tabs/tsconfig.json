@@ -6,6 +6,7 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "composite": true,
+    "jsxImportSource": "@emotion/react",
 
     // Need to override emotion's types because they pollute the global
     "baseUrl": ".",

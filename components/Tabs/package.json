@@ -28,7 +28,8 @@
     "size": "ds size"
   },
   "dependencies": {
-    "@babel/runtime": "7.11.2"
+    "@babel/runtime": "7.11.2",
+    "@emotion/react": "11.4.0"
   },
   "peerDependencies": {
     "react": ">= 16.8.6"

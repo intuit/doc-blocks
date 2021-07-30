@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import styles from "./Tabs.css";
+/** @jsx jsx */
+import { css, jsx } from "@emotion/react";
 
 interface TabsProps {
   /** Children of tabs wrapper */
@@ -57,14 +58,29 @@ export const Tabs = ({ children }: TabsProps) => {
       <TabsContext.Provider value={providerState}>
         {children}
       </TabsContext.Provider>
-      <div className={styles["tab-container"]}>
-        <div className={styles["tab-titles"]}>
+      <div
+        css={css`
+          width: 100%;
+        `}
+      >
+        <div
+          css={css`
+            display: flex;
+            flex-direction: row;
+          `}
+        >
           {Object.entries(tabs).map(([id, tab]) => (
             <div
               key={id}
-              className={`${styles.tab} ${
-                id === selectedId ? styles.selected : ""
-              }`}
+              css={css`
+                padding: 8px 16px;
+                cursor: pointer;
+                ${id === selectedId
+                  ? "border-bottom: 1px solid #000000;"
+                  : `&:hover {
+                      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                  }`}
+              `}
               role="button"
               tabIndex={0}
               onClick={() => setSelectedId(id)}
@@ -80,7 +96,9 @@ export const Tabs = ({ children }: TabsProps) => {
           .map(([id, tab]) => (
             <div
               key={`${id}-content`}
-              className={styles["tab-panel"]}
+              css={css`
+                padding: 16px 32px;
+              `}
               {...tab.contentProps}
             >
               {tab.content}

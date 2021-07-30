@@ -13,6 +13,10 @@
   "sideEffects": [
     "*.css"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "scripts": {
     "clean": "ds clean",
     "build": "ds build",

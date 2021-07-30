@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import { css } from "@emotion/react";
+/** @jsx jsx */
+import { css, jsx } from "@emotion/react";
 
 interface TabsProps {
   /** Children of tabs wrapper */

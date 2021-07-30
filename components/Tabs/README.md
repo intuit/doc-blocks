@@ -1,6 +1,6 @@
 # @doc-blocks/tabs
 
-Welcome to my `Tabs` component.
+Use to display a set of tabs for your docs.
 
 ## Installation
 
@@ -30,6 +30,21 @@ const TabbedInterface = () => (
     <Tabs.Content id="one">Content for tab 1</Tabs.Content>
     <Tabs.Title id="two">Title 2</Tabs.Title>
     <Tabs.Content id="two">Content for tab 2</Tabs.Content>
+  </Tabs>
+);
+```
+
+Or with an `Array.map()`:
+
+```jsx
+const TabbedInterface = () => (
+  <Tabs>
+    {tabs.map((tab) => (
+      <React.Fragment key={tab.id}>
+        <Tabs.Title id="one">{tab.title}</Tabs.Title>
+        <Tabs.Content id="one">{tab.content}</Tabs.Content>
+      </React.Fragment>
+    ))}
   </Tabs>
 );
 ```

@@ -29,7 +29,6 @@ describe("Tabs", () => {
 
   test("It renders first tab content by default", () => {
     const { queryByText } = render(<TabStub />);
-    expect(queryByText("Title 1")).toHaveClass("selected");
     expect(queryByText("Content 1")).toBeInTheDocument();
     expect(queryByText("Content 2")).not.toBeInTheDocument();
   });
@@ -37,7 +36,6 @@ describe("Tabs", () => {
   test("It changes tab content when unselected title is clicked", () => {
     const { queryByText } = render(<TabStub />);
     expect(queryByText("Content 2")).not.toBeInTheDocument();
-    expect(queryByText("Title 2")).not.toHaveClass("selected");
 
     userEvent.click(screen.getByText("Title 2"));
 

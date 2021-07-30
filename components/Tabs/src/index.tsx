@@ -13,6 +13,8 @@ interface TabProps
   > {
   /** ID of tab (ties tab content to tab title)  */
   id: string;
+  /** Class to apply to selected tab title */
+  selectedClassName?: string;
 }
 
 interface TabsContextProps {
@@ -26,7 +28,9 @@ interface Tab {
   /** Title to render in tab */
   title?: React.ReactNode;
   /** Props to spread to tab title element */
-  titleProps?: React.DOMAttributes<HTMLDivElement> & React.AriaAttributes;
+  titleProps?: React.HTMLAttributes<HTMLDivElement> &
+    React.AriaAttributes &
+    TabProps;
   /** Content to render in tab panel */
   content?: React.ReactNode;
   /** Props to spread to tab content element */
@@ -82,6 +86,9 @@ export const Tabs = ({ children }: TabsProps) => {
               `}
               role="button"
               tabIndex={0}
+              className={`${tab.titleProps?.className} ${
+                id === selectedId ? tab.titleProps?.selectedClassName : ""
+              }`}
               onClick={() => setSelectedId(id)}
               onKeyDown={(e) => e.key !== "Tab" && setSelectedId(id)}
               {...tab.titleProps}

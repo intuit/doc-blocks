@@ -9,14 +9,14 @@ exports[`Tabs It matches the snapshot 1`] = `
       class="src___StyledDiv2-sc-1xojtv1-1 keYmsN"
     >
       <div
-        class="src___StyledDiv3-sc-1xojtv1-2 bhJGbF"
+        class="src___StyledDiv3-sc-1xojtv1-2 bhJGbF undefined undefined"
         role="button"
         tabindex="0"
       >
         Title 1
       </div>
       <div
-        class="src___StyledDiv3-sc-1xojtv1-2 lhVIJV"
+        class="src___StyledDiv3-sc-1xojtv1-2 lhVIJV undefined "
         role="button"
         tabindex="0"
       >

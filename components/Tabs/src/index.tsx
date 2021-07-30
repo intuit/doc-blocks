@@ -127,14 +127,18 @@ const Title = ({ id, children, ...rest }: TabProps) => {
         if (prev[id]) {
           return {
             ...prev,
-            [id]: { ...prev[id], title: children, titleProps: otherProps },
+            [id]: {
+              ...prev[id],
+              title: children,
+              titleProps: { ...otherProps, id },
+            },
           };
         }
 
         // Otherwise, create a new object with this ID
         return {
           ...prev,
-          [id]: { title: children, titleProps: otherProps },
+          [id]: { title: children, titleProps: { ...otherProps, id } },
         };
       });
     }

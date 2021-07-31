@@ -6,11 +6,19 @@ import { Tabs } from ".";
 
 const TabStub = () => (
   <Tabs>
-    <Tabs.Title id="one" activeClassName="title-1-selected">
+    <Tabs.Title
+      id="one"
+      activeClassName="title-1-selected"
+      className="title-1-default"
+    >
       Title 1
     </Tabs.Title>
     <Tabs.Content id="one">Content 1</Tabs.Content>
-    <Tabs.Title id="two" activeClassName="title-2-selected">
+    <Tabs.Title
+      id="two"
+      activeClassName="title-2-selected"
+      className="title-2-default"
+    >
       Title 2
     </Tabs.Title>
     <Tabs.Content id="two">Content 2</Tabs.Content>
@@ -57,11 +65,16 @@ describe("Tabs", () => {
 
   test("It applies the activeClassName to the currently selected title", () => {
     const { queryByText } = render(<TabStub />);
+    expect(queryByText("Title 2")).toHaveClass("title-2-default");
     expect(queryByText("Title 2")).not.toHaveClass("title-2-selected");
     expect(queryByText("Title 1")).toHaveClass("title-1-selected");
+    expect(queryByText("Title 1")).toHaveClass("title-1-default");
 
     userEvent.click(screen.getByText("Title 2"));
 
     expect(queryByText("Title 2")).toHaveClass("title-2-selected");
+    expect(queryByText("Title 2")).toHaveClass("title-2-default");
+    expect(queryByText("Title 1")).toHaveClass("title-1-default");
+    expect(queryByText("Title 1")).not.toHaveClass("title-1-selected");
   });
 });

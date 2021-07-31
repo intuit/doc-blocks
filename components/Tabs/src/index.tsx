@@ -74,37 +74,36 @@ export const Tabs = ({ children }: TabsProps) => {
           `}
         >
           {Object.entries(tabs).map(([id, tab]) => {
-            console.log("Tab ID:", id);
-            console.log("Selected ID:", selectedId);
-            console.log("Active Class Name:", tab.titleProps?.activeClassName);
-            console.log(
-              "Component logic result (should be classname):",
-              id === selectedId ? tab.titleProps?.activeClassName : ""
-            );
-            return (
-              <div
-                key={id}
-                css={css`
-                  padding: 8px 16px;
-                  cursor: pointer;
-                  ${id === selectedId
-                    ? "border-bottom: 1px solid #000000;"
-                    : `&:hover {
+            if (tab.titleProps) {
+              const { className, ...titleProps } = tab.titleProps;
+
+              return (
+                <div
+                  key={id}
+                  css={css`
+                    padding: 8px 16px;
+                    cursor: pointer;
+                    ${id === selectedId
+                      ? "border-bottom: 1px solid #000000;"
+                      : `&:hover {
                       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
                   }`}
-                `}
-                role="button"
-                tabIndex={0}
-                className={`${tab.titleProps?.className} ${
-                  id === selectedId ? tab.titleProps?.activeClassName : ""
-                }`}
-                onClick={() => setSelectedId(id)}
-                onKeyDown={(e) => e.key !== "Tab" && setSelectedId(id)}
-                {...tab.titleProps}
-              >
-                {tab.title}
-              </div>
-            );
+                  `}
+                  role="button"
+                  tabIndex={0}
+                  className={`${className} ${
+                    id === selectedId ? tab.titleProps?.activeClassName : ""
+                  }`}
+                  onClick={() => setSelectedId(id)}
+                  onKeyDown={(e) => e.key !== "Tab" && setSelectedId(id)}
+                  {...titleProps}
+                >
+                  {tab.title}
+                </div>
+              );
+            }
+
+            return "No Title";
           })}
         </div>
         {Object.entries(tabs)

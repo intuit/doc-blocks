@@ -57,6 +57,8 @@ export const Tabs = ({ children }: TabsProps) => {
     }
   }, [tabs]);
 
+  console.log("Selected ID:", selectedId);
+
   return (
     <>
       <TabsContext.Provider value={providerState}>
@@ -73,30 +75,33 @@ export const Tabs = ({ children }: TabsProps) => {
             flex-direction: row;
           `}
         >
-          {Object.entries(tabs).map(([id, tab]) => (
-            <div
-              key={id}
-              css={css`
-                padding: 8px 16px;
-                cursor: pointer;
-                ${id === selectedId
-                  ? "border-bottom: 1px solid #000000;"
-                  : `&:hover {
+          {Object.entries(tabs).map(([id, tab]) => {
+            console.log("Active Class Name:", tab.titleProps?.activeClassName);
+            return (
+              <div
+                key={id}
+                css={css`
+                  padding: 8px 16px;
+                  cursor: pointer;
+                  ${id === selectedId
+                    ? "border-bottom: 1px solid #000000;"
+                    : `&:hover {
                       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
                   }`}
-              `}
-              role="button"
-              tabIndex={0}
-              className={`${tab.titleProps?.className} ${
-                id === selectedId ? tab.titleProps?.activeClassName : ""
-              }`}
-              onClick={() => setSelectedId(id)}
-              onKeyDown={(e) => e.key !== "Tab" && setSelectedId(id)}
-              {...tab.titleProps}
-            >
-              {tab.title}
-            </div>
-          ))}
+                `}
+                role="button"
+                tabIndex={0}
+                className={`${tab.titleProps?.className} ${
+                  id === selectedId ? tab.titleProps?.activeClassName : ""
+                }`}
+                onClick={() => setSelectedId(id)}
+                onKeyDown={(e) => e.key !== "Tab" && setSelectedId(id)}
+                {...tab.titleProps}
+              >
+                {tab.title}
+              </div>
+            );
+          })}
         </div>
         {Object.entries(tabs)
           .filter(([id]) => id === selectedId)

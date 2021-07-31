@@ -57,8 +57,6 @@ export const Tabs = ({ children }: TabsProps) => {
     }
   }, [tabs]);
 
-  console.log("Selected ID:", selectedId);
-
   return (
     <>
       <TabsContext.Provider value={providerState}>
@@ -76,7 +74,13 @@ export const Tabs = ({ children }: TabsProps) => {
           `}
         >
           {Object.entries(tabs).map(([id, tab]) => {
+            console.log("Tab ID:", id);
+            console.log("Selected ID:", selectedId);
             console.log("Active Class Name:", tab.titleProps?.activeClassName);
+            console.log(
+              "Component logic result (should be classname):",
+              id === selectedId ? tab.titleProps?.activeClassName : ""
+            );
             return (
               <div
                 key={id}

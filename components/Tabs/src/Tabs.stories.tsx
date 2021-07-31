@@ -10,9 +10,13 @@ export default {
 
 export const BasicUsage = () => (
   <Tabs>
-    <Tabs.Title id="one">Title 1</Tabs.Title>
+    <Tabs.Title id="one" activeClassName="test1">
+      Title 1
+    </Tabs.Title>
     <Tabs.Content id="one">Content 1</Tabs.Content>
-    <Tabs.Title id="two">Title 2</Tabs.Title>
+    <Tabs.Title id="two" activeClassName="test2">
+      Title 2
+    </Tabs.Title>
     <Tabs.Content id="two">Content 2</Tabs.Content>
   </Tabs>
 );

@@ -6,9 +6,13 @@ import { Tabs } from ".";
 
 const TabStub = () => (
   <Tabs>
-    <Tabs.Title id="one">Title 1</Tabs.Title>
+    <Tabs.Title id="one" activeClassName="title-1-selected">
+      Title 1
+    </Tabs.Title>
     <Tabs.Content id="one">Content 1</Tabs.Content>
-    <Tabs.Title id="two">Title 2</Tabs.Title>
+    <Tabs.Title id="two" activeClassName="title-2-selected">
+      Title 2
+    </Tabs.Title>
     <Tabs.Content id="two">Content 2</Tabs.Content>
   </Tabs>
 );
@@ -45,10 +49,19 @@ describe("Tabs", () => {
   test("It changes tab content when unselected title is key pressed", () => {
     const { queryByText } = render(<TabStub />);
     expect(queryByText("Content 2")).not.toBeInTheDocument();
-    expect(queryByText("Title 2")).not.toHaveClass("selected");
 
     userEvent.type(screen.getByText("Title 2"), "{space}");
 
     expect(queryByText("Content 2")).toBeInTheDocument();
+  });
+
+  test("It applies the activeClassName to the currently selected title", () => {
+    const { queryByText } = render(<TabStub />);
+    expect(queryByText("Title 2")).not.toHaveClass("title-2-selected");
+    expect(queryByText("Title 1")).toHaveClass("title-1-selected");
+
+    userEvent.click(screen.getByText("Title 2"));
+
+    expect(queryByText("Title 2")).toHaveClass("title-2-selected");
   });
 });

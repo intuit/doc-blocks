@@ -9,7 +9,7 @@ exports[`Tabs It matches the snapshot 1`] = `
       class="src___StyledDiv2-sc-1xojtv1-1 keYmsN"
     >
       <div
-        class="src___StyledDiv3-sc-1xojtv1-2 bhJGbF undefined undefined"
+        class="src___StyledDiv3-sc-1xojtv1-2 bhJGbF undefined title-1-selected"
         id="one"
         role="button"
         tabindex="0"

@@ -49,4 +49,23 @@ const TabbedInterface = () => (
 );
 ```
 
+### Active Class
+
+You can apply an `activeClassName` to each `Tabs.Title` component. When that title is selected, the specified className will be applied.
+
+```jsx
+const TabbedInterface = () => (
+  <Tabs>
+    <Tabs.Title id="one" activeClassName={styles.blueBackground}>
+      Title 1
+    </Tabs.Title>
+    <Tabs.Content id="one">Content for tab 1</Tabs.Content>
+    <Tabs.Title id="two" activeClassName={styles.redBackground}>
+      Title 2
+    </Tabs.Title>
+    <Tabs.Content id="two">Content for tab 2</Tabs.Content>
+  </Tabs>
+);
+```
+
 Feel free to add whatever classes or styles you want to any of the `Tabs.x` components - they'll be passed down to the div element!

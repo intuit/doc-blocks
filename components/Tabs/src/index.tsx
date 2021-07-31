@@ -15,7 +15,7 @@ interface TabProps
   /** ID of tab (ties tab content to tab title)  */
   id: string;
   /** Class to apply to selected tab title */
-  selectedClassName?: string;
+  activeClassName?: string;
 }
 
 interface TabsContextProps {
@@ -88,7 +88,7 @@ export const Tabs = ({ children }: TabsProps) => {
               role="button"
               tabIndex={0}
               className={`${tab.titleProps?.className} ${
-                id === selectedId ? tab.titleProps?.selectedClassName : ""
+                id === selectedId ? tab.titleProps?.activeClassName : ""
               }`}
               onClick={() => setSelectedId(id)}
               onKeyDown={(e) => e.key !== "Tab" && setSelectedId(id)}

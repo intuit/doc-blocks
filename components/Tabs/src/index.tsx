@@ -5,6 +5,8 @@ import { css, jsx } from "@emotion/react";
 interface TabsProps {
   /** Children of tabs wrapper */
   children: React.ReactChild[];
+  /** Classes to apply to tab title wrapper **/
+  titleWrapperClassName?: string;
 }
 
 interface TabProps
@@ -45,7 +47,7 @@ const TabsContext = React.createContext<TabsContextProps>({
 });
 
 /** Tabbed interface to show consumer and contributor docs  */
-export const Tabs = ({ children }: TabsProps) => {
+export const Tabs = ({ children, titleWrapperClassName }: TabsProps) => {
   const [tabs, setTabs] = React.useState<Record<string, Tab>>({});
   const [selectedId, setSelectedId] = React.useState<string>();
   const providerState = React.useMemo(() => ({ tabs, setTabs }), [tabs]);
@@ -72,6 +74,7 @@ export const Tabs = ({ children }: TabsProps) => {
             display: flex;
             flex-direction: row;
           `}
+          className={titleWrapperClassName}
         >
           {Object.entries(tabs).map(([id, tab]) => {
             if (tab.titleProps) {

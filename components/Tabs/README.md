@@ -20,7 +20,8 @@ import "@doc-blocks/tabs/dist/main.css";
 
 ## Usage
 
-The tabs component is easy peasy to use. It handles all click events internally so all you have to do is worry about the content. Remember to provide an `id` prop to tie the tab title to its content!
+The tabs component handles all click events internally so all you have to do is worry about the content. Remember to provide an `id` prop to tie the tab title to its content!
+Feel free to add whatever classes or styles you want to any of the `Tabs.x` components - they'll be passed down to the div element.
 Just do this:
 
 ```js
@@ -68,4 +69,12 @@ const TabbedInterface = () => (
 );
 ```
 
-Feel free to add whatever classes or styles you want to any of the `Tabs.x` components - they'll be passed down to the div element!
+### Title Wrapper Class
+
+You can apply a `titleWrapperClassName` to the top-level `Tabs` component. These classes will be applied to the element that wraps all of the tab titles. Use this for some extra styling customization.
+
+```jsx
+const TabbedInterface = () => (
+  <Tabs titleWrapperClassName="title-wrapper">...</Tabs>
+);
+```

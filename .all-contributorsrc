@@ -40,6 +40,18 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "fattslug",
+      "name": "Sean Powell",
+      "avatar_url": "https://avatars.githubusercontent.com/u/18297343?v=4",
+      "profile": "https://github.com/fattslug",
+      "contributions": [
+        "doc",
+        "example",
+        "test",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7

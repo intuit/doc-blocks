@@ -9,8 +9,6 @@ interface AccordionCompositionProps
   > {
   /** ID to assign to accordion item */
   id: string;
-  /** Children of title */
-  children: React.ReactChild[];
   /** Class to apply when selected */
   activeClassName?: string;
 }
@@ -87,6 +85,7 @@ const Panel = ({
         isSelected ? styles.expanded : styles.collapsed
       } ${className} ${selectedId === id ? activeClassName : ""}`}
       id={`${id}-panel`}
+      aria-hidden={!isSelected}
       style={{
         height: isSelected ? panelRef.current?.scrollHeight : "0px",
       }}

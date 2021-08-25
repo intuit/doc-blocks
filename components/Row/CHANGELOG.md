@@ -1,3 +1,15 @@
+# v0.8.5 (Fri Aug 13 2021)
+
+#### 🐛 Bug Fix
+
+- Adding `align` prop [#12](https://github.com/intuit/doc-blocks/pull/12) ([@kharrop](https://github.com/kharrop))
+
+#### Authors: 1
+
+- Kelly Harrop ([@kharrop](https://github.com/kharrop))
+
+---
+
 # v0.8.3 (Mon May 24 2021)
 
 #### 🐛 Bug Fix

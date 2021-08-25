@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs It matches the snapshot 1`] = `
+<div>
+  <div
+    class="src___StyledDiv-sc-1xojtv1-0 kfHqKN"
+  >
+    <div
+      class="src___StyledDiv2-sc-1xojtv1-1 keYmsN"
+    >
+      <div
+        class="src___StyledDiv3-sc-1xojtv1-2 bhJGbF title-1-default title-1-selected"
+        id="one"
+        role="button"
+        tabindex="0"
+      >
+        Title 1
+      </div>
+      <div
+        class="src___StyledDiv3-sc-1xojtv1-2 lhVIJV title-2-default "
+        id="two"
+        role="button"
+        tabindex="0"
+      >
+        Title 2
+      </div>
+    </div>
+    <div
+      class="src___StyledDiv4-sc-1xojtv1-3 bNSTYn"
+    >
+      Content 1
+    </div>
+  </div>
+</div>
+`;

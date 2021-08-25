@@ -1,13 +1,13 @@
 {
-  "name": "@doc-blocks/related-components",
+  "name": "@doc-blocks/tabs",
   "version": "0.8.5",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist",
   "repository": "https://github.com/intuit/doc-blocks",
-  "author": "Andrew Lisowski lisowski54@gmail.com",
+  "author": "Sean Powell sean_powell@intuit.com",
   "contributors": [
-    "Andrew Lisowski lisowski54@gmail.com"
+    "Sean Powell sean_powell@intuit.com"
   ],
   "license": "MIT",
   "sideEffects": [
@@ -28,19 +28,12 @@
     "size": "ds size"
   },
   "dependencies": {
-    "@babel/runtime": "^7.11.2",
-    "@emotion/core": "^10.0.28",
-    "@emotion/styled": "^10.0.27",
-    "emotion": "^10.0.27"
+    "@babel/runtime": "7.11.2",
+    "@emotion/react": "11.4.0",
+    "styled-components": "5.3.0"
   },
   "peerDependencies": {
-    "@storybook/addon-links": "6.2.9",
-    "@storybook/components": "6.2.9",
     "react": ">= 16.8.6"
-  },
-  "devDependencies": {
-    "@storybook/addon-links": "6.2.9",
-    "@storybook/components": "6.2.9"
   },
   "files": [
     "dist",

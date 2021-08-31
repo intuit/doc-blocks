@@ -1,6 +1,6 @@
 import React from "react";
-
-import styles from "./Accordion.css";
+/** @jsx jsx */
+import { css, jsx } from "@emotion/react";
 
 interface AccordionCompositionProps
   extends React.DetailedHTMLProps<
@@ -37,7 +37,15 @@ const Accordion = ({ children }: AccordionProps) => {
 
   return (
     <AccordionContext.Provider value={{ selectedId, setSelectedId }}>
-      <div className={styles.accordion}>{children}</div>
+      <div
+        css={css`
+          position: relative;
+          margin: 14px 0;
+          width: 100%;
+        `}
+      >
+        {children}
+      </div>
     </AccordionContext.Provider>
   );
 };
@@ -53,9 +61,17 @@ const Title = ({
 
   return (
     <div
-      className={`${styles.title} ${className} ${
-        selectedId === id ? activeClassName : ""
-      }`}
+      className={`${className} ${selectedId === id ? activeClassName : ""}`}
+      css={css`
+        width: 100%;
+        padding: 14px 28px;
+
+        &:hover,
+        &:focus {
+          background-color: #fafafa;
+          cursor: pointer;
+        }
+      `}
       id={`${id}-title`}
       role="button"
       tabIndex={0}
@@ -81,9 +97,22 @@ const Panel = ({
   return (
     <div
       ref={panelRef}
-      className={`${styles.panel} ${
-        isSelected ? styles.expanded : styles.collapsed
-      } ${className} ${selectedId === id ? activeClassName : ""}`}
+      className={`${className} ${selectedId === id ? activeClassName : ""}`}
+      css={css`
+        width: 100%;
+        box-sizing: content-box;
+        transition: height 0.2s ease-in-out, padding 0.2s ease-in-out;
+        height: auto;
+        overflow: hidden;
+
+        ${!isSelected && `padding: 0 28px;`}
+
+        ${isSelected && `padding: 14px 28px;`}
+
+        @media (prefers-reduced-motion) {
+          transition: none;
+        }
+      `}
       id={`${id}-panel`}
       aria-hidden={!isSelected}
       style={{

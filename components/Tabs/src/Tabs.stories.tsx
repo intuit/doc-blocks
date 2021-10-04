@@ -6,10 +6,15 @@ import notes from "../README.md";
 export default {
   title: "Components/Tabs",
   parameters: { notes },
+  argTypes: { onChange: { action: "Selected" } },
 };
 
-export const BasicUsage = () => (
-  <Tabs>
+export const BasicUsage = ({
+  onChange,
+}: {
+  onChange: (selectedId: string | null) => void;
+}) => (
+  <Tabs onChange={(selectedId) => onChange(selectedId)}>
     <Tabs.Title id="one" activeClassName="test1">
       Title 1
     </Tabs.Title>

@@ -7,6 +7,8 @@ interface TabsProps {
   children: React.ReactChild[];
   /** Classes to apply to tab title wrapper **/
   titleWrapperClassName?: string;
+  /** Callback after a tab is selected */
+  onChange?: (selectedId: string) => void;
 }
 
 interface TabProps
@@ -47,7 +49,11 @@ const TabsContext = React.createContext<TabsContextProps>({
 });
 
 /** Tabbed interface to show consumer and contributor docs  */
-export const Tabs = ({ children, titleWrapperClassName }: TabsProps) => {
+export const Tabs = ({
+  children,
+  titleWrapperClassName,
+  onChange,
+}: TabsProps) => {
   const [tabs, setTabs] = React.useState<Record<string, Tab>>({});
   const [selectedId, setSelectedId] = React.useState<string>();
   const providerState = React.useMemo(() => ({ tabs, setTabs }), [tabs]);
@@ -97,7 +103,12 @@ export const Tabs = ({ children, titleWrapperClassName }: TabsProps) => {
                   className={`${className} ${
                     id === selectedId ? tab.titleProps?.activeClassName : ""
                   }`}
-                  onClick={() => setSelectedId(id)}
+                  onClick={() => {
+                    setSelectedId(() => {
+                      onChange && onChange(id);
+                      return id;
+                    });
+                  }}
                   onKeyDown={(e) => e.key !== "Tab" && setSelectedId(id)}
                   {...titleProps}
                 >

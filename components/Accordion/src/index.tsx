@@ -16,6 +16,8 @@ interface AccordionCompositionProps
 interface AccordionProps {
   /** Children of accordion wrapper */
   children: React.ReactChild[];
+  /** Callback after an accordion panel is expanded */
+  onChange?: (selectedId: string | null) => void;
 }
 
 interface AccordionContextProps {
@@ -23,20 +25,23 @@ interface AccordionContextProps {
   selectedId: string | null;
   /** Setter method for setting selected panel */
   setSelectedId: React.Dispatch<React.SetStateAction<string | null>>;
+  /** Callback after an accordion panel is expanded (derived from AccordionProps) */
+  onChange?: (selectedId: string | null) => void;
 }
 
 // Setting up context with dummy values to satisfy typechecking
 const AccordionContext = React.createContext<AccordionContextProps>({
   selectedId: null,
   setSelectedId: () => null,
+  onChange: () => null,
 });
 
 /** Accordion component */
-const Accordion = ({ children }: AccordionProps) => {
+const Accordion = ({ children, onChange }: AccordionProps) => {
   const [selectedId, setSelectedId] = React.useState<string | null>(null);
 
   return (
-    <AccordionContext.Provider value={{ selectedId, setSelectedId }}>
+    <AccordionContext.Provider value={{ selectedId, setSelectedId, onChange }}>
       <div
         css={css`
           position: relative;
@@ -57,7 +62,9 @@ const Title = ({
   className,
   activeClassName,
 }: AccordionCompositionProps) => {
-  const { selectedId, setSelectedId } = React.useContext(AccordionContext);
+  const { selectedId, setSelectedId, onChange } = React.useContext(
+    AccordionContext
+  );
 
   return (
     <div
@@ -75,7 +82,13 @@ const Title = ({
       id={`${id}-title`}
       role="button"
       tabIndex={0}
-      onClick={() => setSelectedId((prev) => (prev === id ? null : id))}
+      onClick={() => {
+        setSelectedId((prev) => {
+          const selected = prev === id ? null : id;
+          onChange && onChange(selected);
+          return selected;
+        });
+      }}
       onKeyPress={() => setSelectedId((prev) => (prev === id ? null : id))}
     >
       {children}

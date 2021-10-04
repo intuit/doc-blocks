@@ -3,10 +3,10 @@
 exports[`Accordion It matches the snapshot 1`] = `
 <div>
   <div
-    class="accordion"
+    class="src___StyledDiv-fudmoy-0 kRjySN"
   >
     <div
-      class="title title-1-default "
+      class="src___StyledDiv2-fudmoy-1 glEMIw title-1-default "
       id="one-title"
       role="button"
       tabindex="0"
@@ -15,14 +15,14 @@ exports[`Accordion It matches the snapshot 1`] = `
     </div>
     <div
       aria-hidden="true"
-      class="panel collapsed panel-1-default "
+      class="src___StyledDiv3-fudmoy-2 hACPbW panel-1-default "
       id="one-panel"
       style="height: 0px;"
     >
       Panel 1
     </div>
     <div
-      class="title title-2-default "
+      class="src___StyledDiv2-fudmoy-1 glEMIw title-2-default "
       id="two-title"
       role="button"
       tabindex="0"
@@ -31,7 +31,7 @@ exports[`Accordion It matches the snapshot 1`] = `
     </div>
     <div
       aria-hidden="true"
-      class="panel collapsed panel-2-default "
+      class="src___StyledDiv3-fudmoy-2 hACPbW panel-2-default "
       id="two-panel"
       style="height: 0px;"
     >

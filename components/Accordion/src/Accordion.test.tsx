@@ -4,8 +4,8 @@ import userEvent from "@testing-library/user-event";
 
 import Accordion from ".";
 
-const AccordionStub = () => (
-  <Accordion>
+const AccordionStub = ({ spy }: { spy?: jest.Mock<any, any> }) => (
+  <Accordion onChange={(selectedId) => spy(selectedId)}>
     <Accordion.Title
       id="one"
       activeClassName="title-1-selected"
@@ -129,5 +129,17 @@ describe("Accordion", () => {
 
     expect(queryByText("Title 1")).not.toHaveClass("title-1-selected");
     expect(queryByText("Panel 1")).not.toHaveClass("panel-1-selected");
+  });
+
+  test("It calls onChange when a tab is clicked", () => {
+    const spy = jest.fn();
+    const { queryByText } = render(<AccordionStub spy={spy} />);
+    expect(queryByText("Title 1")).toBeInTheDocument();
+    expect(queryByText("Title 2")).toBeInTheDocument();
+
+    userEvent.click(screen.getByText("Title 2"));
+
+    expect(spy).toHaveBeenCalledTimes(1);
+    expect(spy).toHaveBeenCalledWith("two");
   });
 });

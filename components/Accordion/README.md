@@ -53,6 +53,16 @@ const AccordionInterface = () => (
 );
 ```
 
+### onChange Handler
+
+When a user clicks on an Accordion title, the `onChange` handler is called. You can make use of this functionality by adding an `onChange` prop to the `<Accordion>` wrapper like so:
+
+```jsx
+const TabbedInterface = () => (
+  <Accordion onChange={(selectedId) => console.log(selectedId)}>...</Accordion>
+);
+```
+
 ### Active Class
 
 You can apply an `activeClassName` to each `Accordion.Title` and `Accordion.Panel` component. When that accordion item is selected, the specified classes will be applied.

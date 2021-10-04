@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.build.json",
+  "include": ["src/**/*", "../../typings/**/*"],
+
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "composite": true,
+    "jsxImportSource": "@emotion/react",
+
+    // Need to override emotion's types because they pollute the global
+    "baseUrl": ".",
+    "paths": {
+      "@emotion/core": ["../../typings/emotion.d.ts"]
+    },
+    "types": ["@emotion/react/types/css-prop"]
+  }
+}

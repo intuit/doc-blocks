@@ -50,6 +50,16 @@ const TabbedInterface = () => (
 );
 ```
 
+### onChange Handler
+
+When a user clicks on a Tab, the `onChange` handler is called. You can make use of this functionality by adding an `onChange` prop to the `<Tabs>` wrapper like so:
+
+```jsx
+const TabbedInterface = () => (
+  <Tabs onChange={(selectedId) => console.log(selectedId)}>...</Tabs>
+);
+```
+
 ### Active Class
 
 You can apply an `activeClassName` to each `Tabs.Title` component. When that title is selected, the specified className will be applied.

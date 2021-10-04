@@ -1,3 +1,18 @@
+# v0.8.6 (Mon Oct 04 2021)
+
+#### 🐛 Bug Fix
+
+- `@doc-blocks/accordion`
+  - Creating Accordion component [#14](https://github.com/intuit/doc-blocks/pull/14) (sean_powell@intuit.com)
+- `@doc-blocks/tabs`
+  - Adding Tabs onChange handler [#15](https://github.com/intuit/doc-blocks/pull/15) (sean_powell@intuit.com)
+
+#### Authors: 1
+
+- Sean Powell ([@fattslug](https://github.com/fattslug))
+
+---
+
 # v0.8.5 (Fri Aug 13 2021)
 
 #### 🐛 Bug Fix

@@ -4,8 +4,8 @@ import userEvent from "@testing-library/user-event";
 
 import { Tabs } from ".";
 
-const TabStub = () => (
-  <Tabs>
+const TabStub = ({ spy }: { spy?: jest.Mock<any, any> }) => (
+  <Tabs onChange={(selectedId) => spy && spy(selectedId)}>
     <Tabs.Title
       id="one"
       activeClassName="title-1-selected"
@@ -76,5 +76,17 @@ describe("Tabs", () => {
     expect(queryByText("Title 2")).toHaveClass("title-2-default");
     expect(queryByText("Title 1")).toHaveClass("title-1-default");
     expect(queryByText("Title 1")).not.toHaveClass("title-1-selected");
+  });
+
+  test("It calls onChange when a tab is clicked", () => {
+    const spy = jest.fn();
+    const { queryByText } = render(<TabStub spy={spy} />);
+    expect(queryByText("Title 1")).toBeInTheDocument();
+    expect(queryByText("Title 2")).toBeInTheDocument();
+
+    userEvent.click(screen.getByText("Title 2"));
+
+    expect(spy).toHaveBeenCalledTimes(1);
+    expect(spy).toHaveBeenCalledWith("two");
   });
 });

@@ -37,7 +37,7 @@ const AccordionContext = React.createContext<AccordionContextProps>({
 });
 
 /** Accordion component */
-const Accordion = ({ children, onChange }: AccordionProps) => {
+export const Accordion = ({ children, onChange }: AccordionProps) => {
   const [selectedId, setSelectedId] = React.useState<string | null>(null);
 
   return (
@@ -139,5 +139,3 @@ const Panel = ({
 
 Accordion.Title = Title;
 Accordion.Panel = Panel;
-
-export default Accordion;

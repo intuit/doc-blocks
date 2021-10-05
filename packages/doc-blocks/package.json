@@ -33,6 +33,7 @@
   "dependencies": {
     "@babel/runtime": "^7.11.2",
     "@doc-blocks/accessibility": "link:../../components/Accessibility",
+    "@doc-blocks/accordion": "link:../../components/Accordion",
     "@doc-blocks/bundle-size": "link:../../components/BundleSize",
     "@doc-blocks/design-spec": "link:../../components/DesignSpec",
     "@doc-blocks/gallery": "link:../../components/Gallery",
@@ -43,6 +44,7 @@
     "@doc-blocks/row": "link:../../components/Row",
     "@doc-blocks/shield": "link:../../components/Shield",
     "@doc-blocks/shield-row": "link:../../components/ShieldRow",
+    "@doc-blocks/tabs": "link:../../components/Tabs",
     "@doc-blocks/version": "link:../../components/Version"
   }
 }

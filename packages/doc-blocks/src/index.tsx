@@ -1,4 +1,5 @@
 export * from "@doc-blocks/accessibility";
+export * from "@doc-blocks/accordion";
 export * from "@doc-blocks/bundle-size";
 export * from "@doc-blocks/design-spec";
 export * from "@doc-blocks/guideline";
@@ -9,4 +10,5 @@ export * from "@doc-blocks/responsive-story";
 export * from "@doc-blocks/row";
 export * from "@doc-blocks/shield";
 export * from "@doc-blocks/shield-row";
+export * from "@doc-blocks/tabs";
 export * from "@doc-blocks/version";

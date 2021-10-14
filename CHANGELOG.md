@@ -1,3 +1,16 @@
+# v0.8.8 (Thu Oct 14 2021)
+
+#### 🐛 Bug Fix
+
+- `@doc-blocks/accordion`, `@doc-blocks/tabs`
+  - Updating Tabs & Accordion exports [#17](https://github.com/intuit/doc-blocks/pull/17) (sean_powell@intuit.com)
+
+#### Authors: 1
+
+- Sean Powell ([@fattslug](https://github.com/fattslug))
+
+---
+
 # v0.8.7 (Tue Oct 05 2021)
 
 #### 🐛 Bug Fix

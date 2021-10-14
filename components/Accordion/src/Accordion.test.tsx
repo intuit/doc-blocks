@@ -2,7 +2,7 @@ import React from "react";
 import { screen, render, cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import Accordion from ".";
+import { Accordion } from ".";
 
 const AccordionStub = ({ spy }: { spy?: jest.Mock<any, any> }) => (
   <Accordion onChange={(selectedId) => spy(selectedId)}>

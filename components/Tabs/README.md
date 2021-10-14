@@ -13,7 +13,7 @@ yarn add @doc-blocks/tabs
 Then to use the component in your code just import it!
 
 ```js
-import Tabs from "@doc-blocks/tabs";
+import { Tabs } from "@doc-blocks/tabs";
 // and with css-modules
 import "@doc-blocks/tabs/dist/main.css";
 ```
@@ -79,12 +79,10 @@ const TabbedInterface = () => (
 );
 ```
 
-### Title Wrapper Class
+### Class Names
 
-You can apply a `titleWrapperClassName` to the top-level `Tabs` component. These classes will be applied to the element that wraps all of the tab titles. Use this for some extra styling customization.
+`className` props provided to any `Tab` component will be passed down to the render element.
 
-```jsx
-const TabbedInterface = () => (
-  <Tabs titleWrapperClassName="title-wrapper">...</Tabs>
-);
-```
+A `className` provided to the `Tabs` component will be added to the `div` element which wraps the tab title group.
+A `className` provided to the `Tabs.Title` component will be added to the `div` element which wraps an individual tab title.
+A `className` provided to the `Tabs.Content` component will be added to the `div` element which wraps the tab content.

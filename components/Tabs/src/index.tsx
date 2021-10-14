@@ -6,7 +6,7 @@ interface TabsProps {
   /** Children of tabs wrapper */
   children: React.ReactChild[];
   /** Classes to apply to tab title wrapper **/
-  titleWrapperClassName?: string;
+  className?: string;
   /** Callback after a tab is selected */
   onChange?: (selectedId: string) => void;
 }
@@ -51,7 +51,7 @@ const TabsContext = React.createContext<TabsContextProps>({
 /** Tabbed interface to show consumer and contributor docs  */
 export const Tabs = ({
   children,
-  titleWrapperClassName,
+  className: tabsWrapperClassName,
   onChange,
 }: TabsProps) => {
   const [tabs, setTabs] = React.useState<Record<string, Tab>>({});
@@ -80,7 +80,7 @@ export const Tabs = ({
             display: flex;
             flex-direction: row;
           `}
-          className={titleWrapperClassName}
+          className={tabsWrapperClassName}
         >
           {Object.entries(tabs).map(([id, tab]) => {
             if (tab.titleProps) {

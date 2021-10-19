@@ -1,3 +1,15 @@
+# v0.8.9 (Mon Oct 18 2021)
+
+#### 🐛 Bug Fix
+
+- Adding option for external tab state [#18](https://github.com/intuit/doc-blocks/pull/18) (sean_powell@intuit.com)
+
+#### Authors: 1
+
+- Sean Powell ([@fattslug](https://github.com/fattslug))
+
+---
+
 # v0.8.8 (Thu Oct 14 2021)
 
 #### 🐛 Bug Fix

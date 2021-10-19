@@ -4,8 +4,17 @@ import userEvent from "@testing-library/user-event";
 
 import { Tabs } from ".";
 
-const TabStub = ({ spy }: { spy?: jest.Mock<any, any> }) => (
-  <Tabs onChange={(selectedId) => spy && spy(selectedId)}>
+const TabStub = ({
+  spy,
+  active,
+}: {
+  spy?: jest.Mock<any, any>;
+  active?: string;
+}) => (
+  <Tabs
+    active={active || undefined}
+    onChange={(selectedId) => spy && spy(selectedId)}
+  >
     <Tabs.Title
       id="one"
       activeClassName="title-1-selected"
@@ -88,5 +97,11 @@ describe("Tabs", () => {
 
     expect(spy).toHaveBeenCalledTimes(1);
     expect(spy).toHaveBeenCalledWith("two");
+  });
+
+  test("It sets initial tab state based on active prop", () => {
+    const { queryByText } = render(<TabStub active="two" />);
+    expect(queryByText("Content 2")).toBeInTheDocument();
+    expect(queryByText("Content 1")).not.toBeInTheDocument();
   });
 });

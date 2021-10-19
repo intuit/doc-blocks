@@ -20,7 +20,7 @@ import "@doc-blocks/tabs/dist/main.css";
 
 ## Usage
 
-The tabs component handles all click events internally so all you have to do is worry about the content. Remember to provide an `id` prop to tie the tab title to its content!
+The `Tabs` component handles all state-related logic internally by default, meaning you get all basic tabs functionality out of the box. Remember to provide an `id` prop to tie the tab title to its content!
 Feel free to add whatever classes or styles you want to any of the `Tabs.x` components - they'll be passed down to the div element.
 Just do this:
 
@@ -48,6 +48,27 @@ const TabbedInterface = () => (
     ))}
   </Tabs>
 );
+```
+
+### State Handling
+
+By default, all state is handled internally by the `Tabs` component.
+If you'd like to further customize this behavior (e.g. change the default active tab), you can provide an `active` prop to the `Tabs` component. You will then have to manage the state outside of the tabs component using the `onChange` event. Like so:
+
+```jsx
+const ExampleDocs = () => {
+  const queryParams = new URLSearchParams(window.location.search);
+  const [activeId, setActiveId] = React.useState(queryParams.get("default"));
+
+  return (
+    <Tabs active={activeId || undefined} onChange={setActiveId}>
+      <Tabs.Title id="one">Title 1</Tabs.Title>
+      <Tabs.Content id="one">Content for tab 1</Tabs.Content>
+      <Tabs.Title id="two">Title 2</Tabs.Title>
+      <Tabs.Content id="two">Content for tab 2</Tabs.Content>
+    </Tabs>
+  );
+};
 ```
 
 ### onChange Handler

@@ -3,6 +3,8 @@ import React, { useEffect } from "react";
 import { css, jsx } from "@emotion/react";
 
 interface TabsProps {
+  /** Default active tab */
+  active?: string;
   /** Children of tabs wrapper */
   children: React.ReactChild[];
   /** Classes to apply to tab title wrapper **/
@@ -50,6 +52,7 @@ const TabsContext = React.createContext<TabsContextProps>({
 
 /** Tabbed interface to show consumer and contributor docs  */
 export const Tabs = ({
+  active,
   children,
   className: tabsWrapperClassName,
   onChange,
@@ -61,9 +64,10 @@ export const Tabs = ({
   useEffect(() => {
     const tabKeys = Object.keys(tabs);
     if (tabKeys.length > 1) {
-      setSelectedId(tabKeys[0]);
+      const tabIndex = active ? tabKeys.indexOf(active) : 0;
+      setSelectedId(tabKeys[tabIndex]);
     }
-  }, [tabs]);
+  }, [tabs, active]);
 
   return (
     <>

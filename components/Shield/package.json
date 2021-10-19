@@ -1,6 +1,6 @@
 {
   "name": "@doc-blocks/shield",
-  "version": "0.8.8",
+  "version": "0.8.9",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist",

@@ -7,15 +7,17 @@ interface AccordionCompositionProps
     React.HTMLAttributes<HTMLDivElement>,
     HTMLDivElement
   > {
-  /** ID to assign to accordion item */
-  id: string;
   /** Class to apply when selected */
   activeClassName?: string;
+  /** ID to assign to accordion item */
+  id: string;
 }
 
 interface AccordionProps {
   /** Children of accordion wrapper */
   children: React.ReactChild[];
+  /** Classes to apply to accordion wrapper **/
+  className?: string;
   /** Callback after an accordion panel is expanded */
   onChange?: (selectedId: string | null) => void;
 }
@@ -37,12 +39,17 @@ const AccordionContext = React.createContext<AccordionContextProps>({
 });
 
 /** Accordion component */
-export const Accordion = ({ children, onChange }: AccordionProps) => {
+export const Accordion = ({
+  className: accordionWrapperClassName,
+  children,
+  onChange,
+}: AccordionProps) => {
   const [selectedId, setSelectedId] = React.useState<string | null>(null);
 
   return (
     <AccordionContext.Provider value={{ selectedId, setSelectedId, onChange }}>
       <div
+        className={accordionWrapperClassName}
         css={css`
           position: relative;
           margin: 14px 0;

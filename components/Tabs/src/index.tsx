@@ -56,6 +56,7 @@ export const Tabs = ({
   children,
   className: tabsWrapperClassName,
   onChange,
+  ...rest
 }: TabsProps) => {
   const [tabs, setTabs] = React.useState<Record<string, Tab>>({});
   const [selectedId, setSelectedId] = React.useState<string>();
@@ -85,6 +86,7 @@ export const Tabs = ({
             flex-direction: row;
           `}
           className={tabsWrapperClassName}
+          {...rest}
         >
           {Object.entries(tabs).map(([id, tab]) => {
             if (tab.titleProps) {

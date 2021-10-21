@@ -5,7 +5,11 @@ import userEvent from "@testing-library/user-event";
 import { Accordion } from ".";
 
 const AccordionStub = ({ spy }: { spy?: jest.Mock<any, any> }) => (
-  <Accordion onChange={(selectedId) => spy(selectedId)}>
+  <Accordion
+    data-testid="accordionWrapper"
+    className="accordion-wrapper"
+    onChange={(selectedId) => spy(selectedId)}
+  >
     <Accordion.Title
       id="one"
       activeClassName="title-1-selected"
@@ -141,5 +145,10 @@ describe("Accordion", () => {
 
     expect(spy).toHaveBeenCalledTimes(1);
     expect(spy).toHaveBeenCalledWith("two");
+  });
+
+  test("It applies accordion wrapper class name", () => {
+    const { queryByTestId } = render(<AccordionStub />);
+    expect(queryByTestId("accordionWrapper")).toHaveClass("accordion-wrapper");
   });
 });

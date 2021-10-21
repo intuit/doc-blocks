@@ -43,6 +43,7 @@ export const Accordion = ({
   className: accordionWrapperClassName,
   children,
   onChange,
+  ...rest
 }: AccordionProps) => {
   const [selectedId, setSelectedId] = React.useState<string | null>(null);
 
@@ -55,6 +56,7 @@ export const Accordion = ({
           margin: 14px 0;
           width: 100%;
         `}
+        {...rest}
       >
         {children}
       </div>

@@ -13,6 +13,8 @@ const TabStub = ({
 }) => (
   <Tabs
     active={active || undefined}
+    data-testid="tabsWrapper"
+    className="tabs-wrapper"
     onChange={(selectedId) => spy && spy(selectedId)}
   >
     <Tabs.Title
@@ -64,7 +66,7 @@ describe("Tabs", () => {
   });
 
   test("It changes tab content when unselected title is key pressed", () => {
-    const { queryByText } = render(<TabStub />);
+    const { queryByTestId } = render(<TabStub />);
     expect(queryByText("Content 2")).not.toBeInTheDocument();
 
     userEvent.type(screen.getByText("Title 2"), "{space}");
@@ -103,5 +105,10 @@ describe("Tabs", () => {
     const { queryByText } = render(<TabStub active="two" />);
     expect(queryByText("Content 2")).toBeInTheDocument();
     expect(queryByText("Content 1")).not.toBeInTheDocument();
+  });
+
+  test("It applies tabs wrapper class name", () => {
+    const { queryByTestId } = render(<TabStub />);
+    expect(queryByTestId("tabsWrapper")).toHaveClass("tabs-wrapper");
   });
 });

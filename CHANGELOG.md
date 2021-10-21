@@ -1,3 +1,16 @@
+# v0.8.10 (Thu Oct 21 2021)
+
+#### 🐛 Bug Fix
+
+- `@doc-blocks/accordion`
+  - Adding className support for accordion [#19](https://github.com/intuit/doc-blocks/pull/19) ([@kharrop](https://github.com/kharrop))
+
+#### Authors: 1
+
+- Kelly Harrop ([@kharrop](https://github.com/kharrop))
+
+---
+
 # v0.8.9 (Mon Oct 18 2021)
 
 #### 🐛 Bug Fix

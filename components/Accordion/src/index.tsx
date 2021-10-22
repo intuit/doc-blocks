@@ -109,10 +109,6 @@ const Panel = ({
         height: auto;
         overflow: hidden;
 
-        ${!isSelected && `padding: 0;`}
-
-        ${isSelected && `padding: 16px 0;`}
-
         @media (prefers-reduced-motion) {
           transition: none;
         }

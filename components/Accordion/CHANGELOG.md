@@ -1,3 +1,15 @@
+# v0.8.11 (Thu Oct 21 2021)
+
+#### 🐛 Bug Fix
+
+- Removing width and horizontal padding from accordion panel [#21](https://github.com/intuit/doc-blocks/pull/21) ([@kharrop](https://github.com/kharrop))
+
+#### Authors: 1
+
+- Kelly Harrop ([@kharrop](https://github.com/kharrop))
+
+---
+
 # v0.8.10 (Thu Oct 21 2021)
 
 #### 🐛 Bug Fix

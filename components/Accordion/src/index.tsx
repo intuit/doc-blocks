@@ -68,7 +68,7 @@ const Title = ({
     <div
       className={`${className} ${selectedId === id ? activeClassName : ""}`}
       css={css`
-        padding: 16px;
+        padding: 16px 0;
         cursor: pointer;
       `}
       id={`${id}-title`}
@@ -111,7 +111,7 @@ const Panel = ({
 
         ${!isSelected && `padding: 0;`}
 
-        ${isSelected && `padding: 16px;`}
+        ${isSelected && `padding: 16px 0;`}
 
         @media (prefers-reduced-motion) {
           transition: none;

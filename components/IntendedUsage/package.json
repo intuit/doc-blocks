@@ -1,6 +1,6 @@
 {
   "name": "@doc-blocks/intended-usage",
-  "version": "0.8.11",
+  "version": "0.8.12",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist",

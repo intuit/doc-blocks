@@ -1,3 +1,16 @@
+# v0.8.12 (Mon Nov 15 2021)
+
+#### 🐛 Bug Fix
+
+- `@doc-blocks/accordion`
+  - Adding styled-components dependency to Accordion [#22](https://github.com/intuit/doc-blocks/pull/22) (sean_powell@intuit.com)
+
+#### Authors: 1
+
+- Sean Powell ([@fattslug](https://github.com/fattslug))
+
+---
+
 # v0.8.11 (Thu Oct 21 2021)
 
 #### 🐛 Bug Fix

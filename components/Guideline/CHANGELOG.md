@@ -1,3 +1,16 @@
+# v0.8.13 (Tue Mar 08 2022)
+
+#### 🐛 Bug Fix
+
+- Update index.tsx [#24](https://github.com/intuit/doc-blocks/pull/24) ([@NoWorries](https://github.com/NoWorries))
+- Update index.tsx ([@NoWorries](https://github.com/NoWorries))
+
+#### Authors: 1
+
+- Josh Harwood ([@NoWorries](https://github.com/NoWorries))
+
+---
+
 # v0.8.3 (Mon May 24 2021)
 
 #### 🐛 Bug Fix

@@ -1,3 +1,16 @@
+# v0.8.14 (Mon Jul 25 2022)
+
+#### 🐛 Bug Fix
+
+- `@doc-blocks/accordion`, `@doc-blocks/guideline`, `@doc-blocks/related-components`, `@doc-blocks/responsive-story`
+  - add missing peer deps [#25](https://github.com/intuit/doc-blocks/pull/25) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # v0.8.13 (Tue Mar 08 2022)
 
 #### 🐛 Bug Fix

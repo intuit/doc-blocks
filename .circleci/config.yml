@@ -3,7 +3,7 @@ version: 2.1
 defaults: &defaults
   working_directory: ~/design-system
   docker:
-    - image: circleci/node:18-browsers
+    - image: cimg/node:18.19.0
   environment:
     TZ: "/usr/share/zoneinfo/America/Los_Angeles"
 

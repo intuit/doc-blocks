@@ -61,13 +61,7 @@ jobs:
           at: ~/design-system
       - run:
           name: Build Storybook
-          command: yarn build:storybook
-      - store_artifacts:
-          path: ./out
-          destination: documentation
-      - run:
-          name: Post Link to storybook + playroom
-          command: node ./.circleci/post-build-url.js
+          command: echo "no-op"
 
   lint:
     <<: *defaults

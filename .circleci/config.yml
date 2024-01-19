@@ -78,6 +78,7 @@ jobs:
       - attach_workspace:
           at: ~/design-system
       - run: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+      - run: npm whoami
       - run:
           name: Release
           command: yarn release

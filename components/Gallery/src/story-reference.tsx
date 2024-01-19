@@ -2,7 +2,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
 import React from "react";
-import { hrefTo, navigate } from "@storybook/addon-links/dist/esm/preview";
+import { hrefTo, navigate } from "@storybook/addon-links";
 import { Link } from "@storybook/components";
 import { Element } from "@design-systems/utils";
 

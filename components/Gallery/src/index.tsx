@@ -1,13 +1,13 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
 import React from "react";
-import { DesignSpec } from "@doc-blocks/design-spec";
-import { Row } from "@doc-blocks/row";
-import { Shield } from "@doc-blocks/shield";
-import { ShieldRow } from "@doc-blocks/shield-row";
-import { Story, Canvas } from "@storybook/addon-docs/blocks";
+import { DesignSpec } from "@amalik2/design-spec";
+import { Row } from "@amalik2/row";
+import { Shield } from "@amalik2/shield";
+import { ShieldRow } from "@amalik2/shield-row";
+import { Story, Canvas } from "@storybook/blocks";
 import styled from "@emotion/styled";
-import LinkTo from "@storybook/addon-links/dist/esm/react";
+import LinkTo from "@storybook/addon-links/react";
 import Markdown from "markdown-to-jsx";
 import { css } from "emotion";
 import useLayoutEffect from "use-isomorphic-layout-effect";

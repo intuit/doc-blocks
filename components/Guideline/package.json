@@ -1,5 +1,5 @@
 {
-  "name": "@doc-blocks/guideline",
+  "name": "@amalik2/guideline",
   "version": "0.8.15",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -38,7 +38,7 @@
     "react": ">= 18.2.0"
   },
   "devDependencies": {
-    "@doc-blocks/row": "link:../Row"
+    "@amalik2/row": "link:../Row"
   },
   "files": [
     "dist",

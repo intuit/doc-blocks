@@ -1,5 +1,5 @@
 {
-  "name": "@doc-blocks/intended-usage",
+  "name": "@amalik2/intended-usage",
   "version": "0.8.15",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",

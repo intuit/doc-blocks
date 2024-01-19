@@ -1,5 +1,5 @@
 {
-  "name": "doc-blocks",
+  "name": "@amalik2/doc-blocks",
   "version": "0.8.15",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -32,19 +32,19 @@
   ],
   "dependencies": {
     "@babel/runtime": "^7.11.2",
-    "@doc-blocks/accessibility": "link:../../components/Accessibility",
-    "@doc-blocks/accordion": "link:../../components/Accordion",
-    "@doc-blocks/bundle-size": "link:../../components/BundleSize",
-    "@doc-blocks/design-spec": "link:../../components/DesignSpec",
-    "@doc-blocks/gallery": "link:../../components/Gallery",
-    "@doc-blocks/guideline": "link:../../components/Guideline",
-    "@doc-blocks/intended-usage": "link:../../components/IntendedUsage",
-    "@doc-blocks/related-components": "link:../../components/RelatedComponents",
-    "@doc-blocks/responsive-story": "link:../../components/ResponsiveStory",
-    "@doc-blocks/row": "link:../../components/Row",
-    "@doc-blocks/shield": "link:../../components/Shield",
-    "@doc-blocks/shield-row": "link:../../components/ShieldRow",
-    "@doc-blocks/tabs": "link:../../components/Tabs",
-    "@doc-blocks/version": "link:../../components/Version"
+    "@amalik2/accessibility": "link:../../components/Accessibility",
+    "@amalik2/accordion": "link:../../components/Accordion",
+    "@amalik2/bundle-size": "link:../../components/BundleSize",
+    "@amalik2/design-spec": "link:../../components/DesignSpec",
+    "@amalik2/gallery": "link:../../components/Gallery",
+    "@amalik2/guideline": "link:../../components/Guideline",
+    "@amalik2/intended-usage": "link:../../components/IntendedUsage",
+    "@amalik2/related-components": "link:../../components/RelatedComponents",
+    "@amalik2/responsive-story": "link:../../components/ResponsiveStory",
+    "@amalik2/row": "link:../../components/Row",
+    "@amalik2/shield": "link:../../components/Shield",
+    "@amalik2/shield-row": "link:../../components/ShieldRow",
+    "@amalik2/tabs": "link:../../components/Tabs",
+    "@amalik2/version": "link:../../components/Version"
   }
 }

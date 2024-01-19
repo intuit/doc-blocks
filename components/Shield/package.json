@@ -1,5 +1,5 @@
 {
-  "name": "@doc-blocks/shield",
+  "name": "@amalik2/shield",
   "version": "0.8.15",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",

@@ -1,5 +1,5 @@
 {
-  "name": "@doc-blocks/gallery",
+  "name": "@amalik2/gallery",
   "version": "0.8.15",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -29,10 +29,10 @@
   },
   "dependencies": {
     "@babel/runtime": "7.11.2",
-    "@doc-blocks/design-spec": "link:../DesignSpec",
-    "@doc-blocks/row": "link:../Row",
-    "@doc-blocks/shield": "link:../Shield",
-    "@doc-blocks/shield-row": "link:../ShieldRow",
+    "@amalik2/design-spec": "link:../DesignSpec",
+    "@amalik2/row": "link:../Row",
+    "@amalik2/shield": "link:../Shield",
+    "@amalik2/shield-row": "link:../ShieldRow",
     "fast-glob": "^3.1.1",
     "use-isomorphic-layout-effect": "1.0.0"
   },

@@ -1,5 +1,5 @@
 import React from "react";
-import { Shield } from "@doc-blocks/shield";
+import { Shield } from "@amalik2/shield";
 
 interface VersionProps {
   /** The current version */

@@ -1,10 +1,9 @@
 /* eslint-disable react/no-unused-prop-types */
+/* eslint-disable import/no-extraneous-dependencies */
 
 import React from "react";
 import makeClass from "clsx";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import { Source } from "@storybook/addon-docs/blocks";
+import { Source } from "@storybook/blocks";
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 

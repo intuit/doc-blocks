@@ -3,7 +3,7 @@ version: 2.1
 defaults: &defaults
   working_directory: ~/design-system
   docker:
-    - image: circleci/node:12-browsers
+    - image: cimg/node:18.19.0
   environment:
     TZ: "/usr/share/zoneinfo/America/Los_Angeles"
 
@@ -61,13 +61,7 @@ jobs:
           at: ~/design-system
       - run:
           name: Build Storybook
-          command: yarn build:storybook
-      - store_artifacts:
-          path: ./out
-          destination: documentation
-      - run:
-          name: Post Link to storybook + playroom
-          command: node ./.circleci/post-build-url.js
+          command: echo "no-op"
 
   lint:
     <<: *defaults

@@ -1,5 +1,5 @@
 {
-  "name": "@doc-blocks/shield-row",
+  "name": "@amalik2/shield-row",
   "version": "0.8.15",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -33,9 +33,9 @@
     "emotion": "^10.0.27"
   },
   "devDependencies": {
-    "@doc-blocks/accessibility": "link:../Accessibility",
-    "@doc-blocks/design-spec": "link:../DesignSpec",
-    "@doc-blocks/version": "link:../Version"
+    "@amalik2/accessibility": "link:../Accessibility",
+    "@amalik2/design-spec": "link:../DesignSpec",
+    "@amalik2/version": "link:../Version"
   },
   "peerDependencies": {
     "react": ">= 18.2.0"

@@ -4,7 +4,7 @@ const { execSync } = require("child_process");
 const path = require("path");
 const HtmlWebpackInsertPlugin = require("html-webpack-insert-text-plugin")
   .default;
-const { createGallerySpecs } = require("@doc-blocks/gallery/specs");
+const { createGallerySpecs } = require("@amalik2/gallery/specs");
 
 function getSpecs() {
   // Return and array of component specs

@@ -16,6 +16,115 @@
     "@storybook/theming" "^6.0.0"
     markdown-to-jsx "^6.10.3"
 
+"@amalik2/accessibility@link:components/Accessibility":
+  version "0.8.15"
+  dependencies:
+    "@amalik2/shield" "link:components/Shield"
+    "@babel/runtime" "^7.11.2"
+    emotion "^10.0.27"
+
+"@amalik2/accordion@link:components/Accordion":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "7.11.2"
+    "@emotion/react" "11.4.1"
+    react-is "^16.8.1"
+    styled-components "5.3.0"
+
+"@amalik2/bundle-size@link:components/BundleSize":
+  version "0.8.15"
+  dependencies:
+    "@amalik2/shield" "link:components/Shield"
+    "@babel/runtime" "^7.11.2"
+    emotion "^10.0.27"
+
+"@amalik2/design-spec@link:components/DesignSpec":
+  version "0.8.15"
+  dependencies:
+    "@amalik2/shield" "link:components/Shield"
+    "@babel/runtime" "^7.11.2"
+    emotion "^10.0.27"
+
+"@amalik2/gallery@link:components/Gallery":
+  version "0.8.15"
+  dependencies:
+    "@amalik2/design-spec" "link:components/DesignSpec"
+    "@amalik2/row" "link:components/Row"
+    "@amalik2/shield" "link:components/Shield"
+    "@amalik2/shield-row" "link:components/ShieldRow"
+    "@babel/runtime" "7.11.2"
+    fast-glob "^3.1.1"
+    use-isomorphic-layout-effect "1.0.0"
+
+"@amalik2/guideline@link:components/Guideline":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@design-systems/utils" "2.17.5"
+    "@emotion/core" "^10.0.28"
+    "@emotion/styled" "^10.0.27"
+    emotion "^10.0.27"
+
+"@amalik2/intended-usage@link:components/IntendedUsage":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@design-systems/utils" "2.17.5"
+    emotion "^10.0.27"
+
+"@amalik2/related-components@link:components/RelatedComponents":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@emotion/core" "^10.0.28"
+    "@emotion/styled" "^10.0.27"
+    emotion "^10.0.27"
+
+"@amalik2/responsive-story@link:components/ResponsiveStory":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@design-systems/utils" "2.17.5"
+    "@emotion/core" "^10.0.28"
+    "@emotion/styled" "^10.0.27"
+    clsx "^1.1.1"
+    emotion "^10.0.27"
+
+"@amalik2/row@link:components/Row":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@design-systems/utils" "2.17.5"
+    emotion "^10.0.27"
+
+"@amalik2/shield-row@link:components/ShieldRow":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@design-systems/utils" "2.17.5"
+    emotion "^10.0.27"
+
+"@amalik2/shield@link:components/Shield":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    emotion "^10.0.27"
+
+"@amalik2/tabs@link:components/Tabs":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "7.11.2"
+    "@emotion/react" "11.4.0"
+    react-is "^16.8.1"
+    styled-components "5.3.0"
+
+"@amalik2/version@link:components/Version":
+  version "0.8.15"
+  dependencies:
+    "@amalik2/shield" "link:components/Shield"
+    "@babel/runtime" "^7.11.2"
+    emotion "^10.0.27"
+
 "@ampproject/remapping@^2.2.0":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@ampproject/remapping/-/remapping-2.2.1.tgz#99e8e11851128b8702cd57c33684f1d0f260b630"
@@ -1922,115 +2031,6 @@
   version "0.5.5"
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.5.tgz#9283c9ce5b289a3c4f61c12757469e59377f81f3"
   integrity sha512-6nFkfkmSeV/rqSaS4oWHgmpnYw194f6hmWF5is6b0J1naJZoiD0NTc9AiUwPHvWsowkjuHErCZT1wa0jg+BLIA==
-
-"@doc-blocks/accessibility@link:components/Accessibility":
-  version "0.8.15"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    "@doc-blocks/shield" "link:components/Shield"
-    emotion "^10.0.27"
-
-"@doc-blocks/accordion@link:components/Accordion":
-  version "0.8.15"
-  dependencies:
-    "@babel/runtime" "7.11.2"
-    "@emotion/react" "11.4.1"
-    react-is "^16.8.1"
-    styled-components "5.3.0"
-
-"@doc-blocks/bundle-size@link:components/BundleSize":
-  version "0.8.15"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    "@doc-blocks/shield" "link:components/Shield"
-    emotion "^10.0.27"
-
-"@doc-blocks/design-spec@link:components/DesignSpec":
-  version "0.8.15"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    "@doc-blocks/shield" "link:components/Shield"
-    emotion "^10.0.27"
-
-"@doc-blocks/gallery@link:components/Gallery":
-  version "0.8.15"
-  dependencies:
-    "@babel/runtime" "7.11.2"
-    "@doc-blocks/design-spec" "link:components/DesignSpec"
-    "@doc-blocks/row" "link:components/Row"
-    "@doc-blocks/shield" "link:components/Shield"
-    "@doc-blocks/shield-row" "link:components/ShieldRow"
-    fast-glob "^3.1.1"
-    use-isomorphic-layout-effect "1.0.0"
-
-"@doc-blocks/guideline@link:components/Guideline":
-  version "0.8.15"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    "@design-systems/utils" "2.17.5"
-    "@emotion/core" "^10.0.28"
-    "@emotion/styled" "^10.0.27"
-    emotion "^10.0.27"
-
-"@doc-blocks/intended-usage@link:components/IntendedUsage":
-  version "0.8.15"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    "@design-systems/utils" "2.17.5"
-    emotion "^10.0.27"
-
-"@doc-blocks/related-components@link:components/RelatedComponents":
-  version "0.8.15"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    "@emotion/core" "^10.0.28"
-    "@emotion/styled" "^10.0.27"
-    emotion "^10.0.27"
-
-"@doc-blocks/responsive-story@link:components/ResponsiveStory":
-  version "0.8.15"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    "@design-systems/utils" "2.17.5"
-    "@emotion/core" "^10.0.28"
-    "@emotion/styled" "^10.0.27"
-    clsx "^1.1.1"
-    emotion "^10.0.27"
-
-"@doc-blocks/row@link:components/Row":
-  version "0.8.15"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    "@design-systems/utils" "2.17.5"
-    emotion "^10.0.27"
-
-"@doc-blocks/shield-row@link:components/ShieldRow":
-  version "0.8.15"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    "@design-systems/utils" "2.17.5"
-    emotion "^10.0.27"
-
-"@doc-blocks/shield@link:components/Shield":
-  version "0.8.15"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    emotion "^10.0.27"
-
-"@doc-blocks/tabs@link:components/Tabs":
-  version "0.8.15"
-  dependencies:
-    "@babel/runtime" "7.11.2"
-    "@emotion/react" "11.4.0"
-    react-is "^16.8.1"
-    styled-components "5.3.0"
-
-"@doc-blocks/version@link:components/Version":
-  version "0.8.15"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    "@doc-blocks/shield" "link:components/Shield"
-    emotion "^10.0.27"
 
 "@emotion/cache@^10.0.27", "@emotion/cache@^10.0.9":
   version "10.0.29"

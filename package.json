@@ -19,7 +19,7 @@
     "build": "lerna run build --stream",
     "build:storybook": "ds storybook build",
     "size": "ds size",
-    "release": "auto shipit -v"
+    "release": "npx auto shipit -v"
   },
   "workspaces": [
     "components/*",

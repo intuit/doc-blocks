@@ -1729,111 +1729,6 @@
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.5.tgz#9283c9ce5b289a3c4f61c12757469e59377f81f3"
   integrity sha512-6nFkfkmSeV/rqSaS4oWHgmpnYw194f6hmWF5is6b0J1naJZoiD0NTc9AiUwPHvWsowkjuHErCZT1wa0jg+BLIA==
 
-"@doc-blocks/accessibility@link:components/Accessibility":
-  version "0.8.9"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    "@doc-blocks/shield" "link:components/Shield"
-    emotion "^10.0.27"
-
-"@doc-blocks/accordion@link:components/Accordion":
-  version "0.8.9"
-  dependencies:
-    "@babel/runtime" "7.11.2"
-    "@emotion/react" "11.4.1"
-
-"@doc-blocks/bundle-size@link:components/BundleSize":
-  version "0.8.9"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    "@doc-blocks/shield" "link:components/Shield"
-    emotion "^10.0.27"
-
-"@doc-blocks/design-spec@link:components/DesignSpec":
-  version "0.8.9"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    "@doc-blocks/shield" "link:components/Shield"
-    emotion "^10.0.27"
-
-"@doc-blocks/gallery@link:components/Gallery":
-  version "0.8.9"
-  dependencies:
-    "@babel/runtime" "7.11.2"
-    "@doc-blocks/design-spec" "link:components/DesignSpec"
-    "@doc-blocks/row" "link:components/Row"
-    "@doc-blocks/shield" "link:components/Shield"
-    "@doc-blocks/shield-row" "link:components/ShieldRow"
-    fast-glob "^3.1.1"
-    use-isomorphic-layout-effect "1.0.0"
-
-"@doc-blocks/guideline@link:components/Guideline":
-  version "0.8.9"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    "@design-systems/utils" "2.17.5"
-    "@emotion/styled" "^10.0.27"
-    emotion "^10.0.27"
-
-"@doc-blocks/intended-usage@link:components/IntendedUsage":
-  version "0.8.9"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    "@design-systems/utils" "2.17.5"
-    emotion "^10.0.27"
-
-"@doc-blocks/related-components@link:components/RelatedComponents":
-  version "0.8.9"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    "@emotion/core" "^10.0.28"
-    "@emotion/styled" "^10.0.27"
-    emotion "^10.0.27"
-
-"@doc-blocks/responsive-story@link:components/ResponsiveStory":
-  version "0.8.9"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    "@design-systems/utils" "2.17.5"
-    "@emotion/core" "^10.0.28"
-    "@emotion/styled" "^10.0.27"
-    clsx "^1.1.1"
-    emotion "^10.0.27"
-
-"@doc-blocks/row@link:components/Row":
-  version "0.8.9"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    "@design-systems/utils" "2.17.5"
-    emotion "^10.0.27"
-
-"@doc-blocks/shield-row@link:components/ShieldRow":
-  version "0.8.9"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    "@design-systems/utils" "2.17.5"
-    emotion "^10.0.27"
-
-"@doc-blocks/shield@link:components/Shield":
-  version "0.8.9"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    emotion "^10.0.27"
-
-"@doc-blocks/tabs@link:components/Tabs":
-  version "0.8.9"
-  dependencies:
-    "@babel/runtime" "7.11.2"
-    "@emotion/react" "11.4.0"
-    styled-components "5.3.0"
-
-"@doc-blocks/version@link:components/Version":
-  version "0.8.9"
-  dependencies:
-    "@babel/runtime" "^7.11.2"
-    "@doc-blocks/shield" "link:components/Shield"
-    emotion "^10.0.27"
-
 "@emotion/cache@^10.0.27", "@emotion/cache@^10.0.9":
   version "10.0.29"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-10.0.29.tgz#87e7e64f412c060102d589fe7c6dc042e6f9d1e0"
@@ -2072,6 +1967,115 @@
     tar "^4.4.10"
     unique-filename "^1.1.1"
     which "^1.3.1"
+
+"@fattslug/accessibility@link:components/Accessibility":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@fattslug/shield" "link:components/Shield"
+    emotion "^10.0.27"
+
+"@fattslug/accordion@link:components/Accordion":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "7.11.2"
+    "@emotion/react" "11.4.1"
+    react-is "^16.8.1"
+    styled-components "5.3.0"
+
+"@fattslug/bundle-size@link:components/BundleSize":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@fattslug/shield" "link:components/Shield"
+    emotion "^10.0.27"
+
+"@fattslug/design-spec@link:components/DesignSpec":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@fattslug/shield" "link:components/Shield"
+    emotion "^10.0.27"
+
+"@fattslug/gallery@link:components/Gallery":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "7.11.2"
+    "@fattslug/design-spec" "link:components/DesignSpec"
+    "@fattslug/row" "link:components/Row"
+    "@fattslug/shield" "link:components/Shield"
+    "@fattslug/shield-row" "link:components/ShieldRow"
+    fast-glob "^3.1.1"
+    use-isomorphic-layout-effect "1.0.0"
+
+"@fattslug/guideline@link:components/Guideline":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@design-systems/utils" "2.17.5"
+    "@emotion/core" "^10.0.28"
+    "@emotion/styled" "^10.0.27"
+    emotion "^10.0.27"
+
+"@fattslug/intended-usage@link:components/IntendedUsage":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@design-systems/utils" "2.17.5"
+    emotion "^10.0.27"
+
+"@fattslug/related-components@link:components/RelatedComponents":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@emotion/core" "^10.0.28"
+    "@emotion/styled" "^10.0.27"
+    emotion "^10.0.27"
+
+"@fattslug/responsive-story@link:components/ResponsiveStory":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@design-systems/utils" "2.17.5"
+    "@emotion/core" "^10.0.28"
+    "@emotion/styled" "^10.0.27"
+    clsx "^1.1.1"
+    emotion "^10.0.27"
+
+"@fattslug/row@link:components/Row":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@design-systems/utils" "2.17.5"
+    emotion "^10.0.27"
+
+"@fattslug/shield-row@link:components/ShieldRow":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@design-systems/utils" "2.17.5"
+    emotion "^10.0.27"
+
+"@fattslug/shield@link:components/Shield":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    emotion "^10.0.27"
+
+"@fattslug/tabs@link:components/Tabs":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "7.11.2"
+    "@emotion/react" "11.4.0"
+    react-is "^16.8.1"
+    styled-components "5.3.0"
+
+"@fattslug/version@link:components/Version":
+  version "0.8.15"
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@fattslug/shield" "link:components/Shield"
+    emotion "^10.0.27"
 
 "@gar/promisify@^1.0.1":
   version "1.1.2"
@@ -17806,15 +17810,13 @@ react-docgen@^5.0.0:
     node-dir "^0.1.10"
     strip-indent "^3.0.0"
 
-react-dom@16.8.6:
-  version "16.8.6"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
-  integrity sha512-1nL7PIq9LTL3fthPqwkvr2zY7phIPjYrT0jp4HjyEQrEROnw4dG41VVwi/wfoCneoleqrNX7iAD+pXebJZwrwA==
+react-dom@18.2.0:
+  version "18.2.0"
+  resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz#22aaf38708db2674ed9ada224ca4aa708d821e3d"
+  integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
   dependencies:
     loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
-    scheduler "^0.13.6"
+    scheduler "^0.23.0"
 
 react-draggable@^4.4.3:
   version "4.4.4"
@@ -17984,15 +17986,12 @@ react-use@^13.22.3:
     ts-easing "^0.2.0"
     tslib "^1.10.0"
 
-react@16.8.6:
-  version "16.8.6"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
-  integrity sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw==
+react@18.2.0:
+  version "18.2.0"
+  resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
+  integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
   dependencies:
     loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
-    scheduler "^0.13.6"
 
 read-cmd-shim@^1.0.1:
   version "1.0.5"
@@ -18856,13 +18855,12 @@ saxes@^5.0.1:
   dependencies:
     xmlchars "^2.2.0"
 
-scheduler@^0.13.6:
-  version "0.13.6"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.13.6.tgz#466a4ec332467b31a91b9bf74e5347072e4cd889"
-  integrity sha512-IWnObHt413ucAYKsD9J1QShUKkbKLQQHdxRyw73sw4FN26iWr3DY/H34xGPe4nmL1DwXyWmSWmMrA9TfQbE/XQ==
+scheduler@^0.23.0:
+  version "0.23.2"
+  resolved "https://registry.npmjs.org/scheduler/-/scheduler-0.23.2.tgz#414ba64a3b282892e944cf2108ecc078d115cdc3"
+  integrity sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==
   dependencies:
     loose-envify "^1.1.0"
-    object-assign "^4.1.1"
 
 schema-utils@2.7.0:
   version "2.7.0"

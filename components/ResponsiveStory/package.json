@@ -37,7 +37,7 @@
   },
   "peerDependencies": {
     "@storybook/addon-docs": ">= 6.2.9",
-    "react": ">= 16.8.6"
+    "react": ">= 18.2.0"
   },
   "devDependencies": {
     "@storybook/addon-docs": "6.2.9"

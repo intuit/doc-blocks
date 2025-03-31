@@ -17,8 +17,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: npm ci
-      - run: npm test
+          cache: "yarn"
+      - run: yarn install --frozen-lockfile --non-interactive
+      - run: yarn build
 
   publish-npm:
     needs: build
@@ -29,7 +30,6 @@ jobs:
         with:
           node-version: 22
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      - run: npm publish
+      - run: yarn release
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}

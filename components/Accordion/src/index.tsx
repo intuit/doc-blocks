@@ -49,17 +49,7 @@ export const Accordion = ({
 
   return (
     <AccordionContext.Provider value={{ selectedId, setSelectedId, onChange }}>
-      <div
-        className={accordionWrapperClassName}
-        css={css`
-          position: relative;
-          margin: 14px 0;
-          width: 100%;
-        `}
-        {...rest}
-      >
-        {children}
-      </div>
+      <div className={accordionWrapperClassName}>{children}</div>
     </AccordionContext.Provider>
   );
 };
@@ -79,14 +69,8 @@ const Title = ({
     <div
       className={`${className} ${selectedId === id ? activeClassName : ""}`}
       css={css`
-        width: 100%;
-        padding: 14px 28px;
-
-        &:hover,
-        &:focus {
-          background-color: #fafafa;
-          cursor: pointer;
-        }
+        padding: 16px 0;
+        cursor: pointer;
       `}
       id={`${id}-title`}
       role="button"
@@ -121,15 +105,10 @@ const Panel = ({
       ref={panelRef}
       className={`${className} ${selectedId === id ? activeClassName : ""}`}
       css={css`
-        width: 100%;
         box-sizing: content-box;
         transition: height 0.2s ease-in-out, padding 0.2s ease-in-out;
         height: auto;
         overflow: hidden;
-
-        ${!isSelected && `padding: 0 28px;`}
-
-        ${isSelected && `padding: 14px 28px;`}
 
         @media (prefers-reduced-motion) {
           transition: none;

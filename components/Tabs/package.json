@@ -1,6 +1,6 @@
 {
   "name": "@doc-blocks/tabs",
-  "version": "0.8.10",
+  "version": "0.8.15",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist",
@@ -30,6 +30,7 @@
   "dependencies": {
     "@babel/runtime": "7.11.2",
     "@emotion/react": "11.4.0",
+    "react-is": "^16.8.1",
     "styled-components": "5.3.0"
   },
   "peerDependencies": {

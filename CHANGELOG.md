@@ -1,3 +1,68 @@
+# v0.8.15 (Mon Jul 25 2022)
+
+#### 🐛 Bug Fix
+
+- `@doc-blocks/tabs`
+  - add missing peer deps [#26](https://github.com/intuit/doc-blocks/pull/26) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
+# v0.8.14 (Mon Jul 25 2022)
+
+#### 🐛 Bug Fix
+
+- `@doc-blocks/accordion`, `@doc-blocks/guideline`, `@doc-blocks/related-components`, `@doc-blocks/responsive-story`
+  - add missing peer deps [#25](https://github.com/intuit/doc-blocks/pull/25) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
+# v0.8.13 (Tue Mar 08 2022)
+
+#### 🐛 Bug Fix
+
+- `@doc-blocks/guideline`
+  - Update index.tsx [#24](https://github.com/intuit/doc-blocks/pull/24) ([@NoWorries](https://github.com/NoWorries))
+
+#### Authors: 1
+
+- Josh Harwood ([@NoWorries](https://github.com/NoWorries))
+
+---
+
+# v0.8.12 (Mon Nov 15 2021)
+
+#### 🐛 Bug Fix
+
+- `@doc-blocks/accordion`
+  - Adding styled-components dependency to Accordion [#22](https://github.com/intuit/doc-blocks/pull/22) (sean_powell@intuit.com)
+
+#### Authors: 1
+
+- Sean Powell ([@fattslug](https://github.com/fattslug))
+
+---
+
+# v0.8.11 (Thu Oct 21 2021)
+
+#### 🐛 Bug Fix
+
+- `@doc-blocks/accordion`
+  - Removing width and horizontal padding from accordion panel [#21](https://github.com/intuit/doc-blocks/pull/21) ([@kharrop](https://github.com/kharrop))
+
+#### Authors: 1
+
+- Kelly Harrop ([@kharrop](https://github.com/kharrop))
+
+---
+
 # v0.8.10 (Thu Oct 21 2021)
 
 #### 🐛 Bug Fix

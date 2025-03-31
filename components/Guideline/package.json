@@ -1,6 +1,6 @@
 {
   "name": "@doc-blocks/guideline",
-  "version": "0.8.10",
+  "version": "0.8.15",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist",
@@ -30,6 +30,7 @@
   "dependencies": {
     "@babel/runtime": "^7.11.2",
     "@design-systems/utils": "2.17.5",
+    "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "emotion": "^10.0.27"
   },

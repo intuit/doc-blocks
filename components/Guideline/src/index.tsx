@@ -59,7 +59,7 @@ export const Do = (props: GuidelineProps) => (
   <Guideline color="#2ca01c" guidelineLabel="Do" {...props} />
 );
 
-/** A good thing to do with the component. */
+/** A bad thing to do with the component. */
 export const Dont = (props: GuidelineProps) => (
   <Guideline color="#e43834" guidelineLabel="Don't" {...props} />
 );

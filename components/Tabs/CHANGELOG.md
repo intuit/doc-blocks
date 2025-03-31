@@ -1,3 +1,16 @@
+# v0.8.15 (Mon Jul 25 2022)
+
+#### 🐛 Bug Fix
+
+- add missing peer deps [#26](https://github.com/intuit/doc-blocks/pull/26) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- add missing peer deps ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # v0.8.9 (Mon Oct 18 2021)
 
 #### 🐛 Bug Fix

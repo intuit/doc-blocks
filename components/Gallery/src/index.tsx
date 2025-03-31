@@ -1,10 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
 import React from "react";
-import { DesignSpec } from "@doc-blocks/design-spec";
-import { Row } from "@doc-blocks/row";
-import { Shield } from "@doc-blocks/shield";
-import { ShieldRow } from "@doc-blocks/shield-row";
+import { DesignSpec } from "@fattslug/design-spec";
+import { Row } from "@fattslug/row";
+import { Shield } from "@fattslug/shield";
+import { ShieldRow } from "@fattslug/shield-row";
 import { Story, Canvas } from "@storybook/addon-docs/blocks";
 import styled from "@emotion/styled";
 import LinkTo from "@storybook/addon-links/dist/esm/react";

@@ -13,7 +13,7 @@ yarn add @doc-blocks/bundle-size
 Then to use the component in your code just import it!
 
 ```js
-import { BundleSize } from "@doc-blocks/bundle-size";
+import { BundleSize } from "@fattslug/bundle-size";
 
 <BundleSize size="12.4 kB" />;
 ```

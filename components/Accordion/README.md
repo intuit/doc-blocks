@@ -13,9 +13,9 @@ yarn add @doc-blocks/accordion
 Then to use the component in your code just import it!
 
 ```js
-import { Accordion } from "@doc-blocks/accordion";
+import { Accordion } from "@fattslug/accordion";
 // and with css-modules
-import "@doc-blocks/accordion/dist/main.css";
+import "@fattslug/accordion/dist/main.css";
 ```
 
 ## Usage

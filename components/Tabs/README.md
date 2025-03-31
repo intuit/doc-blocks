@@ -13,9 +13,9 @@ yarn add @doc-blocks/tabs
 Then to use the component in your code just import it!
 
 ```js
-import { Tabs } from "@doc-blocks/tabs";
+import { Tabs } from "@fattslug/tabs";
 // and with css-modules
-import "@doc-blocks/tabs/dist/main.css";
+import "@fattslug/tabs/dist/main.css";
 ```
 
 ## Usage

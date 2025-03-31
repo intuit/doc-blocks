@@ -15,7 +15,7 @@ yarn add @doc-blocks/accessibility
 **Example:**
 
 ```jsx
-import { Accessibility } from "@doc-blocks/accessibility";
+import { Accessibility } from "@fattslug/accessibility";
 
 <Accessibility tag="reduced-motion" />;
 ```

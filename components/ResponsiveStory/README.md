@@ -26,7 +26,7 @@ Provide the ID of a story to render in a iframe + mock device.
 **Example:**
 
 ```jsx
-import { ResponsiveStory } from "@doc-blocks/responsive-story";
+import { ResponsiveStory } from "@fattslug/responsive-story";
 
 <ResponsiveStory id="components-row--basic-usage" />;
 ```

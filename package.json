@@ -38,7 +38,7 @@
     "html-webpack-insert-text-plugin": "1.0.3",
     "html-webpack-plugin": "4.3.0",
     "husky": "2.7.0",
-    "lerna": "^3.20.2",
+    "lerna": "^7.1.4",
     "lint-staged": "^9.0.0",
     "prettier": "2.1.2",
     "react": "18.2.0",

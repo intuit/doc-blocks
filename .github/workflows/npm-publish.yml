@@ -10,7 +10,7 @@ on:
     types: [created]
 
 jobs:
-  build:
+  build-publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -20,11 +20,6 @@ jobs:
           cache: "yarn"
       - run: yarn install --frozen-lockfile --non-interactive
       - run: yarn build
-
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:

@@ -26,5 +26,6 @@ jobs:
       - run: yarn release
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NPM_TOKEN: ${{secrets.npm_token}}
           GH_TOKEN: ${{secrets.gh_token}}
           PR: ${{ steps.PR.outputs.number }}

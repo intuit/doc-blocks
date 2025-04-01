@@ -20,9 +20,6 @@ jobs:
           cache: "yarn"
       - run: yarn install --frozen-lockfile --non-interactive
       - run: yarn build
-        with:
-          node-version: 22
-          registry-url: https://registry.npmjs.org/
       - run: yarn release
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}

@@ -20,6 +20,7 @@ jobs:
           cache: "yarn"
       - run: yarn install --frozen-lockfile --non-interactive
       - run: yarn build
+      - run: npm whoami
       - name: Prepare repository
         run: git fetch --unshallow --tags
       - run: yarn release

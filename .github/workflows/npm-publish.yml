@@ -20,6 +20,8 @@ jobs:
           cache: "yarn"
       - run: yarn install --frozen-lockfile --non-interactive
       - run: yarn build
+      - name: Prepare repository
+        run: git fetch --unshallow --tags
       - run: yarn release
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}

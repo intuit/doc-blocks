@@ -26,9 +26,9 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@auto-it/all-contributors": "9.59.1",
-    "@auto-it/gh-pages": "9.59.1",
-    "@auto-it/released": "9.59.1",
+    "@auto-it/all-contributors": "10.46.0",
+    "@auto-it/gh-pages": "10.46.0",
+    "@auto-it/released": "10.46.0",
     "@design-systems/cli": "2.17.5",
     "@storybook/addon-docs": "6.2.9",
     "@testing-library/react": "12.0.0",

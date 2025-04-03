@@ -2,8 +2,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
 import React from "react";
-import { hrefTo, navigate } from "@storybook/addon-links/dist/esm/preview";
-import { Link } from "@storybook/components";
+import LinkTo from "@storybook/addon-links/react";
+import { hrefTo, navigate } from "@storybook/addon-links";
 import { Element } from "@design-systems/utils";
 
 interface StorybookLinkProps extends Element<"a"> {
@@ -53,5 +53,5 @@ export const StorybookReference = ({
 /** Link to a part of storybook using a cgds link */
 export const StorybookLink = (props: StorybookLinkProps) => (
   // @ts-ignore
-  <Link as={StorybookReference} {...props} />
+  <LinkTo as={StorybookReference} {...props} />
 );

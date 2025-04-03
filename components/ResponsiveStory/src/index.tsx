@@ -2,9 +2,7 @@
 
 import React from "react";
 import makeClass from "clsx";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import { Source } from "@storybook/addon-docs/blocks";
+import { Source } from "@storybook/addon-docs";
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 
@@ -261,7 +259,6 @@ export const ResponsiveStory = ({
   const top = "top" in rest ? rest.top : undefined;
   const bottom = "bottom" in rest ? rest.bottom : undefined;
 
-  // TODO: should scale the device instead of scrolling?
   return (
     <ResponsiveStoryWrapper
       style={{
@@ -317,7 +314,7 @@ export const ResponsiveStory = ({
           </ShowCodeButton>
         </IframeLabel>
       </div>
-      {open && <Source id={id} />}
+      {open && <Source of={id} />}
     </ResponsiveStoryWrapper>
   );
 };

@@ -2209,14 +2209,14 @@
   resolved "https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.25.2.tgz#839f72c2decd378f86b8f525e1979a97b920c67d"
   integrity sha512-kM3HKb16VIXZyIeVrM1ygYmZBKybX8N4p754bw390wGO3Tf2j4L2/WYL+4suWujpgf6GBYs3jv7TyUivdd05JA==
 
-"@fattslug/accessibility@link:components/Accessibility":
+"@doc-blocks/accessibility@link:components/Accessibility":
   version "0.8.15"
   dependencies:
     "@babel/runtime" "^7.11.2"
-    "@fattslug/shield" "link:components/Shield"
+    "@doc-blocks/shield" "link:components/Shield"
     emotion "^10.0.27"
 
-"@fattslug/accordion@link:components/Accordion":
+"@doc-blocks/accordion@link:components/Accordion":
   version "0.8.15"
   dependencies:
     "@babel/runtime" "7.11.2"
@@ -2224,33 +2224,33 @@
     react-is "^16.8.1"
     styled-components "5.3.0"
 
-"@fattslug/bundle-size@link:components/BundleSize":
+"@doc-blocks/bundle-size@link:components/BundleSize":
   version "0.8.15"
   dependencies:
     "@babel/runtime" "^7.11.2"
-    "@fattslug/shield" "link:components/Shield"
+    "@doc-blocks/shield" "link:components/Shield"
     emotion "^10.0.27"
 
-"@fattslug/design-spec@link:components/DesignSpec":
+"@doc-blocks/design-spec@link:components/DesignSpec":
   version "0.8.15"
   dependencies:
     "@babel/runtime" "^7.11.2"
-    "@fattslug/shield" "link:components/Shield"
+    "@doc-blocks/shield" "link:components/Shield"
     emotion "^10.0.27"
 
-"@fattslug/gallery@link:components/Gallery":
+"@doc-blocks/gallery@link:components/Gallery":
   version "0.8.15"
   dependencies:
     "@babel/runtime" "7.11.2"
-    "@fattslug/design-spec" "link:components/DesignSpec"
-    "@fattslug/row" "link:components/Row"
-    "@fattslug/shield" "link:components/Shield"
-    "@fattslug/shield-row" "link:components/ShieldRow"
+    "@doc-blocks/design-spec" "link:components/DesignSpec"
+    "@doc-blocks/row" "link:components/Row"
+    "@doc-blocks/shield" "link:components/Shield"
+    "@doc-blocks/shield-row" "link:components/ShieldRow"
     fast-glob "^3.1.1"
     react-markdown "10.1.0"
     use-isomorphic-layout-effect "1.0.0"
 
-"@fattslug/guideline@link:components/Guideline":
+"@doc-blocks/guideline@link:components/Guideline":
   version "0.8.15"
   dependencies:
     "@babel/runtime" "^7.11.2"
@@ -2259,14 +2259,14 @@
     "@emotion/styled" "^10.0.27"
     emotion "^10.0.27"
 
-"@fattslug/intended-usage@link:components/IntendedUsage":
+"@doc-blocks/intended-usage@link:components/IntendedUsage":
   version "0.8.15"
   dependencies:
     "@babel/runtime" "^7.11.2"
     "@design-systems/utils" "4.15.4"
     emotion "^10.0.27"
 
-"@fattslug/related-components@link:components/RelatedComponents":
+"@doc-blocks/related-components@link:components/RelatedComponents":
   version "0.8.15"
   dependencies:
     "@babel/runtime" "^7.11.2"
@@ -2274,7 +2274,7 @@
     "@emotion/styled" "^10.0.27"
     emotion "^10.0.27"
 
-"@fattslug/responsive-story@link:components/ResponsiveStory":
+"@doc-blocks/responsive-story@link:components/ResponsiveStory":
   version "0.8.15"
   dependencies:
     "@babel/runtime" "^7.11.2"
@@ -2285,27 +2285,27 @@
     clsx "^1.1.1"
     emotion "^10.0.27"
 
-"@fattslug/row@link:components/Row":
+"@doc-blocks/row@link:components/Row":
   version "0.8.15"
   dependencies:
     "@babel/runtime" "^7.11.2"
     "@design-systems/utils" "4.15.4"
     emotion "^10.0.27"
 
-"@fattslug/shield-row@link:components/ShieldRow":
+"@doc-blocks/shield-row@link:components/ShieldRow":
   version "0.8.15"
   dependencies:
     "@babel/runtime" "^7.11.2"
     "@design-systems/utils" "4.15.4"
     emotion "^10.0.27"
 
-"@fattslug/shield@link:components/Shield":
+"@doc-blocks/shield@link:components/Shield":
   version "0.8.15"
   dependencies:
     "@babel/runtime" "^7.11.2"
     emotion "^10.0.27"
 
-"@fattslug/tabs@link:components/Tabs":
+"@doc-blocks/tabs@link:components/Tabs":
   version "0.8.15"
   dependencies:
     "@babel/runtime" "7.11.2"
@@ -2313,11 +2313,11 @@
     react-is "^16.8.1"
     styled-components "5.3.0"
 
-"@fattslug/version@link:components/Version":
+"@doc-blocks/version@link:components/Version":
   version "0.8.15"
   dependencies:
     "@babel/runtime" "^7.11.2"
-    "@fattslug/shield" "link:components/Shield"
+    "@doc-blocks/shield" "link:components/Shield"
     emotion "^10.0.27"
 
 "@gar/promisify@^1.0.1", "@gar/promisify@^1.1.3":

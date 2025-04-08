@@ -1,5 +1,5 @@
 {
-  "name": "@fattslug/shield-row",
+  "name": "@doc-blocks/shield-row",
   "version": "0.8.15",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -33,9 +33,9 @@
     "emotion": "^10.0.27"
   },
   "devDependencies": {
-    "@fattslug/accessibility": "link:../Accessibility",
-    "@fattslug/design-spec": "link:../DesignSpec",
-    "@fattslug/version": "link:../Version"
+    "@doc-blocks/accessibility": "link:../Accessibility",
+    "@doc-blocks/design-spec": "link:../DesignSpec",
+    "@doc-blocks/version": "link:../Version"
   },
   "peerDependencies": {
     "react": ">= 18.2.0"

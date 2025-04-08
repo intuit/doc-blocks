@@ -1,5 +1,5 @@
 import React from "react";
-import { Shield } from "@fattslug/shield";
+import { Shield } from "@doc-blocks/shield";
 
 interface VersionProps {
   /** The current version */

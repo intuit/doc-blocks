@@ -15,7 +15,7 @@ yarn add @doc-blocks/row
 **Example:**
 
 ```jsx
-import { Row } from "@fattslug/row";
+import { Row } from "@doc-blocks/row";
 
 <Row>
   <div style={{ height: 60, width: "100%", background: "black" }} />

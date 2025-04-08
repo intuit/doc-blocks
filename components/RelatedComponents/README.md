@@ -15,7 +15,7 @@ yarn add @doc-blocks/related-components
 **Example:**
 
 ```jsx
-import { RelatedComponents } from "@fattslug/related-components";
+import { RelatedComponents } from "@doc-blocks/related-components";
 
 <RelatedComponents
   components={["Components/Responsive Story", "Components/Row"]}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Shield } from "@fattslug/shield";
+import { Shield } from "@doc-blocks/shield";
 
 const typeMap: Record<string, string> = {
   figma: "#a259ff",

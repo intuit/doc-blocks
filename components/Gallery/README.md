@@ -61,7 +61,7 @@ This function should return an array of component specs that have the following 
 - `url`
 
 ```js
-const { createGallerySpecs } = require("@fattslug/gallery/specs");
+const { createGallerySpecs } = require("@doc-blocks/gallery/specs");
 
 function getSpecs() {
   // Return and array of component specs
@@ -127,7 +127,7 @@ Just modify the webpack configuration to use this function:
 const {
   createGallerySpecs,
   getOverviewSpecs,
-} = require("@fattslug/gallery/specs");
+} = require("@doc-blocks/gallery/specs");
 
 module.exports = async (config) => {
   config.plugins.push(

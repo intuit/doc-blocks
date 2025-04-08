@@ -1,5 +1,5 @@
 {
-  "name": "@fattslug/design-spec",
+  "name": "@doc-blocks/design-spec",
   "version": "0.8.15",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.11.2",
-    "@fattslug/shield": "link:../Shield",
+    "@doc-blocks/shield": "link:../Shield",
     "emotion": "^10.0.27"
   },
   "peerDependencies": {

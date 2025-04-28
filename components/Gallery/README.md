@@ -19,7 +19,7 @@ yarn add @doc-blocks/gallery
 Then create an MDX only story that renders the `Gallery` component.
 
 ```md
-import { Meta } from '@storybook/addon-docs/blocks';
+import { Meta } from '@storybook/addon-docs';
 import { Gallery } from '@doc-blocks/gallery';
 
 <Meta title='Getting Started/Gallery' />
@@ -95,7 +95,7 @@ For each `Overview.stories.mdx` that is found `createGallerySpecs` will gather t
 **Example `Overview.stories.mdx`**
 
 ```md
-import { Meta, Description, Title } from '@storybook/addon-docs/blocks';
+import { Meta, Description, Title } from '@storybook/addon-docs';
 import { Version, RelatedComponents, ShieldRow, DesignSpec, BundleSize } from 'storybook-doc-blocks';
 
 import notes from '../../README.md';

@@ -19,30 +19,38 @@
     "build": "lerna run build --stream",
     "build:storybook": "ds storybook build",
     "size": "ds size",
-    "release": "auto shipit -v"
+    "release": "npx auto shipit -vv"
   },
   "workspaces": [
     "components/*",
     "packages/*"
   ],
+  "resolutions": {
+    "typescript": "5.8.2",
+    "react": "18.2.0",
+    "@types/react": "18.3.20",
+    "@types/react-dom": "18.2.0",
+    "unified": "11.0.5",
+    "@types/scheduler": "< 0.23.0"
+  },
   "devDependencies": {
-    "@auto-it/all-contributors": "9.59.1",
-    "@auto-it/gh-pages": "9.59.1",
-    "@auto-it/released": "9.59.1",
-    "@design-systems/cli": "2.17.5",
-    "@storybook/addon-docs": "6.2.9",
+    "@auto-it/all-contributors": "10.46.0",
+    "@auto-it/gh-pages": "10.46.0",
+    "@auto-it/released": "10.46.0",
+    "@design-systems/cli": "4.15.4",
+    "@storybook/addon-docs": "8.6.11",
     "@testing-library/react": "12.0.0",
     "@testing-library/user-event": "13.2.1",
-    "@types/react-dom": "16.8.4",
-    "auto": "9.59.1",
+    "@types/react-dom": "18.2.0",
+    "auto": "11.3.0",
     "html-webpack-insert-text-plugin": "1.0.3",
     "html-webpack-plugin": "4.3.0",
     "husky": "2.7.0",
-    "lerna": "^3.20.2",
+    "lerna": "7.4.2",
     "lint-staged": "^9.0.0",
     "prettier": "2.1.2",
-    "react": "16.8.6",
-    "react-dom": "16.8.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "source-map-loader": "1.1.0"
   },
   "lint-staged": {
@@ -75,5 +83,8 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "storybook": "8.6.11"
   }
 }

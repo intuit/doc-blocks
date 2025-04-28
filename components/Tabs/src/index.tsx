@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { useEffect } from "react";
-/** @jsx jsx */
-import { css, jsx } from "@emotion/react";
+import { css } from "@emotion/react";
 
 interface TabsProps {
   /** Default active tab */
@@ -71,6 +71,7 @@ export const Tabs = ({
 
   return (
     <>
+      {/* @ts-ignore */}
       <TabsContext.Provider value={providerState}>
         {children}
       </TabsContext.Provider>

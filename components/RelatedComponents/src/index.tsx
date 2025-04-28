@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "@storybook/components";
-import { navigate } from "@storybook/addon-links/dist/esm/preview";
+import LinkTo from "@storybook/addon-links/react";
 import { css } from "emotion";
 
 interface KindLinkProps {
@@ -12,9 +11,7 @@ interface KindLinkProps {
 
 /** A link to a story kind */
 const KindLink = ({ kind, children }: KindLinkProps) => (
-  <Link href="#blank" onClick={() => navigate({ kind } as any)}>
-    {children}
-  </Link>
+  <LinkTo story={kind}>{children}</LinkTo>
 );
 
 interface RelatedComponentsProps {

@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React from "react";
-/** @jsx jsx */
-import { css, jsx } from "@emotion/react";
+import { css } from "@emotion/react";
 
 interface AccordionCompositionProps
   extends React.DetailedHTMLProps<
@@ -47,6 +47,7 @@ export const Accordion = ({
   const [selectedId, setSelectedId] = React.useState<string | null>(null);
 
   return (
+    /* @ts-ignore */
     <AccordionContext.Provider value={{ selectedId, setSelectedId, onChange }}>
       <div className={accordionWrapperClassName}>{children}</div>
     </AccordionContext.Provider>

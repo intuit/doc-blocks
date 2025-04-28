@@ -24,8 +24,8 @@ jobs:
         run: git fetch --unshallow --tags
       - name: Release
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-          NPM_TOKEN: ${{secrets.npm_token}}
-          GH_TOKEN: ${{secrets.gh_token}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           PR: ${{ steps.PR.outputs.number }}
         run: echo "$GH_TOKEN" && yarn release

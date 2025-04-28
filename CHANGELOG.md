@@ -46,7 +46,7 @@
 
 #### Authors: 1
 
-- Sean Powell ([@doc-blocks](https://github.com/fattslug))
+- Sean Powell ([@fattslug](https://github.com/fattslug))
 
 ---
 
@@ -85,7 +85,7 @@
 
 #### Authors: 1
 
-- Sean Powell ([@doc-blocks](https://github.com/fattslug))
+- Sean Powell ([@fattslug](https://github.com/fattslug))
 
 ---
 
@@ -98,7 +98,7 @@
 
 #### Authors: 1
 
-- Sean Powell ([@doc-blocks](https://github.com/fattslug))
+- Sean Powell ([@fattslug](https://github.com/fattslug))
 
 ---
 
@@ -111,7 +111,7 @@
 
 #### Authors: 1
 
-- Sean Powell ([@doc-blocks](https://github.com/fattslug))
+- Sean Powell ([@fattslug](https://github.com/fattslug))
 
 ---
 
@@ -126,7 +126,7 @@
 
 #### Authors: 1
 
-- Sean Powell ([@doc-blocks](https://github.com/fattslug))
+- Sean Powell ([@fattslug](https://github.com/fattslug))
 
 ---
 
@@ -157,7 +157,7 @@
 #### Authors: 2
 
 - Kelly Harrop ([@kharrop](https://github.com/kharrop))
-- Sean Powell ([@doc-blocks](https://github.com/fattslug))
+- Sean Powell ([@fattslug](https://github.com/fattslug))
 
 ---
 

@@ -17,10 +17,9 @@
     "lint": "ds lint",
     "test": "ds test",
     "build": "lerna run build --stream",
-    "build:storybook": "ds storybook build",
+    "build:storybook": "storybook build",
     "size": "ds size",
-    "release": "npx auto shipit -vv",
-    "build-storybook": "storybook build"
+    "release": "npx auto shipit -vv"
   },
   "workspaces": [
     "components/*",

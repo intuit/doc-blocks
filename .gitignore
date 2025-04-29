@@ -31,3 +31,4 @@ core.*
 tsconfig.tsbuildinfo
 
 *storybook.log
+storybook-static/

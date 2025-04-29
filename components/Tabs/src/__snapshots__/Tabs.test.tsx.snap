@@ -3,13 +3,13 @@
 exports[`Tabs It matches the snapshot 1`] = `
 <div>
   <div
-    class="src___StyledDiv-sc-1xojtv1-0 kfHqKN"
+    class="container"
   >
     <div
-      class="src___StyledDiv2-sc-1xojtv1-1 keYmsN"
+      class="tabsRow "
     >
       <div
-        class="src___StyledDiv3-sc-1xojtv1-2 bhJGbF title-1-default title-1-selected"
+        class="tabTitle activeTab title-1-default title-1-selected"
         id="one"
         role="button"
         tabindex="0"
@@ -17,7 +17,7 @@ exports[`Tabs It matches the snapshot 1`] = `
         Title 1
       </div>
       <div
-        class="src___StyledDiv3-sc-1xojtv1-2 lhVIJV title-2-default "
+        class="tabTitle  title-2-default "
         id="two"
         role="button"
         tabindex="0"
@@ -26,7 +26,7 @@ exports[`Tabs It matches the snapshot 1`] = `
       </div>
     </div>
     <div
-      class="src___StyledDiv4-sc-1xojtv1-3 bNSTYn"
+      class="tabContent"
     >
       Content 1
     </div>

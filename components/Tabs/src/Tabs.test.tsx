@@ -1,3 +1,4 @@
+import React from "react";
 import { cleanup, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
@@ -53,32 +54,35 @@ describe("Tabs", () => {
     expect(queryByText("Content 2")).not.toBeInTheDocument();
   });
 
-  test("It changes tab content when unselected title is clicked", () => {
+  test("It changes tab content when unselected title is clicked", async () => {
+    const user = userEvent.setup();
     const { queryByText } = render(<TabStub />);
     expect(queryByText("Content 2")).not.toBeInTheDocument();
 
-    userEvent.click(screen.getByText("Title 2"));
+    await user.click(screen.getByText("Title 2"));
 
     expect(queryByText("Content 2")).toBeInTheDocument();
   });
 
-  test("It changes tab content when unselected title is key pressed", () => {
+  test("It changes tab content when unselected title is key pressed", async () => {
+    const user = userEvent.setup();
     const { queryByText } = render(<TabStub />);
     expect(queryByText("Content 2")).not.toBeInTheDocument();
 
-    userEvent.type(screen.getByText("Title 2"), "{space}");
+    await user.type(screen.getByText("Title 2"), "{space}");
 
     expect(queryByText("Content 2")).toBeInTheDocument();
   });
 
-  test("It applies the activeClassName to the currently selected title", () => {
+  test("It applies the activeClassName to the currently selected title", async () => {
+    const user = userEvent.setup();
     const { queryByText } = render(<TabStub />);
     expect(queryByText("Title 2")).toHaveClass("title-2-default");
     expect(queryByText("Title 2")).not.toHaveClass("title-2-selected");
     expect(queryByText("Title 1")).toHaveClass("title-1-selected");
     expect(queryByText("Title 1")).toHaveClass("title-1-default");
 
-    userEvent.click(screen.getByText("Title 2"));
+    await user.click(screen.getByText("Title 2"));
 
     expect(queryByText("Title 2")).toHaveClass("title-2-selected");
     expect(queryByText("Title 2")).toHaveClass("title-2-default");
@@ -86,13 +90,14 @@ describe("Tabs", () => {
     expect(queryByText("Title 1")).not.toHaveClass("title-1-selected");
   });
 
-  test("It calls onChange when a tab is clicked", () => {
+  test("It calls onChange when a tab is clicked", async () => {
+    const user = userEvent.setup();
     const spy = jest.fn();
     const { queryByText } = render(<TabStub spy={spy} />);
     expect(queryByText("Title 1")).toBeInTheDocument();
     expect(queryByText("Title 2")).toBeInTheDocument();
 
-    userEvent.click(screen.getByText("Title 2"));
+    await user.click(screen.getByText("Title 2"));
 
     expect(spy).toHaveBeenCalledTimes(1);
     expect(spy).toHaveBeenCalledWith("two");

@@ -12,6 +12,11 @@
     "baseUrl": ".",
     "paths": {
       "@emotion/core": ["../../typings/emotion.d.ts"]
-    }
+    },
+    "types": [
+      "@emotion/react/types/css-prop",
+      "jest",
+      "@testing-library/jest-dom"
+    ]
   }
 }

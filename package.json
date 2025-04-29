@@ -32,7 +32,8 @@
     "@types/react": "18.3.20",
     "@types/react-dom": "18.2.0",
     "unified": "11.0.5",
-    "@types/scheduler": "< 0.23.0"
+    "@types/scheduler": "< 0.23.0",
+    "@testing-library/jest-dom": "6.6.3"
   },
   "devDependencies": {
     "@auto-it/all-contributors": "10.46.0",
@@ -50,8 +51,9 @@
     "@storybook/react": "^8.6.12",
     "@storybook/react-webpack5": "^8.6.12",
     "@storybook/test": "^8.6.12",
-    "@testing-library/react": "12.0.0",
-    "@testing-library/user-event": "13.2.1",
+    "@testing-library/jest-dom": "6.6.3",
+    "@testing-library/react": "16.3.0",
+    "@testing-library/user-event": "14.6.1",
     "@types/react-dom": "18.2.0",
     "auto": "11.3.0",
     "html-webpack-insert-text-plugin": "1.0.3",

@@ -4,4 +4,6 @@ module.exports = {
   ...base,
   roots: ["<rootDir>/components/", "<rootDir>/packages/"],
   coverageDirectory: "<rootDir>/coverage/",
+  setupFiles: [],
+  setupFilesAfterEnv: [require.resolve("@testing-library/jest-dom")],
 };

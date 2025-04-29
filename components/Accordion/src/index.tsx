@@ -69,7 +69,11 @@ const Title = ({
 
   return (
     <div
-      className={`${className} ${selectedId === id ? activeClassName : ""}`}
+      className={`${className} ${
+        selectedId === id
+          ? `${activeClassName} expanded-title`
+          : "collapsed-title"
+      }`}
       style={{
         padding: "16px 0",
         cursor: "pointer",
@@ -84,7 +88,16 @@ const Title = ({
           return selected;
         });
       }}
-      onKeyPress={() => setSelectedId((prev) => (prev === id ? null : id))}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " " || e.key === "Space") {
+          e.preventDefault();
+          setSelectedId((prev) => {
+            const selected = prev === id ? null : id;
+            onChange?.(selected);
+            return selected;
+          });
+        }
+      }}
     >
       {children}
     </div>
@@ -105,7 +118,9 @@ const Panel = ({
   return (
     <div
       ref={panelRef}
-      className={`${className} ${selectedId === id ? activeClassName : ""}`}
+      className={`${className} ${
+        selectedId === id ? `${activeClassName} expanded` : "collapsed"
+      }`}
       style={{
         boxSizing: "content-box",
         transition: "height 0.2s ease-in-out, padding 0.2s ease-in-out",

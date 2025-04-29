@@ -4,34 +4,36 @@ exports[`Accordion It matches the snapshot 1`] = `
 <div>
   <div>
     <div
-      class="sc-bdnxRM draBkS title-1-default "
+      class="title-1-default collapsed-title"
       id="one-title"
       role="button"
+      style="padding: 16px 0px; cursor: pointer;"
       tabindex="0"
     >
       Title 1
     </div>
     <div
       aria-hidden="true"
-      class="src___StyledDiv2-fudmoy-0 kHbGLE panel-1-default "
+      class="panel-1-default collapsed"
       id="one-panel"
-      style="height: 0px;"
+      style="box-sizing: content-box; transition: height 0.2s ease-in-out, padding 0.2s ease-in-out; overflow: hidden; height: 0px;"
     >
       Panel 1
     </div>
     <div
-      class="sc-bdnxRM draBkS title-2-default "
+      class="title-2-default collapsed-title"
       id="two-title"
       role="button"
+      style="padding: 16px 0px; cursor: pointer;"
       tabindex="0"
     >
       Title 2
     </div>
     <div
       aria-hidden="true"
-      class="src___StyledDiv2-fudmoy-0 kHbGLE panel-2-default "
+      class="panel-2-default collapsed"
       id="two-panel"
-      style="height: 0px;"
+      style="box-sizing: content-box; transition: height 0.2s ease-in-out, padding 0.2s ease-in-out; overflow: hidden; height: 0px;"
     >
       Panel 2
     </div>

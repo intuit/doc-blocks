@@ -1,7 +1,7 @@
 import React from "react";
 import { Shield } from "@doc-blocks/shield";
 
-interface BundleSizeProps {
+export interface BundleSizeProps {
   /** The current BundleSize */
   size: string;
 }

@@ -4,8 +4,8 @@ import userEvent from "@testing-library/user-event";
 
 import { Accordion } from ".";
 
-const AccordionStub = ({ spy }: { spy?: jest.Mock<any, any> }) => (
-  <Accordion onChange={(selectedId) => spy(selectedId)}>
+const AccordionStub = ({ spy }: { spy?: jest.Mock }) => (
+  <Accordion onChange={(selectedId) => spy?.(selectedId)}>
     <Accordion.Title
       id="one"
       activeClassName="title-1-selected"

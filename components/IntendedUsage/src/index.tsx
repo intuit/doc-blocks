@@ -1,9 +1,12 @@
 import React from "react";
-import { Element } from "@design-systems/utils";
 
-import { css } from "emotion";
+import styles from "./IntendedUsage.module.css";
 
-interface IntendedUsageProps {
+export interface IntendedUsageProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   /** The title of the section */
   sectionTitle: string;
   /** The icon for the list */
@@ -16,51 +19,37 @@ export const IntendedUsage = ({
   sectionTitle,
   icon,
   ...props
-}: Element<"div"> & IntendedUsageProps) => (
-  <div
-    {...props}
-    className={css`
-      margin: 40px 0;
+}: IntendedUsageProps) => {
+  const uid = Math.random().toString(36).substring(2, 15);
 
-      ul {
-        list-style: none;
-        padding-left: 0;
-        margin: 0;
-      }
+  // Add the icon dynamically with a style element
+  const iconStyle = `
+    .${styles["intended-usage"]}#${uid} li:before {
+      content: "${icon}";
+    }
+  `;
 
-      li {
-        padding: 5px 0 5px 30px;
-        position: relative;
-        line-height: 24px;
-      }
-
-      li:before {
-        content: "${icon}";
-        position: absolute;
-        left: 0;
-        top: 6px;
-      }
-    `}
-  >
-    <div
-      className={css`
-        font-weight: 500;
-        margin-bottom: 10px;
-        font-size: 24px;
-      `}
-    >
-      {sectionTitle}
+  return (
+    <div {...props} className={styles["intended-usage"]} id={uid}>
+      <style>{iconStyle}</style>
+      <div className={styles["intended-usage-title"]}>{sectionTitle}</div>
+      {children}
     </div>
-    {children}
-  </div>
-);
+  );
+};
 
 /** A component that lists what the component being documented is intended to be used like. */
-export const BestFor = (props: Element<"div">) => (
-  <IntendedUsage sectionTitle="Best For" icon="✅" {...props} />
-);
+export const BestFor = (
+  props: React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  >
+) => <IntendedUsage sectionTitle="Best For" icon="✅" {...props} />;
 
 /** A component that lists what the component being documented is not intended to be used like. */
-export const NotFor = (props: Element<"div">) => (
-  <IntendedUsage sectionTitle="Not For" icon="❌" {...props} />
-);
+export const NotFor = (
+  props: React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  >
+) => <IntendedUsage sectionTitle="Not For" icon="❌" {...props} />;

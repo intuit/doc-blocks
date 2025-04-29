@@ -28,11 +28,7 @@
     "size": "ds size"
   },
   "dependencies": {
-    "@babel/runtime": "^7.11.2",
-    "@design-systems/utils": "4.15.4",
-    "@emotion/core": "^10.0.28",
-    "@emotion/styled": "^10.0.27",
-    "emotion": "^10.0.27"
+    "@babel/runtime": "^7.11.2"
   },
   "peerDependencies": {
     "react": ">= 18.2.0"

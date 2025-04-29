@@ -13,13 +13,14 @@
     "clean": "ds clean",
     "dev": "ds dev",
     "start": "lerna run start --parallel",
-    "storybook": "ds storybook start",
+    "storybook": "storybook dev -p 6006",
     "lint": "ds lint",
     "test": "ds test",
     "build": "lerna run build --stream",
     "build:storybook": "ds storybook build",
     "size": "ds size",
-    "release": "npx auto shipit -vv"
+    "release": "npx auto shipit -vv",
+    "build-storybook": "storybook build"
   },
   "workspaces": [
     "components/*",
@@ -37,8 +38,18 @@
     "@auto-it/all-contributors": "10.46.0",
     "@auto-it/gh-pages": "10.46.0",
     "@auto-it/released": "10.46.0",
+    "@chromatic-com/storybook": "^3",
     "@design-systems/cli": "4.15.4",
-    "@storybook/addon-docs": "8.6.11",
+    "@storybook/addon-docs": "^8.6.12",
+    "@storybook/addon-essentials": "^8.6.12",
+    "@storybook/addon-interactions": "^8.6.12",
+    "@storybook/addon-onboarding": "^8.6.12",
+    "@storybook/addon-styling-webpack": "^1.0.1",
+    "@storybook/addon-webpack5-compiler-swc": "^3.0.0",
+    "@storybook/blocks": "^8.6.12",
+    "@storybook/react": "^8.6.12",
+    "@storybook/react-webpack5": "^8.6.12",
+    "@storybook/test": "^8.6.12",
     "@testing-library/react": "12.0.0",
     "@testing-library/user-event": "13.2.1",
     "@types/react-dom": "18.2.0",
@@ -51,7 +62,8 @@
     "prettier": "2.1.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "source-map-loader": "1.1.0"
+    "source-map-loader": "1.1.0",
+    "storybook": "^8.6.12"
   },
   "lint-staged": {
     "*.{js,json,css,md,ts,tsx,jsx}": [
@@ -84,7 +96,5 @@
       ]
     ]
   },
-  "dependencies": {
-    "storybook": "8.6.11"
-  }
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

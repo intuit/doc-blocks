@@ -1,7 +1,7 @@
 import React from "react";
 import { Shield } from "@doc-blocks/shield";
 
-interface VersionProps {
+export interface VersionProps {
   /** The current version */
   current?: string;
   /** Url to the component's changelog */

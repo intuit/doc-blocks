@@ -29,3 +29,5 @@ core.*
 .env
 .eslintcache
 tsconfig.tsbuildinfo
+
+*storybook.log

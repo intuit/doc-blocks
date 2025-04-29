@@ -1,28 +1,34 @@
 import React from "react";
-import { css } from "emotion";
-import styled from "@emotion/styled";
-import { Element } from "@design-systems/utils";
 
 interface LineProps {
   /** The color of the line */
   color: string;
 }
 
-const Line = styled.div<LineProps>`
-  width: 100%;
-  height: 10px;
-  margin-bottom: 8px;
-  background-color: ${(props) => props.color};
-`;
+/** A line */
+const Line = ({ color }: LineProps) => (
+  <div
+    style={{
+      width: "100%",
+      height: "10px",
+      marginBottom: "8px",
+      backgroundColor: color,
+    }}
+  />
+);
 
-interface CreateGuidelineProps {
+export interface CreateGuidelineProps {
   /** The label for the guideline */
   guidelineLabel: React.ReactNode;
   /** The color of the line */
   color: string;
 }
 
-interface GuidelineProps extends Element<"div"> {
+export interface GuidelineProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   /** The label for the guideline */
   label: React.ReactNode;
 }
@@ -37,10 +43,10 @@ const Guideline = ({
 }: GuidelineProps & CreateGuidelineProps) => (
   <div {...html}>
     <div
-      className={css`
-        border: 1px solid #d4d7dc;
-        margin-bottom: 8px;
-      `}
+      style={{
+        border: "1px solid #d4d7dc",
+        marginBottom: "8px",
+      }}
     >
       {children}
     </div>

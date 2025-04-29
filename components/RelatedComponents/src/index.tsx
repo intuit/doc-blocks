@@ -1,6 +1,5 @@
 import React from "react";
 import LinkTo from "@storybook/addon-links/react";
-import { css } from "emotion";
 
 interface KindLinkProps {
   /** Text of the link */
@@ -14,7 +13,7 @@ const KindLink = ({ kind, children }: KindLinkProps) => (
   <LinkTo story={kind}>{children}</LinkTo>
 );
 
-interface RelatedComponentsProps {
+export interface RelatedComponentsProps {
   /** Stories that are related to this one */
   components: string[];
 }
@@ -22,18 +21,18 @@ interface RelatedComponentsProps {
 /** A component to list related components */
 export const RelatedComponents = (props: RelatedComponentsProps) => (
   <blockquote
-    className={css`
-      margin: 20px 0 40px;
-      border: 0 solid #ddd;
-      border-width: 0 0 0 4px;
-      padding-left: 20px;
-    `}
+    style={{
+      margin: "20px 0 40px",
+      border: "0 solid #ddd",
+      borderWidth: "0 0 0 4px",
+      paddingLeft: "20px",
+    }}
   >
     <span
-      className={css`
-        font-weight: 500;
-        margin-right: 10px;
-      `}
+      style={{
+        fontWeight: "500",
+        marginRight: "10px",
+      }}
     >
       Related Components:
     </span>

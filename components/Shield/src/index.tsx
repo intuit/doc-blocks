@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-import React from "react";
+import React, { JSX } from "react";
 
 import styles from "./Shield.module.css";
 

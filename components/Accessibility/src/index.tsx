@@ -1,4 +1,3 @@
-import React from "react";
 import { Shield } from "@doc-blocks/shield";
 
 export interface AccessibilityProps {

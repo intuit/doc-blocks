@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": ["src/**/*.test.+(ts|tsx)", "src/**/*.stories.+(ts|tsx)"],
+  "types": ["vite/client"]
+}

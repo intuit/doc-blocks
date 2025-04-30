@@ -1,9 +1,16 @@
 {
   "name": "@doc-blocks/shield",
   "version": "0.8.15",
+  "type": "module",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
-  "types": "./dist",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
   "repository": "https://github.com/intuit/doc-blocks",
   "author": "Kendall Gassner kendall.gassner@yahoo.com",
   "contributors": [
@@ -19,18 +26,13 @@
     "access": "public"
   },
   "scripts": {
-    "clean": "ds clean",
-    "build": "ds build",
-    "dev": "ds dev",
-    "storybook": "ds storybook start",
-    "start": "ds build --watch",
-    "test": "ds test",
-    "lint": "ds lint",
-    "size": "ds size"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@babel/runtime": "^7.11.2",
-    "emotion": "^10.0.27"
+    "@babel/runtime": "^7.11.2"
   },
   "peerDependencies": {
     "react": ">= 18.2.0"

@@ -30,7 +30,7 @@ jobs:
           node-version: 22
           cache: "yarn"
       - name: Install
-        run: yarn install
+        run: yarn install --frozen-lockfile
       - name: Build
         run: yarn build
       - name: Deploy Storybook

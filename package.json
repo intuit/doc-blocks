@@ -39,6 +39,7 @@
     "@auto-it/gh-pages": "10.46.0",
     "@auto-it/released": "10.46.0",
     "@chromatic-com/storybook": "^3",
+    "@design-systems/cli": "4.15.4",
     "@eslint/js": "9.25.1",
     "@storybook/addon-docs": "^8.6.12",
     "@storybook/addon-essentials": "^8.6.12",

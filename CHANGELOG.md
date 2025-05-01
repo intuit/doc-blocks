@@ -1,3 +1,21 @@
+# v1.0.0 (Thu May 01 2025)
+
+#### 💥 Breaking Change
+
+- `@doc-blocks/accessibility`, `@doc-blocks/accordion`, `@doc-blocks/bundle-size`, `@doc-blocks/design-spec`, `@doc-blocks/guideline`, `@doc-blocks/intended-usage`, `@doc-blocks/related-components`, `@doc-blocks/responsive-story`, `@doc-blocks/row`, `@doc-blocks/shield`, `@doc-blocks/shield-row`, `@doc-blocks/tabs`, `@doc-blocks/version`, `@doc-blocks/doc-blocks`
+  - feat: add github actions pipeline, bump to react v18 + storybook v8 + lerna v7 + auto v11 + vite [#34](https://github.com/intuit/doc-blocks/pull/34) ([@fattslug](https://github.com/fattslug) sean_powell@intuit.com)
+
+#### 🐛 Bug Fix
+
+- fix: publish on master push [#35](https://github.com/intuit/doc-blocks/pull/35) (sean_powell@intuit.com [@fattslug](https://github.com/fattslug))
+
+#### Authors: 2
+
+- Sean Powell ([@fattslug](https://github.com/fattslug))
+- spowell9 (sean_powell@intuit.com)
+
+---
+
 # v0.8.15 (Mon Jul 25 2022)
 
 #### 🐛 Bug Fix

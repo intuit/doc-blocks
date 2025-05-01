@@ -1,3 +1,16 @@
+# v1.0.0 (Thu May 01 2025)
+
+#### 💥 Breaking Change
+
+- feat: add github actions pipeline, bump to react v18 + storybook v8 + lerna v7 + auto v11 + vite [#34](https://github.com/intuit/doc-blocks/pull/34) ([@fattslug](https://github.com/fattslug) sean_powell@intuit.com)
+
+#### Authors: 2
+
+- Sean Powell ([@fattslug](https://github.com/fattslug))
+- spowell9 (sean_powell@intuit.com)
+
+---
+
 # v0.8.3 (Mon May 24 2021)
 
 #### 🐛 Bug Fix

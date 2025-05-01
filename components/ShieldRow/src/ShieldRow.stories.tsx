@@ -4,7 +4,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Accessibility } from "@doc-blocks/accessibility";
 import { DesignSpec } from "@doc-blocks/design-spec";
 import { Version } from "@doc-blocks/version";
-import "@doc-blocks/shield/style.css";
 
 import { ShieldRow } from ".";
 

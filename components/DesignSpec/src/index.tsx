@@ -1,6 +1,5 @@
 import React from "react";
 import { Shield } from "@doc-blocks/shield";
-import "@doc-blocks/shield/style.css";
 
 const typeMap: Record<string, string> = {
   figma: "#a259ff",

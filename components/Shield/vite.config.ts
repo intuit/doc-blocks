@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 import react from "@vitejs/plugin-react";
 import dts from "vite-plugin-dts";
+import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -10,14 +11,8 @@ export default defineConfig({
     dts({
       tsconfigPath: "tsconfig.build.json",
     }),
+    cssInjectedByJsPlugin(),
   ],
-  css: {
-    modules: {
-      getJSON(cssFileName, json, outputFileName) {
-        console.log(cssFileName, json, outputFileName);
-      },
-    },
-  },
   build: {
     lib: {
       entry: resolve(__dirname, `src/index.tsx`),
@@ -36,12 +31,6 @@ export default defineConfig({
         globals: {
           react: "React",
           "react-dom": "React-dom",
-        },
-        assetFileNames: (chunkInfo) => {
-          if (chunkInfo.names[0].includes(".css")) {
-            return "assets/style.css";
-          }
-          return "assets/[name][extname]";
         },
       },
     },

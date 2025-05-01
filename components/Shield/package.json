@@ -8,8 +8,7 @@
     ".": {
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.js"
-    },
-    "./style.css": "./dist/assets/style.css"
+    }
   },
   "types": "./dist/index.d.ts",
   "repository": "https://github.com/intuit/doc-blocks",

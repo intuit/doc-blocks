@@ -1,4 +1,5 @@
 import { Shield } from "@doc-blocks/shield";
+import "@doc-blocks/shield/style.css";
 
 export interface AccessibilityProps {
   /** The current accessibility tag */

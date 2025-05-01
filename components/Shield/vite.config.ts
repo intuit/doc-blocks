@@ -11,6 +11,13 @@ export default defineConfig({
       tsconfigPath: "tsconfig.build.json",
     }),
   ],
+  css: {
+    modules: {
+      getJSON(cssFileName, json, outputFileName) {
+        console.log(cssFileName, json, outputFileName);
+      },
+    },
+  },
   build: {
     lib: {
       entry: resolve(__dirname, `src/index.tsx`),
@@ -29,6 +36,12 @@ export default defineConfig({
         globals: {
           react: "React",
           "react-dom": "React-dom",
+        },
+        assetFileNames: (chunkInfo) => {
+          if (chunkInfo.names[0].includes(".css")) {
+            return "assets/style.css";
+          }
+          return "assets/[name][extname]";
         },
       },
     },

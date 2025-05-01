@@ -30,6 +30,12 @@ export default defineConfig({
           react: "React",
           "react-dom": "React-dom",
         },
+        assetFileNames: (chunkInfo) => {
+          if (chunkInfo.names[0].includes(".css")) {
+            return "assets/style.css";
+          }
+          return "assets/[name][extname]";
+        },
       },
     },
   },

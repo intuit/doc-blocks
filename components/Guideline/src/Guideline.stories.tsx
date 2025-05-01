@@ -1,6 +1,7 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Row } from "@doc-blocks/row";
+import "@doc-blocks/row/style.css";
 
 import { Do, Dont } from ".";
 

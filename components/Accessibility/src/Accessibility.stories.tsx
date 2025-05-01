@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Accessibility } from "./index";
+import { Accessibility } from ".";
 
 const meta: Meta<typeof Accessibility> = {
   title: "Shields/Accessibility",

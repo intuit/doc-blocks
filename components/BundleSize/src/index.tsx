@@ -1,5 +1,6 @@
 import React from "react";
 import { Shield } from "@doc-blocks/shield";
+import "@doc-blocks/shield/style.css";
 
 export interface BundleSizeProps {
   /** The current BundleSize */

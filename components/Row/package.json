@@ -9,7 +9,8 @@
     ".": {
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.js"
-    }
+    },
+    "./style.css": "./dist/assets/style.css"
   },
   "repository": "https://github.com/intuit/doc-blocks",
   "author": "Andrew Lisowski lisowski54@gmail.com",

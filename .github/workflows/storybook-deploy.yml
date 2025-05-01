@@ -4,8 +4,6 @@
 name: Storybook Deployment
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
   push:
     branches:
       - "master"

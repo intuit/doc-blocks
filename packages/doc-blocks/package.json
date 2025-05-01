@@ -1,9 +1,16 @@
 {
-  "name": "doc-blocks",
+  "name": "@doc-blocks/doc-blocks",
   "version": "0.8.15",
+  "type": "module",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
   "repository": "https://github.com/intuit/doc-blocks",
   "author": "Andrew Lisowski lisowski54@gmail.com",
   "contributors": [
@@ -16,12 +23,10 @@
   "description": "All of the storybook doc blocks in 1 package",
   "license": "MIT",
   "scripts": {
-    "clean": "ds clean",
-    "build": "ds build",
-    "start": "ds build --watch",
-    "test": "ds test",
-    "lint": "ds lint",
-    "size": "ds size"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "files": [
     "dist",

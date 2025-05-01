@@ -1,19 +1,20 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { useEffect } from "react";
-/** @jsx jsx */
-import { css, jsx } from "@emotion/react";
 
-interface TabsProps {
+import styles from "./Tabs.module.css";
+
+export interface TabsProps {
   /** Default active tab */
   active?: string;
   /** Children of tabs wrapper */
-  children: React.ReactChild[];
+  children?: React.ReactNode[];
   /** Classes to apply to tab title wrapper **/
   className?: string;
   /** Callback after a tab is selected */
   onChange?: (selectedId: string) => void;
 }
 
-interface TabProps
+export interface TabProps
   extends React.DetailedHTMLProps<
     React.HTMLAttributes<HTMLDivElement>,
     HTMLDivElement
@@ -71,47 +72,33 @@ export const Tabs = ({
 
   return (
     <>
+      {/* @ts-ignore */}
       <TabsContext.Provider value={providerState}>
         {children}
       </TabsContext.Provider>
-      <div
-        css={css`
-          width: 100%;
-        `}
-      >
-        <div
-          css={css`
-            display: flex;
-            flex-direction: row;
-          `}
-          className={tabsWrapperClassName}
-        >
+      <div className={styles.container}>
+        <div className={`${styles.tabsRow} ${tabsWrapperClassName || ""}`}>
           {Object.entries(tabs).map(([id, tab]) => {
             if (tab.titleProps) {
-              const { className, ...titleProps } = tab.titleProps;
+              const {
+                className,
+                activeClassName,
+                ...titleProps
+              } = tab.titleProps;
 
               return (
                 <div
                   key={id}
-                  css={css`
-                    padding: 8px 16px;
-                    cursor: pointer;
-                    ${id === selectedId
-                      ? "border-bottom: 1px solid #000000;"
-                      : `&:hover {
-                      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                  className={`${styles.tabTitle} ${
+                    id === selectedId ? styles.activeTab : ""
+                  } ${className || ""} ${
+                    id === selectedId ? activeClassName || "" : ""
                   }`}
-                  `}
                   role="button"
                   tabIndex={0}
-                  className={`${className} ${
-                    id === selectedId ? tab.titleProps?.activeClassName : ""
-                  }`}
                   onClick={() => {
-                    setSelectedId(() => {
-                      onChange && onChange(id);
-                      return id;
-                    });
+                    onChange?.(id);
+                    setSelectedId(id);
                   }}
                   onKeyDown={(e) => e.key !== "Tab" && setSelectedId(id)}
                   {...titleProps}
@@ -129,9 +116,7 @@ export const Tabs = ({
           .map(([id, tab]) => (
             <div
               key={`${id}-content`}
-              css={css`
-                padding: 16px 32px;
-              `}
+              className={styles.tabContent}
               {...tab.contentProps}
             >
               {tab.content}
@@ -143,7 +128,7 @@ export const Tabs = ({
 };
 
 /** Add a title to a tab */
-const Title = ({ id, children, ...rest }: TabProps) => {
+const Title = ({ id, children, activeClassName, ...rest }: TabProps) => {
   const { setTabs } = React.useContext(TabsContext);
   const { current: otherProps } = React.useRef(rest);
 
@@ -157,7 +142,7 @@ const Title = ({ id, children, ...rest }: TabProps) => {
             [id]: {
               ...prev[id],
               title: children,
-              titleProps: { ...otherProps, id },
+              titleProps: { ...otherProps, id, activeClassName },
             },
           };
         }
@@ -165,11 +150,14 @@ const Title = ({ id, children, ...rest }: TabProps) => {
         // Otherwise, create a new object with this ID
         return {
           ...prev,
-          [id]: { title: children, titleProps: { ...otherProps, id } },
+          [id]: {
+            title: children,
+            titleProps: { ...otherProps, id, activeClassName },
+          },
         };
       });
     }
-  }, [id, children, setTabs, otherProps]);
+  }, [id, children, setTabs, otherProps, activeClassName]);
 
   return null;
 };

@@ -1,8 +1,12 @@
 import React from "react";
-import { Element } from "@design-systems/utils";
-import { css, cx } from "emotion";
 
-export interface RowProps extends Element<"div"> {
+import styles from "./Row.module.css";
+
+export interface RowProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   /** The space between items in the row */
   gap?: number;
   /** A specific type of row */
@@ -17,30 +21,24 @@ export const Row = ({
   align = "self-start",
   type,
   className,
+  style,
   ...props
-}: RowProps) => (
-  <div
-    {...props}
-    className={cx(
-      className,
-      css`
-        align-items: ${align};
-        display: grid;
-        grid-auto-flow: row;
-        grid-gap: ${gap}px;
-        margin: 45px 0;
+}: RowProps) => {
+  // Define CSS variables
+  const cssVars = {
+    "--gap": `${gap}px`,
+    "--align": align,
+    "--grid-template":
+      type === "large-text"
+        ? "2fr 1fr"
+        : "repeat(auto-fit, minmax(200px, 1fr))",
+  } as React.CSSProperties;
 
-        > * {
-          margin: 0 !important;
-        }
-
-        @media (min-width: 992px) {
-          grid-auto-flow: column;
-          grid-template-columns: ${type === "large-text"
-            ? "2fr 1fr"
-            : "repeat(auto-fit, minmax(200px, 1fr))"};
-        }
-      `
-    )}
-  />
-);
+  return (
+    <div
+      {...props}
+      style={{ ...style, ...cssVars }}
+      className={`${styles.row} ${className}`}
+    />
+  );
+};

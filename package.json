@@ -13,37 +13,66 @@
     "clean": "ds clean",
     "dev": "ds dev",
     "start": "lerna run start --parallel",
-    "storybook": "ds storybook start",
+    "storybook": "storybook dev -p 6006",
     "lint": "ds lint",
     "test": "ds test",
     "build": "lerna run build --stream",
-    "build:storybook": "ds storybook build",
+    "build:storybook": "storybook build",
     "size": "ds size",
-    "release": "auto shipit -v"
+    "release": "npx auto shipit -vv"
   },
   "workspaces": [
     "components/*",
     "packages/*"
   ],
+  "resolutions": {
+    "typescript": "5.8.2",
+    "react": "18.2.0",
+    "@types/react": "18.3.20",
+    "@types/react-dom": "18.2.0",
+    "unified": "11.0.5",
+    "@types/scheduler": "< 0.23.0",
+    "@testing-library/jest-dom": "6.6.3"
+  },
   "devDependencies": {
-    "@auto-it/all-contributors": "9.59.1",
-    "@auto-it/gh-pages": "9.59.1",
-    "@auto-it/released": "9.59.1",
-    "@design-systems/cli": "2.17.5",
-    "@storybook/addon-docs": "6.2.9",
-    "@testing-library/react": "12.0.0",
-    "@testing-library/user-event": "13.2.1",
-    "@types/react-dom": "16.8.4",
-    "auto": "9.59.1",
-    "html-webpack-insert-text-plugin": "1.0.3",
-    "html-webpack-plugin": "4.3.0",
+    "@auto-it/all-contributors": "10.46.0",
+    "@auto-it/gh-pages": "10.46.0",
+    "@auto-it/released": "10.46.0",
+    "@chromatic-com/storybook": "^3",
+    "@design-systems/cli": "4.15.4",
+    "@eslint/js": "9.25.1",
+    "@storybook/addon-docs": "^8.6.12",
+    "@storybook/addon-essentials": "^8.6.12",
+    "@storybook/addon-interactions": "^8.6.12",
+    "@storybook/blocks": "^8.6.12",
+    "@storybook/builder-vite": "8.6.12",
+    "@storybook/react": "^8.6.12",
+    "@storybook/react-vite": "8.6.12",
+    "@storybook/test": "^8.6.12",
+    "@testing-library/jest-dom": "6.6.3",
+    "@testing-library/react": "16.3.0",
+    "@testing-library/user-event": "14.6.1",
+    "@types/node": "22.15.3",
+    "@types/react": "19.1.2",
+    "@types/react-dom": "19.1.3",
+    "@vitejs/plugin-react": "4.4.1",
+    "auto": "11.3.0",
+    "eslint": "9.25.1",
+    "eslint-plugin-react-hooks": "5.2.0",
+    "eslint-plugin-react-refresh": "0.4.20",
+    "global": "4.4.0",
     "husky": "2.7.0",
-    "lerna": "^3.20.2",
+    "lerna": "7.4.2",
     "lint-staged": "^9.0.0",
     "prettier": "2.1.2",
-    "react": "16.8.6",
-    "react-dom": "16.8.6",
-    "source-map-loader": "1.1.0"
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "storybook": "^8.6.12",
+    "typescript": "5.8.3",
+    "typescript-eslint": "8.31.1",
+    "vite": "6.3.4",
+    "vite-plugin-css-injected-by-js": "3.5.2",
+    "vite-plugin-dts": "4.5.3"
   },
   "lint-staged": {
     "*.{js,json,css,md,ts,tsx,jsx}": [
@@ -75,5 +104,6 @@
         }
       ]
     ]
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

@@ -1,46 +1,42 @@
 import React from "react";
+import type { Meta, StoryObj } from "@storybook/react";
+import { fn } from "@storybook/test";
 
-import { Tabs } from ".";
-import notes from "../README.md";
+import { Tabs, TabsProps } from ".";
 
-export default {
+const meta: Meta<typeof Tabs> = {
   title: "Components/Tabs",
-  parameters: { notes },
-  argTypes: { onChange: { action: "Selected" } },
+  component: Tabs,
+  args: { onChange: fn() },
+  tags: ["autodocs"],
 };
 
-export const BasicUsage = ({
-  onChange,
-}: {
-  onChange: (selectedId: string | null) => void;
-}) => {
-  const defaultTab: string | null = React.useMemo(
-    () => new URLSearchParams(window.location.search).get("tab"),
-    []
-  );
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-  const [activeTab, setActiveTab] = React.useState(defaultTab || undefined);
+const TabsDemo = (args: TabsProps) => {
+  const [activeTab, setActiveTab] = React.useState<string>();
 
   return (
     <Tabs
       active={activeTab}
       onChange={(selectedId) => {
         setActiveTab(selectedId);
-        onChange(selectedId);
+        args.onChange?.(selectedId);
       }}
     >
       <Tabs.Title id="one" activeClassName="test1">
         Title 1
       </Tabs.Title>
-      <Tabs.Content id="one">
-        You can change the default active tab using a query param -- try it now
-        by adding &quot;<b>&tab=two</b>&quot; to the end of the URL in your
-        browser!
-      </Tabs.Content>
+      <Tabs.Content id="one">Content 1</Tabs.Content>
       <Tabs.Title id="two" activeClassName="test2">
         Title 2
       </Tabs.Title>
       <Tabs.Content id="two">Content 2</Tabs.Content>
     </Tabs>
   );
+};
+
+export const BasicUsage: Story = {
+  render: (args) => <TabsDemo {...args} />,
 };

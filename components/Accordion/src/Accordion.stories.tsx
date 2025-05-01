@@ -1,30 +1,38 @@
 import React from "react";
+import type { Meta, StoryObj } from "@storybook/react";
+import { fn } from "@storybook/test";
 
 import { Accordion } from ".";
-import notes from "../README.md";
 
-export default {
+const meta: Meta<typeof Accordion> = {
   title: "Components/Accordion",
-  parameters: { notes },
-  argTypes: { onChange: { action: "Selected" } },
+  component: Accordion,
+  parameters: {
+    layout: "centered",
+  },
+  tags: ["autodocs"],
+  args: {
+    onChange: fn(),
+  },
 };
 
-export const BasicUsage = ({
-  onChange,
-}: {
-  onChange: (selectedId: string | null) => void;
-}) => (
-  <Accordion onChange={(selectedId) => onChange(selectedId)}>
-    <Accordion.Title id="one" activeClassName="test1">
-      Title 1
-    </Accordion.Title>
-    <Accordion.Panel id="one">Panel 1</Accordion.Panel>
-    <Accordion.Title id="two" activeClassName="test2">
-      Title 2
-    </Accordion.Title>
-    <Accordion.Panel id="two">Panel 2</Accordion.Panel>
-  </Accordion>
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const BasicUsage: Story = {
+  render: ({ onChange }) => (
+    <Accordion onChange={(selectedId) => onChange?.(selectedId)}>
+      <Accordion.Title id="one" activeClassName="test1">
+        Title 1
+      </Accordion.Title>
+      <Accordion.Panel id="one">Panel 1</Accordion.Panel>
+      <Accordion.Title id="two" activeClassName="test2">
+        Title 2
+      </Accordion.Title>
+      <Accordion.Panel id="two">Panel 2</Accordion.Panel>
+    </Accordion>
+  ),
+};
 
 const Chevron = ({ style }: { style: React.CSSProperties }) => (
   <svg

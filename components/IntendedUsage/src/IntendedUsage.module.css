@@ -1,0 +1,27 @@
+.intended-usage {
+  margin: 40px 0;
+}
+
+.intended-usage ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.intended-usage li {
+  padding: 5px 0 5px 30px;
+  position: relative;
+  line-height: 24px;
+}
+
+.intended-usage li:before {
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+
+.intended-usage-title {
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 24px;
+}

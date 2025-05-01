@@ -4,6 +4,12 @@
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
   "repository": "https://github.com/intuit/doc-blocks",
   "author": "Sean Powell sean_powell@intuit.com",
   "contributors": [
@@ -18,23 +24,16 @@
     "access": "public"
   },
   "scripts": {
-    "clean": "ds clean",
-    "build": "ds build",
-    "dev": "ds dev",
-    "storybook": "ds storybook start",
-    "start": "ds build --watch",
-    "test": "ds test",
-    "lint": "ds lint",
-    "size": "ds size"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@babel/runtime": "7.11.2",
-    "@emotion/react": "11.4.0",
-    "react-is": "^16.8.1",
-    "styled-components": "5.3.0"
+    "@babel/runtime": "7.11.2"
   },
   "peerDependencies": {
-    "react": ">= 16.8.6"
+    "react": ">= 18.2.0"
   },
   "files": [
     "dist",

@@ -5,4 +5,6 @@ module.exports = {
   ...base,
   name,
   displayName: name,
+  setupFiles: [],
+  setupFilesAfterEnv: [require.resolve("@testing-library/jest-dom")],
 };

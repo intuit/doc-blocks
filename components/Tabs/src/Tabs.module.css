@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+}
+
+.tabsRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.tabTitle {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.activeTab {
+  border-bottom: 1px solid #000000;
+}
+
+.tabTitle:not(.activeTab):hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.tabContent {
+  padding: 16px 32px;
+}

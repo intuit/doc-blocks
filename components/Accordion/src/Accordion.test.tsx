@@ -4,8 +4,8 @@ import userEvent from "@testing-library/user-event";
 
 import { Accordion } from ".";
 
-const AccordionStub = ({ spy }: { spy?: jest.Mock<any, any> }) => (
-  <Accordion onChange={(selectedId) => spy(selectedId)}>
+const AccordionStub = ({ spy }: { spy?: jest.Mock }) => (
+  <Accordion onChange={(selectedId) => spy?.(selectedId)}>
     <Accordion.Title
       id="one"
       activeClassName="title-1-selected"
@@ -65,49 +65,52 @@ describe("Accordion", () => {
     expect(queryByText("Panel 1")).toHaveClass("panel-1-default");
   });
 
-  test("It expands and collapses the accordion panel when selected", () => {
-    const { queryByText } = render(<AccordionStub />);
+  test("It expands and collapses the accordion panel when selected", async () => {
+    const user = userEvent.setup();
+    const { queryByText, getByText } = render(<AccordionStub />);
     expect(queryByText("Panel 1")).toHaveClass("collapsed");
     expect(queryByText("Panel 1")).not.toHaveClass("expanded");
 
-    userEvent.click(screen.getByText("Title 1"));
+    await user.click(getByText("Title 1"));
 
     expect(queryByText("Panel 1")).toHaveClass("expanded");
     expect(queryByText("Panel 1")).not.toHaveClass("collapsed");
 
-    userEvent.click(screen.getByText("Title 1"));
+    await user.click(getByText("Title 1"));
 
     expect(queryByText("Panel 1")).not.toHaveClass("expanded");
     expect(queryByText("Panel 1")).toHaveClass("collapsed");
   });
 
-  test("It expands and collapses the accordion panel with keyboard events", () => {
+  test("It expands and collapses the accordion panel with keyboard events", async () => {
+    const user = userEvent.setup();
     const { queryByText } = render(<AccordionStub />);
     expect(queryByText("Panel 1")).toHaveClass("collapsed");
     expect(queryByText("Panel 1")).not.toHaveClass("expanded");
 
-    userEvent.type(screen.getByText("Title 1"), "{space}");
+    await user.type(screen.getByText("Title 1"), "{space}");
 
     expect(queryByText("Panel 1")).toHaveClass("expanded");
     expect(queryByText("Panel 1")).not.toHaveClass("collapsed");
 
-    userEvent.type(screen.getByText("Title 1"), "{space}");
+    await user.type(screen.getByText("Title 1"), "{space}");
 
     expect(queryByText("Panel 1")).not.toHaveClass("expanded");
     expect(queryByText("Panel 1")).toHaveClass("collapsed");
   });
 
-  test("It collapses all other panels when another title is selected", () => {
+  test("It collapses all other panels when another title is selected", async () => {
+    const user = userEvent.setup();
     const { queryByText } = render(<AccordionStub />);
     expect(queryByText("Panel 1")).toHaveClass("collapsed");
     expect(queryByText("Panel 1")).not.toHaveClass("expanded");
 
-    userEvent.click(screen.getByText("Title 1"));
+    await user.click(screen.getByText("Title 1"));
 
     expect(queryByText("Panel 1")).toHaveClass("expanded");
     expect(queryByText("Panel 1")).not.toHaveClass("collapsed");
 
-    userEvent.click(screen.getByText("Title 2"));
+    await user.click(screen.getByText("Title 2"));
 
     expect(queryByText("Panel 1")).not.toHaveClass("expanded");
     expect(queryByText("Panel 1")).toHaveClass("collapsed");
@@ -115,29 +118,31 @@ describe("Accordion", () => {
     expect(queryByText("Panel 2")).toHaveClass("expanded");
   });
 
-  test("It toggles the activeClassName to the selected accordion title & panel", () => {
+  test("It toggles the activeClassName to the selected accordion title & panel", async () => {
+    const user = userEvent.setup();
     const { queryByText } = render(<AccordionStub />);
     expect(queryByText("Title 1")).not.toHaveClass("title-1-selected");
     expect(queryByText("Panel 1")).not.toHaveClass("panel-1-selected");
 
-    userEvent.click(screen.getByText("Title 1"));
+    await user.click(screen.getByText("Title 1"));
 
     expect(queryByText("Title 1")).toHaveClass("title-1-selected");
     expect(queryByText("Panel 1")).toHaveClass("panel-1-selected");
 
-    userEvent.click(screen.getByText("Title 1"));
+    await user.click(screen.getByText("Title 1"));
 
     expect(queryByText("Title 1")).not.toHaveClass("title-1-selected");
     expect(queryByText("Panel 1")).not.toHaveClass("panel-1-selected");
   });
 
-  test("It calls onChange when a tab is clicked", () => {
+  test("It calls onChange when a tab is clicked", async () => {
+    const user = userEvent.setup();
     const spy = jest.fn();
     const { queryByText } = render(<AccordionStub spy={spy} />);
     expect(queryByText("Title 1")).toBeInTheDocument();
     expect(queryByText("Title 2")).toBeInTheDocument();
 
-    userEvent.click(screen.getByText("Title 2"));
+    await user.click(screen.getByText("Title 2"));
 
     expect(spy).toHaveBeenCalledTimes(1);
     expect(spy).toHaveBeenCalledWith("two");

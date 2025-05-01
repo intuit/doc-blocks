@@ -2,11 +2,10 @@
 
 import React from "react";
 import makeClass from "clsx";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import { Source } from "@storybook/addon-docs/blocks";
-import { css } from "@emotion/core";
-import styled from "@emotion/styled";
+import { Source } from "@storybook/addon-docs";
+
+import styles from "./ResponsiveStory.module.css";
+import "./devices.min.css";
 
 const devices = ["iPad", "iPhone", "mac"] as const;
 type Device = typeof devices[number];
@@ -21,96 +20,7 @@ interface IsLandscape {
   isLandscape?: boolean;
 }
 
-const DeviceSelect = styled.select`
-  cursor: pointer;
-  color: rgb(51, 51, 51);
-  text-align: center;
-  appearance: none;
-  font-size: 12px;
-  line-height: 16px;
-  font-family: "Nunito Sans", -apple-system, ".SFNSText-Regular",
-    "San Francisco", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica,
-    Arial, sans-serif;
-  font-weight: 700;
-  padding: 4px 10px;
-  background: rgb(255, 255, 255);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  margin: 20px 0;
-  text-align-last: center;
-`;
-
-const InfoBar = styled.div`
-  height: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 0 25px 0 34px;
-  font-size: 14px;
-`;
-
-const IframeLabel = styled.div`
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin-top: 14px;
-
-  > *:not(:last-child) {
-    margin-right: 10px;
-  }
-`;
-
-const ShowCodeButton = styled.button`
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  color: rgb(51, 51, 51);
-  font-size: 12px;
-  line-height: 16px;
-  font-family: "Nunito Sans", -apple-system, ".SFNSText-Regular",
-    "San Francisco", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica,
-    Arial, sans-serif;
-  font-weight: 700;
-  margin-left: -1px;
-  padding: 4px 10px;
-  background: rgb(255, 255, 255);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-`;
-
-const ResponsiveStoryWrapper = styled.div`
-  margin: 30px auto;
-  display: flex;
-  flex-direction: column;
-`;
-
-const Iframe = styled.iframe<IsLandscape & DeviceProp>`
-  border: none;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  display: block;
-
-  ${({ device, isLandscape }) => css`
-    ${device === "iPhone" &&
-    isLandscape &&
-    css`
-      padding-left: 30px;
-      box-sizing: border-box;
-    `}
-
-    ${device === "mac" &&
-    css`
-      width: 1200px;
-      height: 750px;
-      transform: scale(0.8);
-      transform-origin: 0 0;
-    `}
-  `}
-`;
-
-type DeviceProps = IsLandscape & {
+export type DeviceProps = IsLandscape & {
   /** The content to display in the device screen */
   children: React.ReactNode;
   /** Color to make iOS header */
@@ -152,9 +62,12 @@ const IPhone = ({
       <div className="inner-shadow" />
       <div className="screen">
         {!isLandscape && (
-          <InfoBar style={{ background: headerColor, color: headerText }}>
+          <div
+            className={styles.infoBar}
+            style={{ background: headerColor, color: headerText }}
+          >
             <span>{`${time.getHours() % 12}:${time.getMinutes()}`}</span>
-          </InfoBar>
+          </div>
         )}
         {children}
       </div>
@@ -238,7 +151,10 @@ interface BottomProps extends ResponsiveStoryBaseProps {
   bottom: number;
 }
 
-type ResponsiveStoryProps = ResponsiveStoryBaseProps | TopProps | BottomProps;
+export type ResponsiveStoryProps =
+  | ResponsiveStoryBaseProps
+  | TopProps
+  | BottomProps;
 
 /** Render a story in an iframe so it's responsive */
 export const ResponsiveStory = ({
@@ -261,9 +177,15 @@ export const ResponsiveStory = ({
   const top = "top" in rest ? rest.top : undefined;
   const bottom = "bottom" in rest ? rest.bottom : undefined;
 
-  // TODO: should scale the device instead of scrolling?
+  const iframeClasses = makeClass(
+    styles.iframe,
+    currentDevice === "iPhone" && isLandscape && styles.iframeIphoneLandscape,
+    currentDevice === "mac" && styles.iframeMac
+  );
+
   return (
-    <ResponsiveStoryWrapper
+    <div
+      className={styles.responsiveStoryWrapper}
       style={{
         alignItems: align === "center" ? align : `flex-${align}`,
       }}
@@ -283,23 +205,23 @@ export const ResponsiveStory = ({
             headerColor={headerColor}
             headerText={headerText}
           >
-            <Iframe
+            <iframe
+              className={iframeClasses}
               title="Responsive preview"
               src={`${window.location.origin}${window.location.pathname.replace(
                 "index.html",
                 "iframe.html"
               )}?id=${id}`}
-              isLandscape={isLandscape}
-              device={currentDevice}
               style={screenStyles}
             />
           </DeviceComponent>
         </div>
 
-        <IframeLabel>
+        <div className={styles.iframeLabel}>
           {label && <i>{label}</i>}
           {device === "choose" && (
-            <DeviceSelect
+            <select
+              className={styles.deviceSelect}
               value={currentDevice}
               onChange={(e) => {
                 setCurrentDevice(e.target.value as Device);
@@ -310,14 +232,18 @@ export const ResponsiveStory = ({
                   {d}
                 </option>
               ))}
-            </DeviceSelect>
+            </select>
           )}
-          <ShowCodeButton type="button" onClick={() => setOpen(!open)}>
+          <button
+            className={styles.showCodeButton}
+            type="button"
+            onClick={() => setOpen(!open)}
+          >
             {open ? "Hide" : "Show"} Code
-          </ShowCodeButton>
-        </IframeLabel>
+          </button>
+        </div>
       </div>
-      {open && <Source id={id} />}
-    </ResponsiveStoryWrapper>
+      {open && <Source of={id} />}
+    </div>
   );
 };

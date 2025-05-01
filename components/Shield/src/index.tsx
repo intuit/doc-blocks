@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-import React from "react";
-import { css } from "emotion";
+import React, { JSX } from "react";
 
-interface ShieldProps {
+import styles from "./Shield.module.css";
+
+export interface ShieldProps {
   /** The current label */
   label?: string;
   /** The current message */
@@ -41,32 +42,9 @@ export const Shield = ({
     : "span";
 
   return (
-    <Wrapper
-      className={css`
-        border-radius: 4px;
-        overflow: hidden;
-        display: flex;
-        width: fit-content;
-        font-size: 12px;
-        text-decoration: none;
-      `}
-    >
-      <span
-        className={css`
-          background: gray;
-          color: white;
-          padding: 4px 6px 4px 8px;
-        `}
-      >
-        {label}
-      </span>
-      <span
-        className={css`
-          background: ${color};
-          color: white;
-          padding: 4px 8px 4px 6px;
-        `}
-      >
+    <Wrapper className={styles.wrapper}>
+      <span className={styles.label}>{label}</span>
+      <span className={styles.message} style={{ background: color }}>
         {message}
       </span>
     </Wrapper>

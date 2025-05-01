@@ -1,0 +1,18 @@
+.row {
+  align-items: var(--align);
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: var(--gap);
+  margin: 45px 0;
+}
+
+.row > * {
+  margin: 0 !important;
+}
+
+@media (min-width: 992px) {
+  .row {
+    grid-auto-flow: column;
+    grid-template-columns: var(--grid-template);
+  }
+}

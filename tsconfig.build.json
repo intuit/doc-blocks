@@ -1,16 +1,18 @@
 {
   "compilerOptions": {
+    "types": ["vite/client"],
+    "composite": true,
     "target": "es5",
     "module": "commonjs",
     "strict": true,
     "jsx": "preserve",
-    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "sourceMap": true,
     "declaration": true,
-    "lib": ["es6", "es2017", "dom"],
-    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
     "experimentalDecorators": true,
     "resolveJsonModule": true,
     "downlevelIteration": true
-  }
+  },
+  "exclude": ["node_modules"]
 }

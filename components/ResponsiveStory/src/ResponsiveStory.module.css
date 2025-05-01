@@ -1,0 +1,83 @@
+.deviceSelect {
+  cursor: pointer;
+  color: rgb(51, 51, 51);
+  text-align: center;
+  appearance: none;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "Nunito Sans", -apple-system, ".SFNSText-Regular",
+    "San Francisco", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-weight: 700;
+  padding: 4px 10px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin: 20px 0;
+  text-align-last: center;
+}
+
+.infoBar {
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 25px 0 34px;
+  font-size: 14px;
+}
+
+.iframeLabel {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 14px;
+}
+
+.iframeLabel > *:not(:last-child) {
+  margin-right: 10px;
+}
+
+.showCodeButton {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: rgb(51, 51, 51);
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "Nunito Sans", -apple-system, ".SFNSText-Regular",
+    "San Francisco", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-weight: 700;
+  margin-left: -1px;
+  padding: 4px 10px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.responsiveStoryWrapper {
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: block;
+}
+
+.iframeIphoneLandscape {
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+
+.iframeMac {
+  width: 1200px;
+  height: 750px;
+  transform: scale(0.8);
+  transform-origin: 0 0;
+}

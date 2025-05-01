@@ -1,7 +1,6 @@
-import React from "react";
 import { Shield } from "@doc-blocks/shield";
 
-interface AccessibilityProps {
+export interface AccessibilityProps {
   /** The current accessibility tag */
   tag?: string;
 }

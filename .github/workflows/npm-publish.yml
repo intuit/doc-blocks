@@ -8,6 +8,9 @@ on:
     types: [opened, synchronize, reopened]
   release:
     types: [created]
+  push:
+    branches:
+      - "master"
 
 jobs:
   build-publish:

@@ -34,11 +34,11 @@
     "@babel/runtime": "^7.11.2"
   },
   "peerDependencies": {
-    "@storybook/addon-links": ">= 8.6.12",
+    "@storybook/addon-links": "^9.0.0",
     "react": ">= 18.2.0"
   },
   "devDependencies": {
-    "@storybook/addon-links": "8.6.12"
+    "@storybook/addon-links": "^9.0.0"
   },
   "files": [
     "dist",

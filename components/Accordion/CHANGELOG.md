@@ -1,3 +1,16 @@
+# v2.0.0 (Wed Jul 02 2025)
+
+#### 💥 Breaking Change
+
+- feat: bump to storybook 9 [#36](https://github.com/intuit/doc-blocks/pull/36) (sean_powell@intuit.com [@fattslug](https://github.com/fattslug))
+
+#### Authors: 2
+
+- Sean Powell ([@fattslug](https://github.com/fattslug))
+- spowell9 (sean_powell@intuit.com)
+
+---
+
 # v1.0.0 (Thu May 01 2025)
 
 #### 💥 Breaking Change

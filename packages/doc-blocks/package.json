@@ -1,5 +1,5 @@
 {
-  "name": "@doc-blocks/doc-blocks",
+  "name": "@doc-blocks/all",
   "version": "1.0.0",
   "type": "module",
   "main": "./dist/cjs/index.js",

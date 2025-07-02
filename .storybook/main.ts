@@ -13,11 +13,7 @@ const config: StorybookConfig = {
   core: {
     builder: "@storybook/builder-vite",
   },
-  addons: [
-    getAbsolutePath("@storybook/addon-essentials"),
-    getAbsolutePath("@chromatic-com/storybook"),
-    getAbsolutePath("@storybook/addon-interactions"),
-  ],
+  addons: [getAbsolutePath("@chromatic-com/storybook")],
   framework: {
     name: getAbsolutePath("@storybook/react-vite"),
     options: {},

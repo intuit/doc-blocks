@@ -1916,24 +1916,24 @@
   integrity sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
 
 "@doc-blocks/accessibility@link:components/Accessibility":
-  version "1.0.0"
+  version "2.0.0"
   dependencies:
     "@babel/runtime" "^7.11.2"
     "@doc-blocks/shield" "link:components/Shield"
 
 "@doc-blocks/accordion@link:components/Accordion":
-  version "1.0.0"
+  version "2.0.0"
   dependencies:
     "@babel/runtime" "7.11.2"
 
 "@doc-blocks/bundle-size@link:components/BundleSize":
-  version "1.0.0"
+  version "2.0.0"
   dependencies:
     "@babel/runtime" "^7.11.2"
     "@doc-blocks/shield" "link:components/Shield"
 
 "@doc-blocks/design-spec@link:components/DesignSpec":
-  version "1.0.0"
+  version "2.0.0"
   dependencies:
     "@babel/runtime" "^7.11.2"
     "@doc-blocks/shield" "link:components/Shield"
@@ -1943,51 +1943,51 @@
   uid ""
 
 "@doc-blocks/guideline@link:components/Guideline":
-  version "1.0.0"
+  version "2.0.0"
   dependencies:
     "@babel/runtime" "^7.11.2"
 
 "@doc-blocks/intended-usage@link:components/IntendedUsage":
-  version "1.0.0"
+  version "2.0.0"
   dependencies:
     "@babel/runtime" "^7.11.2"
     "@design-systems/utils" "4.15.4"
     emotion "^10.0.27"
 
 "@doc-blocks/related-components@link:components/RelatedComponents":
-  version "1.0.0"
+  version "2.0.0"
   dependencies:
     "@babel/runtime" "^7.11.2"
 
 "@doc-blocks/responsive-story@link:components/ResponsiveStory":
-  version "1.0.0"
+  version "2.0.0"
   dependencies:
     "@babel/runtime" "^7.11.2"
     "@storybook/addon-docs" "^9.0.0"
     clsx "^1.1.1"
 
 "@doc-blocks/row@link:components/Row":
-  version "1.0.0"
+  version "2.0.0"
   dependencies:
     "@babel/runtime" "^7.11.2"
 
 "@doc-blocks/shield-row@link:components/ShieldRow":
-  version "1.0.0"
+  version "2.0.0"
   dependencies:
     "@babel/runtime" "^7.11.2"
 
 "@doc-blocks/shield@link:components/Shield":
-  version "1.0.0"
+  version "2.0.0"
   dependencies:
     "@babel/runtime" "^7.11.2"
 
 "@doc-blocks/tabs@link:components/Tabs":
-  version "1.0.0"
+  version "2.0.0"
   dependencies:
     "@babel/runtime" "7.11.2"
 
 "@doc-blocks/version@link:components/Version":
-  version "1.0.0"
+  version "2.0.0"
   dependencies:
     "@babel/runtime" "^7.11.2"
     "@doc-blocks/shield" "link:components/Shield"

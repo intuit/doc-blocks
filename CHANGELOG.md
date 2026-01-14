@@ -1,3 +1,21 @@
+# v2.0.1 (Wed Jan 14 2026)
+
+#### 🐛 Bug Fix
+
+- `@doc-blocks/accessibility`, `@doc-blocks/accordion`, `@doc-blocks/bundle-size`, `@doc-blocks/design-spec`, `@doc-blocks/guideline`, `@doc-blocks/intended-usage`, `@doc-blocks/related-components`, `@doc-blocks/responsive-story`, `@doc-blocks/row`, `@doc-blocks/shield`, `@doc-blocks/shield-row`, `@doc-blocks/tabs`, `@doc-blocks/version`, `@doc-blocks/all`
+  - fix: add types condition to package exports for Storybook 10 compat [#37](https://github.com/intuit/doc-blocks/pull/37) ([@kaelig](https://github.com/kaelig))
+
+#### ⚠️ Pushed to `master`
+
+- feat: force release (sean_powell@intuit.com)
+
+#### Authors: 2
+
+- Kaelig Deloumeau-Prigent ([@kaelig](https://github.com/kaelig))
+- spowell9 (sean_powell@intuit.com)
+
+---
+
 # v2.0.0 (Wed Jul 02 2025)
 
 #### 💥 Breaking Change

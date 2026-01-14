@@ -1,3 +1,15 @@
+# v2.0.1 (Wed Jan 14 2026)
+
+#### 🐛 Bug Fix
+
+- fix: add types condition to package exports for Storybook 10 compat [#37](https://github.com/intuit/doc-blocks/pull/37) ([@kaelig](https://github.com/kaelig))
+
+#### Authors: 1
+
+- Kaelig Deloumeau-Prigent ([@kaelig](https://github.com/kaelig))
+
+---
+
 # v1.0.0 (Thu May 01 2025)
 
 #### 💥 Breaking Change

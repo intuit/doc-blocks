@@ -62,6 +62,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "kaelig",
+      "name": "Kaelig Deloumeau-Prigent",
+      "avatar_url": "https://avatars.githubusercontent.com/u/85783?v=4",
+      "profile": "https://www.kaelig.fr/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
